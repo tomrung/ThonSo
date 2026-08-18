@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad512" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="45%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="goldGrad512" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="50%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </linearGradient>
+    <linearGradient id="leafGrad512" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6ee7b7"/>
+      <stop offset="50%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Rounded App Icon Background -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad512)"/>
+  
+  <!-- Outer Glow Ring -->
+  <rect x="16" y="16" width="480" height="480" rx="100" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="4"/>
+
+  <!-- Smart Digital Network Web Lines -->
+  <g opacity="0.35">
+    <circle cx="256" cy="256" r="180" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="8,8"/>
+    <circle cx="256" cy="256" r="215" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4,6"/>
+    <line x1="76" y1="256" x2="436" y2="256" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="6,6"/>
+    <line x1="256" y1="76" x2="256" y2="436" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="6,6"/>
+  </g>
+
+  <!-- Center Shield of An Trach -->
+  <g filter="url(#dropShadow)">
+    <path d="M256 100 C340 100 376 135 376 210 C376 330 256 395 256 395 C256 395 136 330 136 210 C136 135 172 100 256 100 Z" fill="rgba(15,23,42,0.85)" stroke="url(#goldGrad512)" stroke-width="8"/>
+
+    <!-- Golden Star of Vietnam -->
+    <polygon points="256,135 271,178 316,178 280,205 294,248 256,222 218,248 232,205 196,178 241,178" fill="url(#goldGrad512)"/>
+
+    <!-- Wheat Rice Stalks (Nong Nghiep An Trach) -->
+    <path d="M200 310 C220 280 238 260 256 245 C274 260 292 280 312 310" fill="none" stroke="url(#leafGrad512)" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="220" cy="285" r="8" fill="#34d399"/>
+    <circle cx="292" cy="285" r="8" fill="#34d399"/>
+    <circle cx="256" cy="255" r="9" fill="#34d399"/>
+    <circle cx="236" cy="305" r="7" fill="#10b981"/>
+    <circle cx="276" cy="305" r="7" fill="#10b981"/>
+  </g>
+
+  <!-- Bottom Title Badge -->
+  <rect x="126" y="420" width="260" height="46" rx="23" fill="rgba(2,132,199,0.4)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  <text x="256" y="451" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="900" fill="#ffffff" letter-spacing="3">AN TRẠCH SỐ</text>
+</svg>

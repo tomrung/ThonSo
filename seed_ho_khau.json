@@ -1,0 +1,6142 @@
+[
+  {
+    "ma_ho": "HK001",
+    "ten_chu_ho": "ĐINH THỊ EM",
+    "so_cmnd_chu_ho": "200321109",
+    "so_dien_thoai": "0931905941",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK002",
+    "ten_chu_ho": "NGÔ THỊ THANH THẢO",
+    "so_cmnd_chu_ho": "200832861",
+    "so_dien_thoai": "0799407734",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK003",
+    "ten_chu_ho": "VÕ VĂN PHI HÙNG",
+    "so_cmnd_chu_ho": "200964516",
+    "so_dien_thoai": "0796525886",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK004",
+    "ten_chu_ho": "NGUYỄN THỊ THU NGA",
+    "so_cmnd_chu_ho": "048164004840",
+    "so_dien_thoai": "0776950144",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK005",
+    "ten_chu_ho": "NGUYỄN YÊN",
+    "so_cmnd_chu_ho": "200321115",
+    "so_dien_thoai": "0788583039",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK006",
+    "ten_chu_ho": "NGUYỄN LÊ MINH TÙNG",
+    "so_cmnd_chu_ho": "201537983",
+    "so_dien_thoai": "0905730353",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK007",
+    "ten_chu_ho": "NGUYỄN MINH",
+    "so_cmnd_chu_ho": "200890167",
+    "so_dien_thoai": "0783671053",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK008",
+    "ten_chu_ho": "NGUYỄN ANH PHÚC",
+    "so_cmnd_chu_ho": "201700965",
+    "so_dien_thoai": "0905625902",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK009",
+    "ten_chu_ho": "NGUYỄN MỘNG HÙNG",
+    "so_cmnd_chu_ho": "201077756",
+    "so_dien_thoai": "0905420764",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK010",
+    "ten_chu_ho": "NGUYỄN TRUNG DŨNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK011",
+    "ten_chu_ho": "VÕ ĐÌNH PHÚ",
+    "so_cmnd_chu_ho": "201235401",
+    "so_dien_thoai": "0935969027",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK012",
+    "ten_chu_ho": "ĐẶNG THỊ HÒA",
+    "so_cmnd_chu_ho": "200964487",
+    "so_dien_thoai": "0708700465",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK013",
+    "ten_chu_ho": "ĐẶNG VĂN PHƯỚC",
+    "so_cmnd_chu_ho": "201582163",
+    "so_dien_thoai": "0905911517",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK014",
+    "ten_chu_ho": "NGUYỄN LUẬT",
+    "so_cmnd_chu_ho": "201570880",
+    "so_dien_thoai": "0905170953",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK015",
+    "ten_chu_ho": "NGUYỄN XÍ",
+    "so_cmnd_chu_ho": "200321218",
+    "so_dien_thoai": "0905281154",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK016",
+    "ten_chu_ho": "PHAN THỊ KIM ANH",
+    "so_cmnd_chu_ho": "200321939",
+    "so_dien_thoai": "0935512974",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK017",
+    "ten_chu_ho": "NGUYỄN THỊ TÂN",
+    "so_cmnd_chu_ho": "200032041",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK018",
+    "ten_chu_ho": "NGUYỄN PHƯƠNG",
+    "so_cmnd_chu_ho": "200808704",
+    "so_dien_thoai": "0932421403",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK019",
+    "ten_chu_ho": "NGUYỄN THỊ THỊNH",
+    "so_cmnd_chu_ho": "200321207",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK020",
+    "ten_chu_ho": "NGUYỄN VĂN MỸ",
+    "so_cmnd_chu_ho": "200832866",
+    "so_dien_thoai": "0935547266",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK021",
+    "ten_chu_ho": "NGUYỄN ĐÌNH QUỐC",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK022",
+    "ten_chu_ho": "ĐẶNG LIÊN",
+    "so_cmnd_chu_ho": "048070004884",
+    "so_dien_thoai": "0704697943",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK023",
+    "ten_chu_ho": "ĐẶNG LƯ",
+    "so_cmnd_chu_ho": "048068006888",
+    "so_dien_thoai": "0905001540",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK024",
+    "ten_chu_ho": "ĐẶNG TUẤN VŨ",
+    "so_cmnd_chu_ho": "201552853",
+    "so_dien_thoai": "0797555765",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK025",
+    "ten_chu_ho": "NGUYỄN NGỌC SƠN",
+    "so_cmnd_chu_ho": "201077789",
+    "so_dien_thoai": "0932556831",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK026",
+    "ten_chu_ho": "ĐẶNG VĂN ĐĂNG",
+    "so_cmnd_chu_ho": "200321954",
+    "so_dien_thoai": "0901144880",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK027",
+    "ten_chu_ho": "NGUYỄN THỊ TRUNG",
+    "so_cmnd_chu_ho": "201677907",
+    "so_dien_thoai": "0905531095",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK028",
+    "ten_chu_ho": "TỪ VĂN MẪN",
+    "so_cmnd_chu_ho": "201269684",
+    "so_dien_thoai": "0906587234",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK029",
+    "ten_chu_ho": "VÕ THỊ HOA",
+    "so_cmnd_chu_ho": "201205356",
+    "so_dien_thoai": "0795467383",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK030",
+    "ten_chu_ho": "VÕ LỮ",
+    "so_cmnd_chu_ho": "201376568",
+    "so_dien_thoai": "0905051620",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK031",
+    "ten_chu_ho": "PHẠM PHÚ TẾ",
+    "so_cmnd_chu_ho": "201077766",
+    "so_dien_thoai": "0905619724",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK032",
+    "ten_chu_ho": "NGUYỄN THỊ KIÊU",
+    "so_cmnd_chu_ho": "200321103",
+    "so_dien_thoai": "0905149014",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 8,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK033",
+    "ten_chu_ho": "NGUYỄN KHÁNH LINH",
+    "so_cmnd_chu_ho": "201590167",
+    "so_dien_thoai": "0905614605",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK034",
+    "ten_chu_ho": "VÕ DUY HÙNG",
+    "so_cmnd_chu_ho": "201556894",
+    "so_dien_thoai": "0905749276",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK035",
+    "ten_chu_ho": "NGUYỄN CHÂU",
+    "so_cmnd_chu_ho": "200964607",
+    "so_dien_thoai": "0905342145",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 9,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK036",
+    "ten_chu_ho": "NGUYỄN ÂN",
+    "so_cmnd_chu_ho": "201157962",
+    "so_dien_thoai": "0905925664",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK037",
+    "ten_chu_ho": "ĐẶNG VĂN EM",
+    "so_cmnd_chu_ho": "200890108",
+    "so_dien_thoai": "0702355976",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK038",
+    "ten_chu_ho": "ĐINH THỊ NHƯỜNG",
+    "so_cmnd_chu_ho": "200321135",
+    "so_dien_thoai": "0383292134",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK039",
+    "ten_chu_ho": "ĐẶNG THÀNH",
+    "so_cmnd_chu_ho": "200321940",
+    "so_dien_thoai": "0905929210",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK041",
+    "ten_chu_ho": "ĐẶNG NGỌC TIẾN",
+    "so_cmnd_chu_ho": "201205286",
+    "so_dien_thoai": "0906499156",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK042",
+    "ten_chu_ho": "ĐẶNG THỊ MƯỜI",
+    "so_cmnd_chu_ho": "200321171",
+    "so_dien_thoai": "0935646968",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK043",
+    "ten_chu_ho": "ĐẶNG ĐIỆN",
+    "so_cmnd_chu_ho": "200321223",
+    "so_dien_thoai": "0333333952",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK044",
+    "ten_chu_ho": "ĐẶNG THỊ LIÊN",
+    "so_cmnd_chu_ho": "200890134",
+    "so_dien_thoai": "0333333952",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK045",
+    "ten_chu_ho": "ĐẶNG CÔNG KHANH",
+    "so_cmnd_chu_ho": "200321182",
+    "so_dien_thoai": "0905197676",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK046",
+    "ten_chu_ho": "PHÙNG THỊ NGA",
+    "so_cmnd_chu_ho": "200321183",
+    "so_dien_thoai": "0905197676",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK047",
+    "ten_chu_ho": "NGUYỄN TẤN DŨNG",
+    "so_cmnd_chu_ho": "201376547",
+    "so_dien_thoai": "0774470372",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK048",
+    "ten_chu_ho": "NGUYỄN NGỌC QUÝ",
+    "so_cmnd_chu_ho": "200964520",
+    "so_dien_thoai": "0978421793",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK049",
+    "ten_chu_ho": "NGUYỄN CHÂU",
+    "so_cmnd_chu_ho": "048035000032",
+    "so_dien_thoai": "0978421793",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK050",
+    "ten_chu_ho": "NGUYỄN THỊ QUÝT",
+    "so_cmnd_chu_ho": "048163000626",
+    "so_dien_thoai": "0935016604",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK051",
+    "ten_chu_ho": "LÊ ĐỨC THÀNH",
+    "so_cmnd_chu_ho": "201582117",
+    "so_dien_thoai": "0905696135",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK052",
+    "ten_chu_ho": "NGUYỄN HƯỜNG",
+    "so_cmnd_chu_ho": "201205368",
+    "so_dien_thoai": "0902243553",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK053",
+    "ten_chu_ho": "NGUYỄN XUÂN TRƯỜNG",
+    "so_cmnd_chu_ho": "201641231",
+    "so_dien_thoai": "0916504808",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK054",
+    "ten_chu_ho": "NGUYỄN THỊ NGỌC DUNG",
+    "so_cmnd_chu_ho": "200832898",
+    "so_dien_thoai": "0934799345",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK055",
+    "ten_chu_ho": "NGUYỄN XUÂN HUỲNH",
+    "so_cmnd_chu_ho": "201641855",
+    "so_dien_thoai": "0905805626",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK056",
+    "ten_chu_ho": "NGUYỄN MƯỜI",
+    "so_cmnd_chu_ho": "200890272",
+    "so_dien_thoai": "0934839816",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK057",
+    "ten_chu_ho": "NGUYỄN TẤN TÀI",
+    "so_cmnd_chu_ho": "201600620",
+    "so_dien_thoai": "0935674408",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK058",
+    "ten_chu_ho": "NGUYỄN THỊ ĐINH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK059",
+    "ten_chu_ho": "NGUYỄN TƯ",
+    "so_cmnd_chu_ho": "201316924",
+    "so_dien_thoai": "0905751559",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK060",
+    "ten_chu_ho": "NGUYỄN THỊ HUỆ",
+    "so_cmnd_chu_ho": "200321118",
+    "so_dien_thoai": "0935472735",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK062",
+    "ten_chu_ho": "NGUYỄN VĂN THÀNH",
+    "so_cmnd_chu_ho": "201205288",
+    "so_dien_thoai": "0935349588",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK063",
+    "ten_chu_ho": "NGUYỄN VĂN HỒNG",
+    "so_cmnd_chu_ho": "201317135",
+    "so_dien_thoai": "0903482846",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK064",
+    "ten_chu_ho": "NGUYỄN THANH SƠN",
+    "so_cmnd_chu_ho": "201416131",
+    "so_dien_thoai": "0905873005",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK065",
+    "ten_chu_ho": "NGUYỄN THỊ CHÚC",
+    "so_cmnd_chu_ho": "200321123",
+    "so_dien_thoai": "0774880315",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK066",
+    "ten_chu_ho": "NGUYỄN PHƯỢNG",
+    "so_cmnd_chu_ho": "200832991",
+    "so_dien_thoai": "0708068351",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 8,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK067",
+    "ten_chu_ho": "ĐẶNG THỊ DIỆU",
+    "so_cmnd_chu_ho": "200321155",
+    "so_dien_thoai": "0905163545",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 9,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK068",
+    "ten_chu_ho": "PHẠM NGỌC HIỆP",
+    "so_cmnd_chu_ho": "201106544",
+    "so_dien_thoai": "0797496940",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK069",
+    "ten_chu_ho": "ĐẶNG THỊ NHƯỜNG",
+    "so_cmnd_chu_ho": "200321126",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK070",
+    "ten_chu_ho": "NGUYỄN THỊ THƯƠNG",
+    "so_cmnd_chu_ho": "200320909",
+    "so_dien_thoai": "0935650496",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK071",
+    "ten_chu_ho": "NGUYỄN VĂN VINH",
+    "so_cmnd_chu_ho": "200321008",
+    "so_dien_thoai": "0935025738",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK072",
+    "ten_chu_ho": "NGUYỄN THỊ XẢO",
+    "so_cmnd_chu_ho": "200321185",
+    "so_dien_thoai": "0779456640",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK073",
+    "ten_chu_ho": "VÕ LAI",
+    "so_cmnd_chu_ho": "200321148",
+    "so_dien_thoai": "0783147127",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 8,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK074",
+    "ten_chu_ho": "NGUYỄN THỊ XÍ",
+    "so_cmnd_chu_ho": "200321202",
+    "so_dien_thoai": "0905908825",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK075",
+    "ten_chu_ho": "ĐẶNG THỊ TUÔI",
+    "so_cmnd_chu_ho": "200321206",
+    "so_dien_thoai": "0932260263",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK076",
+    "ten_chu_ho": "NGUYỄN THỊ ANH",
+    "so_cmnd_chu_ho": "200321986",
+    "so_dien_thoai": "0901957738",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 9,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK078",
+    "ten_chu_ho": "NGUYỄN THỊ NĂNG",
+    "so_cmnd_chu_ho": "200321055",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK079",
+    "ten_chu_ho": "TRẦN MẬU THỨC",
+    "so_cmnd_chu_ho": "200238497",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK080",
+    "ten_chu_ho": "NGUYỄN TRƯỜNG VĨ",
+    "so_cmnd_chu_ho": "200505319",
+    "so_dien_thoai": "0905522224",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK081",
+    "ten_chu_ho": "NGÔ THỊ HÌNH",
+    "so_cmnd_chu_ho": "200321158",
+    "so_dien_thoai": "0359953326",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK082",
+    "ten_chu_ho": "NGUYỄN TÀU",
+    "so_cmnd_chu_ho": "200121129",
+    "so_dien_thoai": "0905312616",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 8,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK083",
+    "ten_chu_ho": "NGUYỄN THUẬN",
+    "so_cmnd_chu_ho": "200964956",
+    "so_dien_thoai": "0902983683",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK084",
+    "ten_chu_ho": "VÕ KỸ",
+    "so_cmnd_chu_ho": "200321125",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK085",
+    "ten_chu_ho": "VÕ THỊ HỮU",
+    "so_cmnd_chu_ho": "200321056",
+    "so_dien_thoai": "0384212033",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK087",
+    "ten_chu_ho": "NGUYỄN THỊ MIÊN",
+    "so_cmnd_chu_ho": "200321177",
+    "so_dien_thoai": "0796552010",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK088",
+    "ten_chu_ho": "NGUYỄN PHÁP",
+    "so_cmnd_chu_ho": "200964921",
+    "so_dien_thoai": "0905660315",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK089",
+    "ten_chu_ho": "NGUYỄN THỊ CẦN",
+    "so_cmnd_chu_ho": "200321128",
+    "so_dien_thoai": "0787947881",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK090",
+    "ten_chu_ho": "NGUYỄN NHỰT",
+    "so_cmnd_chu_ho": "200890099",
+    "so_dien_thoai": "0787947881",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK091",
+    "ten_chu_ho": "NGÔ THANH HÙNG",
+    "so_cmnd_chu_ho": "200964920",
+    "so_dien_thoai": "0935188550",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK092",
+    "ten_chu_ho": "NGUYỄN THỊ CHUỐC",
+    "so_cmnd_chu_ho": "200321099",
+    "so_dien_thoai": "0905573936",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK094",
+    "ten_chu_ho": "NGUYỄN NHÍ",
+    "so_cmnd_chu_ho": "200321083",
+    "so_dien_thoai": "0901161076",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK095",
+    "ten_chu_ho": "NGUYỄN VĂN HÙNG",
+    "so_cmnd_chu_ho": "201363855",
+    "so_dien_thoai": "0905781697",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK096",
+    "ten_chu_ho": "NGUYỄN VĂN HƯNG",
+    "so_cmnd_chu_ho": "201444766",
+    "so_dien_thoai": "0905454315",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK097",
+    "ten_chu_ho": "ĐẶNG THỊ LIỄU",
+    "so_cmnd_chu_ho": "201363913",
+    "so_dien_thoai": "0706163331",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK098",
+    "ten_chu_ho": "NGUYỄN THỊ TRI",
+    "so_cmnd_chu_ho": "200321121",
+    "so_dien_thoai": "0773482344",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK099",
+    "ten_chu_ho": "NGUYỄN ĐỨC QUAN",
+    "so_cmnd_chu_ho": "201834987",
+    "so_dien_thoai": "0762693144",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK100",
+    "ten_chu_ho": "ĐẶNG THỊ ÍT",
+    "so_cmnd_chu_ho": "200321010",
+    "so_dien_thoai": "0901177165",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK101",
+    "ten_chu_ho": "TRƯƠNG THỊ DẠNG",
+    "so_cmnd_chu_ho": "200320982",
+    "so_dien_thoai": "0975275869",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK102",
+    "ten_chu_ho": "NGUYỄN SẢY",
+    "so_cmnd_chu_ho": "200321139",
+    "so_dien_thoai": "0768430048",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK103",
+    "ten_chu_ho": "NGUYỄN TÁM",
+    "so_cmnd_chu_ho": "201077843",
+    "so_dien_thoai": "0962409734",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK104",
+    "ten_chu_ho": "DOÃN THANH PHONG",
+    "so_cmnd_chu_ho": "048076004078",
+    "so_dien_thoai": "0935880874",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK105",
+    "ten_chu_ho": "NGUYỄN THỊ LANG",
+    "so_cmnd_chu_ho": "201834119",
+    "so_dien_thoai": "0762582706",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK106",
+    "ten_chu_ho": "NGUYỄN THỊ KIM ANH PHƯỢNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "0762582806",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK107",
+    "ten_chu_ho": "ĐẶNG THỊ XÁNG",
+    "so_cmnd_chu_ho": "200321101",
+    "so_dien_thoai": "0905035213",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK108",
+    "ten_chu_ho": "NGUYỄN TRƯỜNG SƠN",
+    "so_cmnd_chu_ho": "200839712",
+    "so_dien_thoai": "0935396774",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK109",
+    "ten_chu_ho": "NGÔ THỊ YẾN",
+    "so_cmnd_chu_ho": "200320918",
+    "so_dien_thoai": "0931947653",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK110",
+    "ten_chu_ho": "NGUYỄN THỊ HỒNG",
+    "so_cmnd_chu_ho": "201768534",
+    "so_dien_thoai": "0931931755",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK111",
+    "ten_chu_ho": "VÕ SẢN",
+    "so_cmnd_chu_ho": "200880122",
+    "so_dien_thoai": "0394989264",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK112",
+    "ten_chu_ho": "NGUYỄN VĂN DŨNG",
+    "so_cmnd_chu_ho": "201500696",
+    "so_dien_thoai": "0935083098",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK113",
+    "ten_chu_ho": "ĐẶNG THỊ LƯƠM",
+    "so_cmnd_chu_ho": "200321124",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK114",
+    "ten_chu_ho": "LÊ THỊ THANH",
+    "so_cmnd_chu_ho": "200828933",
+    "so_dien_thoai": "0796289600",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK115",
+    "ten_chu_ho": "VÕ THỊ THÙY DIỄM",
+    "so_cmnd_chu_ho": "272462876",
+    "so_dien_thoai": "0934371110",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK117",
+    "ten_chu_ho": "TRẦN THỊ DIỄM",
+    "so_cmnd_chu_ho": "201491694",
+    "so_dien_thoai": "0932559997",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK118",
+    "ten_chu_ho": "NGUYỄN THỊ SÁU",
+    "so_cmnd_chu_ho": "200890247",
+    "so_dien_thoai": "0763648865",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK119",
+    "ten_chu_ho": "VÕ THỊ NAM",
+    "so_cmnd_chu_ho": "200321058",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK120",
+    "ten_chu_ho": "ĐẶNG LÝ",
+    "so_cmnd_chu_ho": "200321074",
+    "so_dien_thoai": "0937112313",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 10,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK121",
+    "ten_chu_ho": "NGUYỄN HÀ",
+    "so_cmnd_chu_ho": "200321086",
+    "so_dien_thoai": "0702513968",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 10,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK122",
+    "ten_chu_ho": "NGUYỄN THỊ THÚY HẰNG",
+    "so_cmnd_chu_ho": "201551539",
+    "so_dien_thoai": "0905052580",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK123",
+    "ten_chu_ho": "TRẦN THỊ HUỆ",
+    "so_cmnd_chu_ho": "201077720",
+    "so_dien_thoai": "0905492331",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK124",
+    "ten_chu_ho": "NGUYỄN THỊ MAI",
+    "so_cmnd_chu_ho": "200321639",
+    "so_dien_thoai": "0339924561",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK125",
+    "ten_chu_ho": "ĐINH THỊ NGỌC TUYẾN",
+    "so_cmnd_chu_ho": "201416024",
+    "so_dien_thoai": "0775510387",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK127",
+    "ten_chu_ho": "ĐẶNG MINH THÀNH",
+    "so_cmnd_chu_ho": "201317048",
+    "so_dien_thoai": "0779454428",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK128",
+    "ten_chu_ho": "ĐẶNG MINH PHÚ",
+    "so_cmnd_chu_ho": "200964549",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK129",
+    "ten_chu_ho": "BÙI THỊ HỒNG VÂN",
+    "so_cmnd_chu_ho": "200321084",
+    "so_dien_thoai": "0779480492",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK130",
+    "ten_chu_ho": "ĐẶNG VĂN LỰC",
+    "so_cmnd_chu_ho": "201538102",
+    "so_dien_thoai": "0905315177",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK131",
+    "ten_chu_ho": "HUỲNH THỊ LAN",
+    "so_cmnd_chu_ho": "200321085",
+    "so_dien_thoai": "0937917809",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK132",
+    "ten_chu_ho": "VÕ NÔNG",
+    "so_cmnd_chu_ho": "200320958",
+    "so_dien_thoai": "0914575058",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 8,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK133",
+    "ten_chu_ho": "ĐẶNG TRUẬT",
+    "so_cmnd_chu_ho": "200321060",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK134",
+    "ten_chu_ho": "VÕ THỊ KIM PHƯỢNG",
+    "so_cmnd_chu_ho": "200964696",
+    "so_dien_thoai": "0935334642",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK135",
+    "ten_chu_ho": "VÕ THỊ KIM THANH",
+    "so_cmnd_chu_ho": "200964695",
+    "so_dien_thoai": "0934856529",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK136",
+    "ten_chu_ho": "NGUYỄN HÙNG SƠN",
+    "so_cmnd_chu_ho": "200321127",
+    "so_dien_thoai": "0776586416",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK137",
+    "ten_chu_ho": "ĐẶNG THỊ TUYẾT",
+    "so_cmnd_chu_ho": "200320965",
+    "so_dien_thoai": "0912768867",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK138",
+    "ten_chu_ho": "NGÔ NGHĨA",
+    "so_cmnd_chu_ho": "201316959",
+    "so_dien_thoai": "0934776838",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK139",
+    "ten_chu_ho": "ĐẶNG VĂN OAI",
+    "so_cmnd_chu_ho": "200320936",
+    "so_dien_thoai": "0907269178",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK140",
+    "ten_chu_ho": "NGUYỄN TẤN VIỆT",
+    "so_cmnd_chu_ho": "048079005735",
+    "so_dien_thoai": "0905027526",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK141",
+    "ten_chu_ho": "TRƯƠNG THỊ NHĨ",
+    "so_cmnd_chu_ho": "200320926",
+    "so_dien_thoai": "0905102463",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK142",
+    "ten_chu_ho": "ĐẶNG THỊ XUÂN",
+    "so_cmnd_chu_ho": "048158003731",
+    "so_dien_thoai": "0707358399",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK143",
+    "ten_chu_ho": "VÕ THỊ HỒNG LÝ",
+    "so_cmnd_chu_ho": "200730705",
+    "so_dien_thoai": "0986672101",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK144",
+    "ten_chu_ho": "ĐẶNG TÌNH",
+    "so_cmnd_chu_ho": "200321225",
+    "so_dien_thoai": "0896203378",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 8,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK145",
+    "ten_chu_ho": "ĐẶNG THÀNH PHƯƠNG",
+    "so_cmnd_chu_ho": "201700520",
+    "so_dien_thoai": "0355650470",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 10,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK146",
+    "ten_chu_ho": "ĐẶNG THÀNH HIỂN",
+    "so_cmnd_chu_ho": "200893333",
+    "so_dien_thoai": "0788793307",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK147",
+    "ten_chu_ho": "NGÔ THỊ DIỆP",
+    "so_cmnd_chu_ho": "200320963",
+    "so_dien_thoai": "0776513595",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK148",
+    "ten_chu_ho": "ĐẶNG VĂN HẠNH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "0763268699",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK149",
+    "ten_chu_ho": "ĐẶNG PHƯỚC THẠNH",
+    "so_cmnd_chu_ho": "201263826",
+    "so_dien_thoai": "0909535238",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK150",
+    "ten_chu_ho": "ĐẶNG VĂN QUỐC",
+    "so_cmnd_chu_ho": "200805422",
+    "so_dien_thoai": "0905112441",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK151",
+    "ten_chu_ho": "THÁI THỊ HIỆP",
+    "so_cmnd_chu_ho": "200320976",
+    "so_dien_thoai": "0905112441",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK152",
+    "ten_chu_ho": "ĐẶNG VĂN NGA",
+    "so_cmnd_chu_ho": "201077820",
+    "so_dien_thoai": "0934987622",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK153",
+    "ten_chu_ho": "ĐẶNG VĂN PHIÊN",
+    "so_cmnd_chu_ho": "201005064",
+    "so_dien_thoai": "0905607828",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK154",
+    "ten_chu_ho": "DOÃN THANH QUANG",
+    "so_cmnd_chu_ho": "201007789",
+    "so_dien_thoai": "0905114402",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK155",
+    "ten_chu_ho": "NGUYỄN THỊ THÔI",
+    "so_cmnd_chu_ho": "048146002538",
+    "so_dien_thoai": "076493962",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK156",
+    "ten_chu_ho": "DOÃN QUÝ",
+    "so_cmnd_chu_ho": "201005058",
+    "so_dien_thoai": "0905609928",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 11,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK157",
+    "ten_chu_ho": "TRƯƠNG THỊ ĐIỂM",
+    "so_cmnd_chu_ho": "200321996",
+    "so_dien_thoai": "0905822786",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK158",
+    "ten_chu_ho": "NGUYỄN VĂN HÀ",
+    "so_cmnd_chu_ho": "200890232",
+    "so_dien_thoai": "0906540318",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK159",
+    "ten_chu_ho": "ĐẶNG THỊ BÍCH SƠN",
+    "so_cmnd_chu_ho": "200964438",
+    "so_dien_thoai": "0905990261",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK160",
+    "ten_chu_ho": "ĐẶNG THANH TỊNH",
+    "so_cmnd_chu_ho": "201491737",
+    "so_dien_thoai": "0935100770",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK161",
+    "ten_chu_ho": "ĐẶNG THIỆU",
+    "so_cmnd_chu_ho": "200320919",
+    "so_dien_thoai": "0702419015",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK162",
+    "ten_chu_ho": "NGUYỄN THỊ MẪN",
+    "so_cmnd_chu_ho": "200859739",
+    "so_dien_thoai": "0945674725",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK163",
+    "ten_chu_ho": "NGUYỄN TỀ",
+    "so_cmnd_chu_ho": "200320998",
+    "so_dien_thoai": "0935647981",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK164",
+    "ten_chu_ho": "ĐẶNG HUẤN",
+    "so_cmnd_chu_ho": "200321013",
+    "so_dien_thoai": "0935282701",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 9,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK165",
+    "ten_chu_ho": "DOÃN THỊ DỤC",
+    "so_cmnd_chu_ho": "200320953",
+    "so_dien_thoai": "0903675354",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK166",
+    "ten_chu_ho": "ĐẶNG NGỌC LỤA",
+    "so_cmnd_chu_ho": "200167586",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK167",
+    "ten_chu_ho": "ĐẶNG VĂN HÙNG",
+    "so_cmnd_chu_ho": "201157948",
+    "so_dien_thoai": "0906444858",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK168",
+    "ten_chu_ho": "ĐẶNG THỊ LUẬN",
+    "so_cmnd_chu_ho": "200749275",
+    "so_dien_thoai": "0767172610",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK169",
+    "ten_chu_ho": "ĐẶNG LẠC",
+    "so_cmnd_chu_ho": "200964670",
+    "so_dien_thoai": "0782257260",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK171",
+    "ten_chu_ho": "ĐẶNG VĂN DŨNG",
+    "so_cmnd_chu_ho": "201205310",
+    "so_dien_thoai": "0768511774",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK172",
+    "ten_chu_ho": "VỆ THỊ HÀ",
+    "so_cmnd_chu_ho": "201634527",
+    "so_dien_thoai": "0798794959",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK173",
+    "ten_chu_ho": "NGUYỄN THỊ LIỀU",
+    "so_cmnd_chu_ho": "200321097",
+    "so_dien_thoai": "0935191383",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK175",
+    "ten_chu_ho": "VỆ PHÚ HÒA",
+    "so_cmnd_chu_ho": "201460600",
+    "so_dien_thoai": "0935191383",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK176",
+    "ten_chu_ho": "ĐẶNG THỊ LỰ",
+    "so_cmnd_chu_ho": "200321204",
+    "so_dien_thoai": "0935691672",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK177",
+    "ten_chu_ho": "VỆ THỊ THẢO",
+    "so_cmnd_chu_ho": "201005069",
+    "so_dien_thoai": "0905613432",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK178",
+    "ten_chu_ho": "NGUYỄN THỊ HINH",
+    "so_cmnd_chu_ho": "200832682",
+    "so_dien_thoai": "0934824796",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK179",
+    "ten_chu_ho": "DOÃN ĐÌNH DƯƠNG",
+    "so_cmnd_chu_ho": "201317034",
+    "so_dien_thoai": "0906475210",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK180",
+    "ten_chu_ho": "ĐẶNG NGỌC CHÂU",
+    "so_cmnd_chu_ho": "200140731",
+    "so_dien_thoai": "0903639408",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK181",
+    "ten_chu_ho": "ĐẶNG NGỌC HỒNG",
+    "so_cmnd_chu_ho": "200320995",
+    "so_dien_thoai": "0972846133",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK182",
+    "ten_chu_ho": "ĐẶNG ĐÀO",
+    "so_cmnd_chu_ho": "048070005912",
+    "so_dien_thoai": "0762651363",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK183",
+    "ten_chu_ho": "VÕ TRỢ",
+    "so_cmnd_chu_ho": "200320994",
+    "so_dien_thoai": "0905531012",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 9,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK184",
+    "ten_chu_ho": "ĐẶNG THỊ LAN",
+    "so_cmnd_chu_ho": "200321069",
+    "so_dien_thoai": "0984073426",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK185",
+    "ten_chu_ho": "VÕ PHAN QUANG THUẬN",
+    "so_cmnd_chu_ho": "201538157",
+    "so_dien_thoai": "0935585930",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK186",
+    "ten_chu_ho": "ĐẶNG VĂN MINH",
+    "so_cmnd_chu_ho": "200859703",
+    "so_dien_thoai": "0905434623",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK187",
+    "ten_chu_ho": "VÕ THU THẢO",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK188",
+    "ten_chu_ho": "NGUYỄN XE",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK189",
+    "ten_chu_ho": "VÕ THỊ TUYẾT SƯƠNG",
+    "so_cmnd_chu_ho": "201500632",
+    "so_dien_thoai": "0359408702",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK190",
+    "ten_chu_ho": "NGUYỄN LÂM",
+    "so_cmnd_chu_ho": "201157944",
+    "so_dien_thoai": "0338501746",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 12,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK192",
+    "ten_chu_ho": "NGUYỄN VĂN ÍCH",
+    "so_cmnd_chu_ho": "200964957",
+    "so_dien_thoai": "0389505157",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK193",
+    "ten_chu_ho": "PHẠM THỊ THU PHƯƠNG",
+    "so_cmnd_chu_ho": "200685863",
+    "so_dien_thoai": "0774042003",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK194",
+    "ten_chu_ho": "LÊ PHƯƠNG",
+    "so_cmnd_chu_ho": "200320939",
+    "so_dien_thoai": "0708182685",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK195",
+    "ten_chu_ho": "LÊ CÔNG KHÁNH",
+    "so_cmnd_chu_ho": "200832797",
+    "so_dien_thoai": "0905969825",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK196",
+    "ten_chu_ho": "NGUYỄN THỊ HIỀN",
+    "so_cmnd_chu_ho": "201352557",
+    "so_dien_thoai": "0903500494",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK197",
+    "ten_chu_ho": "ĐẶNG THỊ BÍCH LIÊN",
+    "so_cmnd_chu_ho": "201565964",
+    "so_dien_thoai": "0788589808",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK198",
+    "ten_chu_ho": "NGUYỄN VĂN CỨ",
+    "so_cmnd_chu_ho": "201235291",
+    "so_dien_thoai": "0935230414",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK199",
+    "ten_chu_ho": "NGUYỄN KHÁNH HOÀNG",
+    "so_cmnd_chu_ho": "201505316",
+    "so_dien_thoai": "0908822829",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK200",
+    "ten_chu_ho": "NGUYỄN THỊ SỞ",
+    "so_cmnd_chu_ho": "200320970",
+    "so_dien_thoai": "0905834266",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK201",
+    "ten_chu_ho": "NGUYỄN VĂN CÔI",
+    "so_cmnd_chu_ho": "201005018",
+    "so_dien_thoai": "0905834266",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK202",
+    "ten_chu_ho": "NGUYỄN VĂN ĐÔNG",
+    "so_cmnd_chu_ho": "201641785",
+    "so_dien_thoai": "0702615552",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK203",
+    "ten_chu_ho": "ĐẶNG THỊ LUÔN",
+    "so_cmnd_chu_ho": "048149001484",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK205",
+    "ten_chu_ho": "ĐẶNG KẾ",
+    "so_cmnd_chu_ho": "201205243",
+    "so_dien_thoai": "0905470867",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK206",
+    "ten_chu_ho": "PHẠM THỊ KHÁCH",
+    "so_cmnd_chu_ho": "200320945",
+    "so_dien_thoai": "0767172610",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK207",
+    "ten_chu_ho": "ĐẶNG KÝ",
+    "so_cmnd_chu_ho": "200320941",
+    "so_dien_thoai": "0933903275",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 9,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK208",
+    "ten_chu_ho": "ĐẶNG ĐOAN",
+    "so_cmnd_chu_ho": "200749303",
+    "so_dien_thoai": "0769910018",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK209",
+    "ten_chu_ho": "NGUYỄN HƠN",
+    "so_cmnd_chu_ho": "201317005",
+    "so_dien_thoai": "0783915608",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK210",
+    "ten_chu_ho": "ĐẶNG TIẾU",
+    "so_cmnd_chu_ho": "200321036",
+    "so_dien_thoai": "0773521793",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK211",
+    "ten_chu_ho": "ĐẶNG VĂN DŨNG",
+    "so_cmnd_chu_ho": "200832958",
+    "so_dien_thoai": "0903752640",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK212",
+    "ten_chu_ho": "ĐẶNG VĂN THỌ",
+    "so_cmnd_chu_ho": "201641164",
+    "so_dien_thoai": "0903789626",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK213",
+    "ten_chu_ho": "ĐẶNG NINH",
+    "so_cmnd_chu_ho": "200320984",
+    "so_dien_thoai": "0775465061",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK214",
+    "ten_chu_ho": "LÊ VĂN THUẬN",
+    "so_cmnd_chu_ho": "200179480",
+    "so_dien_thoai": "0935470866",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK215",
+    "ten_chu_ho": "NGUYỄN VĂN HOÀI",
+    "so_cmnd_chu_ho": "200320934",
+    "so_dien_thoai": "0914004451",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK216",
+    "ten_chu_ho": "LÂM THỊ ÁI",
+    "so_cmnd_chu_ho": "201691839",
+    "so_dien_thoai": "0778567880",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK217",
+    "ten_chu_ho": "DƯƠNG THỊ TÂM",
+    "so_cmnd_chu_ho": "200820398",
+    "so_dien_thoai": "0905160401",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK218",
+    "ten_chu_ho": "ĐẶNG CHIẾN",
+    "so_cmnd_chu_ho": "200320972",
+    "so_dien_thoai": "0777438539",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 10,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK219",
+    "ten_chu_ho": "NGUYỄN THỊ MỰC",
+    "so_cmnd_chu_ho": "200320776",
+    "so_dien_thoai": "0901121173",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK220",
+    "ten_chu_ho": "ĐẶNG THỊ LỢI",
+    "so_cmnd_chu_ho": "200320955",
+    "so_dien_thoai": "0906504268",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK221",
+    "ten_chu_ho": "NGUYỄN BÁ",
+    "so_cmnd_chu_ho": "200321154",
+    "so_dien_thoai": "0763480520",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK222",
+    "ten_chu_ho": "NGUYỄN THỊ THỨ",
+    "so_cmnd_chu_ho": "200320676",
+    "so_dien_thoai": "0908861293",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK223",
+    "ten_chu_ho": "ĐINH NGỌC HUẤN",
+    "so_cmnd_chu_ho": "200980180",
+    "so_dien_thoai": "0392776402",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK224",
+    "ten_chu_ho": "ĐẶNG THỨC",
+    "so_cmnd_chu_ho": "200203131",
+    "so_dien_thoai": "0905628660",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK225",
+    "ten_chu_ho": "ĐẶNG THỊ NGỌT",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK226",
+    "ten_chu_ho": "ĐẶNG NGHĨA",
+    "so_cmnd_chu_ho": "200320920",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK227",
+    "ten_chu_ho": "ĐẶNG VĂN LAI",
+    "so_cmnd_chu_ho": "201077695",
+    "so_dien_thoai": "0935218634",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK228",
+    "ten_chu_ho": "ĐẶNG NGỌC PHÚ QUỐC",
+    "so_cmnd_chu_ho": "201571435",
+    "so_dien_thoai": "0905823847",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK229",
+    "ten_chu_ho": "ĐẶNG THỊ MỸ",
+    "so_cmnd_chu_ho": "048168007310",
+    "so_dien_thoai": "0766659575",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK230",
+    "ten_chu_ho": "LÊ THỊ THU THANH",
+    "so_cmnd_chu_ho": "201505399",
+    "so_dien_thoai": "0935564976",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK231",
+    "ten_chu_ho": "ĐẶNG THỊ DIỄM",
+    "so_cmnd_chu_ho": "200320987",
+    "so_dien_thoai": "0768451330",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK232",
+    "ten_chu_ho": "VÕ NHỰT",
+    "so_cmnd_chu_ho": "201582129",
+    "so_dien_thoai": "0905949373",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK233",
+    "ten_chu_ho": "ĐẶNG NGỌC THỊNH",
+    "so_cmnd_chu_ho": "201574279",
+    "so_dien_thoai": "0905119249",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK235",
+    "ten_chu_ho": "ĐINH THỊ THANH THÚY",
+    "so_cmnd_chu_ho": "201505386",
+    "so_dien_thoai": "0907076105",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK236",
+    "ten_chu_ho": "HỒ VIẾT BÌNH",
+    "so_cmnd_chu_ho": "182047660",
+    "so_dien_thoai": "0984380788",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK237",
+    "ten_chu_ho": "NGUYỄN TRUNG TÂM",
+    "so_cmnd_chu_ho": "201486497",
+    "so_dien_thoai": "0397487559",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK238",
+    "ten_chu_ho": "NGUYỄN VĂN NHẬT",
+    "so_cmnd_chu_ho": "201376557",
+    "so_dien_thoai": "0707153018",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 8,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK239",
+    "ten_chu_ho": "ĐẶNG VĂN ĐỐI",
+    "so_cmnd_chu_ho": "200320727",
+    "so_dien_thoai": "0905202317",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK240",
+    "ten_chu_ho": "TRƯƠNG THỊ THU HƯƠNG",
+    "so_cmnd_chu_ho": "200320694",
+    "so_dien_thoai": "0903287847",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 10,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK241",
+    "ten_chu_ho": "PHẠM VĂN MƯỜI",
+    "so_cmnd_chu_ho": "048073005159",
+    "so_dien_thoai": "0766638658",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK242",
+    "ten_chu_ho": "VÕ LONG",
+    "so_cmnd_chu_ho": "200320603",
+    "so_dien_thoai": "0935136342",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 9,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK243",
+    "ten_chu_ho": "ĐẶNG TÀU",
+    "so_cmnd_chu_ho": "200320606",
+    "so_dien_thoai": "0783944469",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK244",
+    "ten_chu_ho": "PHẠM XONG",
+    "so_cmnd_chu_ho": "200832878",
+    "so_dien_thoai": "0702193694",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK245",
+    "ten_chu_ho": "PHẠM VĂN VIỆT",
+    "so_cmnd_chu_ho": "201570892",
+    "so_dien_thoai": "0905532170",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK246",
+    "ten_chu_ho": "TRẦN THỊ ÂN",
+    "so_cmnd_chu_ho": "200320681",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK247",
+    "ten_chu_ho": "ĐẶNG QUANG VIÊN",
+    "so_cmnd_chu_ho": "200320874",
+    "so_dien_thoai": "0905258946",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 8,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK248",
+    "ten_chu_ho": "ĐẶNG VĂN TOÀN",
+    "so_cmnd_chu_ho": "048068003072",
+    "so_dien_thoai": "0795729333",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK249",
+    "ten_chu_ho": "NGUYỄN VĂN LỢI",
+    "so_cmnd_chu_ho": "201157689",
+    "so_dien_thoai": "0905831527",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK250",
+    "ten_chu_ho": "VÕ SÁU",
+    "so_cmnd_chu_ho": "200832810",
+    "so_dien_thoai": "0762647834",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK251",
+    "ten_chu_ho": "NGUYỄN VĂN TÍCH",
+    "so_cmnd_chu_ho": "201005011",
+    "so_dien_thoai": "0935583673",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK252",
+    "ten_chu_ho": "PHẠM THỊ LIÊN",
+    "so_cmnd_chu_ho": "200320745",
+    "so_dien_thoai": "0916199945",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK253",
+    "ten_chu_ho": "NGUYỄN THỊ XÍ",
+    "so_cmnd_chu_ho": "200047702",
+    "so_dien_thoai": "0905529950",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK254",
+    "ten_chu_ho": "NGUYỄN CỨ",
+    "so_cmnd_chu_ho": "200820763",
+    "so_dien_thoai": "0905192726",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 11,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK256",
+    "ten_chu_ho": "ĐẶNG THỊ KIỆU",
+    "so_cmnd_chu_ho": "200320733",
+    "so_dien_thoai": "0772187214",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK257",
+    "ten_chu_ho": "ĐINH TUÂN",
+    "so_cmnd_chu_ho": "201235390",
+    "so_dien_thoai": "0931915790",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK258",
+    "ten_chu_ho": "ĐẶNG THỌ",
+    "so_cmnd_chu_ho": "200890111",
+    "so_dien_thoai": "0905977834",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK259",
+    "ten_chu_ho": "ĐINH CA",
+    "so_cmnd_chu_ho": "200152993",
+    "so_dien_thoai": "0905989776",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK260",
+    "ten_chu_ho": "NGUYỄN ÁNH",
+    "so_cmnd_chu_ho": "201157808",
+    "so_dien_thoai": "0906416458",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK261",
+    "ten_chu_ho": "VÕ KỲ",
+    "so_cmnd_chu_ho": "200320615",
+    "so_dien_thoai": "0989883256",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK262",
+    "ten_chu_ho": "NGUYỄN XIN",
+    "so_cmnd_chu_ho": "200320670",
+    "so_dien_thoai": "0985400260",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 9,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK263",
+    "ten_chu_ho": "NGUYỄN XUÂN",
+    "so_cmnd_chu_ho": "201235374",
+    "so_dien_thoai": "0932457812",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK264",
+    "ten_chu_ho": "ĐẶNG THỊ BÉ",
+    "so_cmnd_chu_ho": "048170000889",
+    "so_dien_thoai": "0795667802",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK265",
+    "ten_chu_ho": "ĐẶNG THỊ BẠN",
+    "so_cmnd_chu_ho": "200320868",
+    "so_dien_thoai": "0766761573",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK266",
+    "ten_chu_ho": "ĐẶNG THÁI ĐỨC",
+    "so_cmnd_chu_ho": "201363835",
+    "so_dien_thoai": "0905795941",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK267",
+    "ten_chu_ho": "NGUYỄN THỊ TỰ",
+    "so_cmnd_chu_ho": "201677744",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK268",
+    "ten_chu_ho": "ĐẶNG THỊ HỒNG",
+    "so_cmnd_chu_ho": "200028240",
+    "so_dien_thoai": "0935219136",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK269",
+    "ten_chu_ho": "NGÔ THỊ XOA",
+    "so_cmnd_chu_ho": "200320691",
+    "so_dien_thoai": "0935372289",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK270",
+    "ten_chu_ho": "BÙI THỊ GÁI",
+    "so_cmnd_chu_ho": "200320753",
+    "so_dien_thoai": "0905356312",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK271",
+    "ten_chu_ho": "ĐẶNG ĐOÀN",
+    "so_cmnd_chu_ho": "200320508",
+    "so_dien_thoai": "0904863758",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK272",
+    "ten_chu_ho": "TRẦN ĐÌNH TÂN",
+    "so_cmnd_chu_ho": "200163623",
+    "so_dien_thoai": "0905315694",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 8,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK273",
+    "ten_chu_ho": "NGUYỄN MINH TÂM",
+    "so_cmnd_chu_ho": "200890109",
+    "so_dien_thoai": "0905499792",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK274",
+    "ten_chu_ho": "NGUYỄN CHÁNH TÍN",
+    "so_cmnd_chu_ho": "201505410",
+    "so_dien_thoai": "0935786749",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK275",
+    "ten_chu_ho": "PHẠM GIÀU",
+    "so_cmnd_chu_ho": "200320702",
+    "so_dien_thoai": "0902395974",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK276",
+    "ten_chu_ho": "PHẠM RÔ",
+    "so_cmnd_chu_ho": "048070006667",
+    "so_dien_thoai": "0236350809",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK277",
+    "ten_chu_ho": "ĐẶNG THỬ",
+    "so_cmnd_chu_ho": "048063000602",
+    "so_dien_thoai": "0905868509",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK278",
+    "ten_chu_ho": "ĐẶNG VĂN SINH",
+    "so_cmnd_chu_ho": "048092000566",
+    "so_dien_thoai": "0773532642",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK279",
+    "ten_chu_ho": "ĐẶNG VĂN QUANG",
+    "so_cmnd_chu_ho": "200964629",
+    "so_dien_thoai": "0905202317",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK280",
+    "ten_chu_ho": "PHẠM THỊ TỨ",
+    "so_cmnd_chu_ho": "200245263",
+    "so_dien_thoai": "0899226647",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK281",
+    "ten_chu_ho": "PHAN LAN",
+    "so_cmnd_chu_ho": "200199845",
+    "so_dien_thoai": "0905454485",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK282",
+    "ten_chu_ho": "PHAN THỊ NGỌC ÁNH",
+    "so_cmnd_chu_ho": "201582007",
+    "so_dien_thoai": "0905695654",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK283",
+    "ten_chu_ho": "HỒ THỊ LIÊN",
+    "so_cmnd_chu_ho": "048165000724",
+    "so_dien_thoai": "0906419250",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK284",
+    "ten_chu_ho": "ĐẶNG THỊ SIM",
+    "so_cmnd_chu_ho": "200320617",
+    "so_dien_thoai": "0934866124",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK285",
+    "ten_chu_ho": "VÕ NHA",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK286",
+    "ten_chu_ho": "LÂM TÙNG NGHĨA",
+    "so_cmnd_chu_ho": "048068005735",
+    "so_dien_thoai": "0988190620",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK288",
+    "ten_chu_ho": "VÕ THỊ NHẠN",
+    "so_cmnd_chu_ho": "200320754",
+    "so_dien_thoai": "0905897526",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK289",
+    "ten_chu_ho": "ĐẶNG VĂN PHƯỚC",
+    "so_cmnd_chu_ho": "201590308",
+    "so_dien_thoai": "0914162252",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK290",
+    "ten_chu_ho": "VÕ THÀNH TRƯỞNG",
+    "so_cmnd_chu_ho": "200964871",
+    "so_dien_thoai": "0789557138",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK291",
+    "ten_chu_ho": "NGUYỄN ĐÍNH",
+    "so_cmnd_chu_ho": "200320697",
+    "so_dien_thoai": "0905628031",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK292",
+    "ten_chu_ho": "PHẠM THƯỚC",
+    "so_cmnd_chu_ho": "200066858",
+    "so_dien_thoai": "0775418979",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK293",
+    "ten_chu_ho": "PHẠM VĂN TIẾN",
+    "so_cmnd_chu_ho": "201005007",
+    "so_dien_thoai": "0935213847",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK294",
+    "ten_chu_ho": "ĐẶNG THỊ LỆ QUYÊN",
+    "so_cmnd_chu_ho": "201538151",
+    "so_dien_thoai": "0905987207",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK295",
+    "ten_chu_ho": "ĐẶNG TRUNG HIẾU",
+    "so_cmnd_chu_ho": "201520908",
+    "so_dien_thoai": "0935786794",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK296",
+    "ten_chu_ho": "ĐẶNG THỊ TẠO",
+    "so_cmnd_chu_ho": "201317029",
+    "so_dien_thoai": "0794512548",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK297",
+    "ten_chu_ho": "ĐẶNG ĐỨC HIẾU",
+    "so_cmnd_chu_ho": "201582099",
+    "so_dien_thoai": "0905416425",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK298",
+    "ten_chu_ho": "PHẠM NHÂN",
+    "so_cmnd_chu_ho": "200320869",
+    "so_dien_thoai": "0949429944",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 8,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK299",
+    "ten_chu_ho": "ĐẶNG QUỐC HUY",
+    "so_cmnd_chu_ho": "201505345",
+    "so_dien_thoai": "0358576220",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK300",
+    "ten_chu_ho": "ĐẶNG THỊ THỦY LY",
+    "so_cmnd_chu_ho": "201416079",
+    "so_dien_thoai": "0396203741",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK301",
+    "ten_chu_ho": "PHẠM CÔNG TUÂN",
+    "so_cmnd_chu_ho": "201444739",
+    "so_dien_thoai": "0905772118",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK302",
+    "ten_chu_ho": "VÕ VĂN THUẬN",
+    "so_cmnd_chu_ho": "201505383",
+    "so_dien_thoai": "0905764828",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK303",
+    "ten_chu_ho": "ĐẶNG VĂN HÓA",
+    "so_cmnd_chu_ho": "201396975",
+    "so_dien_thoai": "0905954335",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK304",
+    "ten_chu_ho": "NGUYỄN THỊ THU THANH",
+    "so_cmnd_chu_ho": "201005107",
+    "so_dien_thoai": "0796668822",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK305",
+    "ten_chu_ho": "ĐẶNG THỊ TỰU",
+    "so_cmnd_chu_ho": "200320878",
+    "so_dien_thoai": "0358301586",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK306",
+    "ten_chu_ho": "ĐẶNG TẤN CA",
+    "so_cmnd_chu_ho": "048078006210",
+    "so_dien_thoai": "0775441472",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK307",
+    "ten_chu_ho": "ĐẶNG HOÀNG BÌNH",
+    "so_cmnd_chu_ho": "201205116",
+    "so_dien_thoai": "0792755957",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK308",
+    "ten_chu_ho": "PHẠM CÔNG TÀI",
+    "so_cmnd_chu_ho": "201505341",
+    "so_dien_thoai": "0799305924",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK309",
+    "ten_chu_ho": "DƯƠNG THỊ BỐN",
+    "so_cmnd_chu_ho": "049162001132",
+    "so_dien_thoai": "0339469047",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK310",
+    "ten_chu_ho": "VÕ THỊ MINH TUYẾT",
+    "so_cmnd_chu_ho": "201460647",
+    "so_dien_thoai": "0905828318",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK311",
+    "ten_chu_ho": "NGUYỄN THỊ KIÊN DANG",
+    "so_cmnd_chu_ho": "201570297",
+    "so_dien_thoai": "0905798948",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 12,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK312",
+    "ten_chu_ho": "ĐẶNG CÔNG THỐNG",
+    "so_cmnd_chu_ho": "201325329",
+    "so_dien_thoai": "0908615196",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK313",
+    "ten_chu_ho": "ĐẶNG THỨ",
+    "so_cmnd_chu_ho": "200320630",
+    "so_dien_thoai": "0979605465",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK314",
+    "ten_chu_ho": "VÕ THIỆU",
+    "so_cmnd_chu_ho": "200320700",
+    "so_dien_thoai": "0931958645",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK315",
+    "ten_chu_ho": "VÕ HIỆU",
+    "so_cmnd_chu_ho": "200320782",
+    "so_dien_thoai": "0762507043",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK316",
+    "ten_chu_ho": "VÕ HOÀNG",
+    "so_cmnd_chu_ho": "200320674",
+    "so_dien_thoai": "0765583627",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK317",
+    "ten_chu_ho": "ĐẶNG CÔNG",
+    "so_cmnd_chu_ho": "200320587",
+    "so_dien_thoai": "0935403229",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK318",
+    "ten_chu_ho": "ĐẶNG THỊ BÌNH",
+    "so_cmnd_chu_ho": "200320589",
+    "so_dien_thoai": "0778776736",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK319",
+    "ten_chu_ho": "VÕ ĐÌNH NGUYÊN",
+    "so_cmnd_chu_ho": "200320703",
+    "so_dien_thoai": "0775816083",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK320",
+    "ten_chu_ho": "VÕ THỊ LỊCH",
+    "so_cmnd_chu_ho": "200832838",
+    "so_dien_thoai": "0763187929",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK321",
+    "ten_chu_ho": "NGUYỄN THỊ NĂM",
+    "so_cmnd_chu_ho": "200320628",
+    "so_dien_thoai": "0774941255",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK322",
+    "ten_chu_ho": "PHẠM HỒNG VIỆT",
+    "so_cmnd_chu_ho": "201538160",
+    "so_dien_thoai": "0906512188",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK323",
+    "ten_chu_ho": "PHẠM THỊ PHA",
+    "so_cmnd_chu_ho": "200320666",
+    "so_dien_thoai": "0385001125",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK324",
+    "ten_chu_ho": "PHẠM THỊ ĐẶNG KIỀU DIỄM",
+    "so_cmnd_chu_ho": "201582008",
+    "so_dien_thoai": "0936319141",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK325",
+    "ten_chu_ho": "NGUYỄN THỊ CHÚT",
+    "so_cmnd_chu_ho": "200320826",
+    "so_dien_thoai": "0766733881",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK326",
+    "ten_chu_ho": "LÊ TRÌNH",
+    "so_cmnd_chu_ho": "200320821",
+    "so_dien_thoai": "0905324601",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK327",
+    "ten_chu_ho": "PHẠM TRUNG",
+    "so_cmnd_chu_ho": "200320610",
+    "so_dien_thoai": "0795566382",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK328",
+    "ten_chu_ho": "ĐẶNG LA",
+    "so_cmnd_chu_ho": "200320592",
+    "so_dien_thoai": "0702336826",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK329",
+    "ten_chu_ho": "VÕ VĂN SANG",
+    "so_cmnd_chu_ho": "200320798",
+    "so_dien_thoai": "0935120956",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK330",
+    "ten_chu_ho": "NGUYỄN SỰ",
+    "so_cmnd_chu_ho": "200832801",
+    "so_dien_thoai": "0389941077",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK331",
+    "ten_chu_ho": "NGUYỄN PHI HÙNG",
+    "so_cmnd_chu_ho": "201700483",
+    "so_dien_thoai": "0776377581",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK332",
+    "ten_chu_ho": "NGUYỄN PHI SƠN",
+    "so_cmnd_chu_ho": "201363774",
+    "so_dien_thoai": "0988442946",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK333",
+    "ten_chu_ho": "ĐẶNG VĂN SANH",
+    "so_cmnd_chu_ho": "200832914",
+    "so_dien_thoai": "0905990925",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK334",
+    "ten_chu_ho": "ĐẶNG THỊ HOA",
+    "so_cmnd_chu_ho": "200199398",
+    "so_dien_thoai": "0902795125",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK335",
+    "ten_chu_ho": "PHẠM THANH",
+    "so_cmnd_chu_ho": "200320900",
+    "so_dien_thoai": "0905944462",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK336",
+    "ten_chu_ho": "PHẠM CÔNG ANH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK337",
+    "ten_chu_ho": "ĐẶNG HIỀN",
+    "so_cmnd_chu_ho": "200320595",
+    "so_dien_thoai": "0779444269",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK338",
+    "ten_chu_ho": "NGUYỄN MUÔN",
+    "so_cmnd_chu_ho": "200320815",
+    "so_dien_thoai": "0702578556",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 8,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK339",
+    "ten_chu_ho": "NGUYỄN THỊ CHIẾN",
+    "so_cmnd_chu_ho": "200320683",
+    "so_dien_thoai": "0369656673",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 9,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK340",
+    "ten_chu_ho": "VÕ THỊ THU VÂN",
+    "so_cmnd_chu_ho": "201157501",
+    "so_dien_thoai": "0799420445",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK341",
+    "ten_chu_ho": "VŨ THỊ DUNG",
+    "so_cmnd_chu_ho": "200320810",
+    "so_dien_thoai": "0793644844",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK342",
+    "ten_chu_ho": "TRẦN MAI TRƯỜNG",
+    "so_cmnd_chu_ho": "201205277",
+    "so_dien_thoai": "0793644844",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK343",
+    "ten_chu_ho": "VÕ DỰ",
+    "so_cmnd_chu_ho": "200320806",
+    "so_dien_thoai": "0905682340",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK344",
+    "ten_chu_ho": "VÕ ĐỨC THUẬN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK345",
+    "ten_chu_ho": "VÕ THỊ BÚT",
+    "so_cmnd_chu_ho": "200320687",
+    "so_dien_thoai": "0779538147",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK346",
+    "ten_chu_ho": "VÕ KHẢI",
+    "so_cmnd_chu_ho": "200320724",
+    "so_dien_thoai": "0905249386",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK347",
+    "ten_chu_ho": "VÕ ĐÁ",
+    "so_cmnd_chu_ho": "201157932",
+    "so_dien_thoai": "0905249386",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK349",
+    "ten_chu_ho": "LÊ HẠC",
+    "so_cmnd_chu_ho": "200320747",
+    "so_dien_thoai": "0905026003",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK350",
+    "ten_chu_ho": "ĐẶNG VĂN QUÂN",
+    "so_cmnd_chu_ho": "024941032",
+    "so_dien_thoai": "0961108274",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK351",
+    "ten_chu_ho": "PHẠM NGỌC KHÔI",
+    "so_cmnd_chu_ho": "201460530",
+    "so_dien_thoai": "0905168712",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK352",
+    "ten_chu_ho": "ĐẶNG THỊ THU",
+    "so_cmnd_chu_ho": "201317162",
+    "so_dien_thoai": "0332172148",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK353",
+    "ten_chu_ho": "NGUYỄN THỊ NGA",
+    "so_cmnd_chu_ho": "200320625",
+    "so_dien_thoai": "0397743127",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK354",
+    "ten_chu_ho": "PHẠM PHÚ QUỐC",
+    "so_cmnd_chu_ho": "201536638",
+    "so_dien_thoai": "0905783693",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK355",
+    "ten_chu_ho": "VÕ ĐỨC THỊNH",
+    "so_cmnd_chu_ho": "201460535",
+    "so_dien_thoai": "0905746169",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK357",
+    "ten_chu_ho": "VÕ THỊ HƯƠNG",
+    "so_cmnd_chu_ho": "200964642",
+    "so_dien_thoai": "0935309937",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK358",
+    "ten_chu_ho": "LÊ THỊ MẸO",
+    "so_cmnd_chu_ho": "200320871",
+    "so_dien_thoai": "0905764361",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK359",
+    "ten_chu_ho": "VÕ ĐÔNG GIANG",
+    "so_cmnd_chu_ho": "201523988",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK361",
+    "ten_chu_ho": "TRẦN MINH LỢI",
+    "so_cmnd_chu_ho": "201485606",
+    "so_dien_thoai": "0935303038",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK362",
+    "ten_chu_ho": "LÊ BIÊN",
+    "so_cmnd_chu_ho": "200320878",
+    "so_dien_thoai": "0905324601",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK363",
+    "ten_chu_ho": "PHẠM THỊ HỒNG HẠNH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK364",
+    "ten_chu_ho": "HOÀNG THỊ NGHI",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "0983798255",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK365",
+    "ten_chu_ho": "VÕ THANH LONG",
+    "so_cmnd_chu_ho": "200320649",
+    "so_dien_thoai": "0795572286",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK366",
+    "ten_chu_ho": "TRẦN THỊ NGA",
+    "so_cmnd_chu_ho": "200320734",
+    "so_dien_thoai": "0775235854",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK367",
+    "ten_chu_ho": "NGUYỄN QUANG THƠ",
+    "so_cmnd_chu_ho": "200320892",
+    "so_dien_thoai": "0799335700",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK368",
+    "ten_chu_ho": "ĐẶNG NHỎ",
+    "so_cmnd_chu_ho": "200964630",
+    "so_dien_thoai": "0707560114",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK369",
+    "ten_chu_ho": "ĐẶNG THỊ TÂM",
+    "so_cmnd_chu_ho": "200320736",
+    "so_dien_thoai": "0797183665",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK370",
+    "ten_chu_ho": "VÕ THỊ PHƯỚC",
+    "so_cmnd_chu_ho": "048154003786",
+    "so_dien_thoai": "0772526657",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK371",
+    "ten_chu_ho": "VÕ VĂN LỢI",
+    "so_cmnd_chu_ho": "201582086",
+    "so_dien_thoai": "0901951590",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK372",
+    "ten_chu_ho": "VÕ DI",
+    "so_cmnd_chu_ho": "200320618",
+    "so_dien_thoai": "0762756349",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK373",
+    "ten_chu_ho": "THÁI THỊ TUYẾT",
+    "so_cmnd_chu_ho": "200832887",
+    "so_dien_thoai": "0766799716",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK374",
+    "ten_chu_ho": "ĐẶNG CA",
+    "so_cmnd_chu_ho": "201005101",
+    "so_dien_thoai": "0983445112",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK375",
+    "ten_chu_ho": "ĐẶNG VĂN BẢY",
+    "so_cmnd_chu_ho": "200832918",
+    "so_dien_thoai": "0905881712",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK376",
+    "ten_chu_ho": "NGUYỄN THỊ BÌNH",
+    "so_cmnd_chu_ho": "200686430",
+    "so_dien_thoai": "0906554125",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK377",
+    "ten_chu_ho": "ĐẶNG LÀO",
+    "so_cmnd_chu_ho": "048063002847",
+    "so_dien_thoai": "0375352750",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK378",
+    "ten_chu_ho": "ĐẶNG VĂN NGỌC TUYÊN",
+    "so_cmnd_chu_ho": "048094003984",
+    "so_dien_thoai": "0905915606",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK379",
+    "ten_chu_ho": "ĐẶNG HỒNG",
+    "so_cmnd_chu_ho": "201728735",
+    "so_dien_thoai": "0799221405",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK380",
+    "ten_chu_ho": "ĐẶNG NGỌC LÝ",
+    "so_cmnd_chu_ho": "201723205",
+    "so_dien_thoai": "0774580023",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK381",
+    "ten_chu_ho": "PHẠM KIM SƠN",
+    "so_cmnd_chu_ho": "201030263",
+    "so_dien_thoai": "0905373125",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK382",
+    "ten_chu_ho": "VÕ HỒNG QUÂN",
+    "so_cmnd_chu_ho": "201363808",
+    "so_dien_thoai": "0934783364",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK383",
+    "ten_chu_ho": "VÕ VĂN XUÂN",
+    "so_cmnd_chu_ho": "201157749",
+    "so_dien_thoai": "0795667505",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK384",
+    "ten_chu_ho": "HỒ LÝ",
+    "so_cmnd_chu_ho": "048068004877",
+    "so_dien_thoai": "0935208968",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK385",
+    "ten_chu_ho": "HỒ TUẤN",
+    "so_cmnd_chu_ho": "049174003308",
+    "so_dien_thoai": "0935208968",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK386",
+    "ten_chu_ho": "NGUYỄN THỊ Y",
+    "so_cmnd_chu_ho": "200853743",
+    "so_dien_thoai": "0985095993",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK387",
+    "ten_chu_ho": "NGUYỄN THỊ HOA",
+    "so_cmnd_chu_ho": "200832846",
+    "so_dien_thoai": "0792866388",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK388",
+    "ten_chu_ho": "NGUYỄN THỊ MẶC",
+    "so_cmnd_chu_ho": "200320711",
+    "so_dien_thoai": "0899247177",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK389",
+    "ten_chu_ho": "ĐẶNG QUANG",
+    "so_cmnd_chu_ho": "200320742",
+    "so_dien_thoai": "0905125103",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK390",
+    "ten_chu_ho": "TRẦN VĂN QUANG",
+    "so_cmnd_chu_ho": "038087002465",
+    "so_dien_thoai": "0986119100",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK391",
+    "ten_chu_ho": "NGUYỄN NGHĨA",
+    "so_cmnd_chu_ho": "200320765",
+    "so_dien_thoai": "0764708062",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK392",
+    "ten_chu_ho": "NGUYỄN THỊ HẠNH",
+    "so_cmnd_chu_ho": "201005105",
+    "so_dien_thoai": "0905013684",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK393",
+    "ten_chu_ho": "NGUYỄN ĐỨC THANH",
+    "so_cmnd_chu_ho": "201157604",
+    "so_dien_thoai": "0932416458",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK394",
+    "ten_chu_ho": "VÕ VĂN VŨ",
+    "so_cmnd_chu_ho": "201005036",
+    "so_dien_thoai": "0905256363",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK395",
+    "ten_chu_ho": "NGUYỄN PHẬN",
+    "so_cmnd_chu_ho": "200320644",
+    "so_dien_thoai": "0899864989",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK396",
+    "ten_chu_ho": "NGUYỄN ĐỨC SANG",
+    "so_cmnd_chu_ho": "201582094",
+    "so_dien_thoai": "0899864989",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK397",
+    "ten_chu_ho": "NGUYỄN ĐỨC DƯƠNG",
+    "so_cmnd_chu_ho": "201376562",
+    "so_dien_thoai": "0704580320",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK398",
+    "ten_chu_ho": "NGUYỄN KEO",
+    "so_cmnd_chu_ho": "200320605",
+    "so_dien_thoai": "0901975906",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK399",
+    "ten_chu_ho": "NGUYỄN ĐỨC QUANG",
+    "so_cmnd_chu_ho": "201505370",
+    "so_dien_thoai": "0799319439",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK400",
+    "ten_chu_ho": "ĐẶNG THỊ THÊ",
+    "so_cmnd_chu_ho": "200320828",
+    "so_dien_thoai": "0932585206",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK401",
+    "ten_chu_ho": "NGUYỄN ĐỨC DŨNG",
+    "so_cmnd_chu_ho": "048073005759",
+    "so_dien_thoai": "0779520588",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK402",
+    "ten_chu_ho": "ĐẶNG CHINH",
+    "so_cmnd_chu_ho": "200320855",
+    "so_dien_thoai": "0367024998",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK403",
+    "ten_chu_ho": "ĐẶNG THỊ HÝ",
+    "so_cmnd_chu_ho": "200320600",
+    "so_dien_thoai": "0907754814",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 8,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK404",
+    "ten_chu_ho": "PHẠM VĂN QUANG",
+    "so_cmnd_chu_ho": "200890177",
+    "so_dien_thoai": "0782769974",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK405",
+    "ten_chu_ho": "VÕ NHÂN",
+    "so_cmnd_chu_ho": "200320391",
+    "so_dien_thoai": "0916199945",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK406",
+    "ten_chu_ho": "NGUYỄN NHO",
+    "so_cmnd_chu_ho": "048072000926",
+    "so_dien_thoai": "0979161175",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK407",
+    "ten_chu_ho": "NGUYỄN NHƠN",
+    "so_cmnd_chu_ho": "048069005506",
+    "so_dien_thoai": "0776217944",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK408",
+    "ten_chu_ho": "VÕ TIẾN DŨNG",
+    "so_cmnd_chu_ho": "200320647",
+    "so_dien_thoai": "0762756344",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 10,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK409",
+    "ten_chu_ho": "VÕ ĐỨC TUẤN",
+    "so_cmnd_chu_ho": "200320790",
+    "so_dien_thoai": "0935312685",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK410",
+    "ten_chu_ho": "ĐẶNG ĐIỀN",
+    "so_cmnd_chu_ho": "200321990",
+    "so_dien_thoai": "0906560161",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK411",
+    "ten_chu_ho": "ĐẶNG THỊ HẰNG",
+    "so_cmnd_chu_ho": "048180004808",
+    "so_dien_thoai": "0772784427",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK412",
+    "ten_chu_ho": "NGUYỄN VĂN MINH",
+    "so_cmnd_chu_ho": "201269615",
+    "so_dien_thoai": "0905311898",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK413",
+    "ten_chu_ho": "NGUYỄN CAM",
+    "so_cmnd_chu_ho": "048004100005",
+    "so_dien_thoai": "0905136476",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK414",
+    "ten_chu_ho": "VÕ THỊ THỦY",
+    "so_cmnd_chu_ho": "201235399",
+    "so_dien_thoai": "0905542504",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK415",
+    "ten_chu_ho": "HUỲNH THỊ NHƯ HẠNH",
+    "so_cmnd_chu_ho": "201470780",
+    "so_dien_thoai": "0899964906",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK416",
+    "ten_chu_ho": "NGUYỄN VĂN TUẤN",
+    "so_cmnd_chu_ho": "200808719",
+    "so_dien_thoai": "0382921878",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK417",
+    "ten_chu_ho": "NGUYỄN THỊ ĐƯỢC",
+    "so_cmnd_chu_ho": "200890100",
+    "so_dien_thoai": "0934944036",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK418",
+    "ten_chu_ho": "ĐẶNG VĂN NHẤT",
+    "so_cmnd_chu_ho": "200964868",
+    "so_dien_thoai": "0774552690",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 9,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK419",
+    "ten_chu_ho": "ĐẶNG MẠNH HÙNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK420",
+    "ten_chu_ho": "PHẠM THỊ THÚY NGA",
+    "so_cmnd_chu_ho": "201554374",
+    "so_dien_thoai": "0905529400",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK422",
+    "ten_chu_ho": "PHẠM KIM KHÁNH",
+    "so_cmnd_chu_ho": "201556845",
+    "so_dien_thoai": "0905399922",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK423",
+    "ten_chu_ho": "PHẠM THANH KHẢI",
+    "so_cmnd_chu_ho": "201505372",
+    "so_dien_thoai": "0905591424",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK424",
+    "ten_chu_ho": "NGUYỄN QUANG CHÂU",
+    "so_cmnd_chu_ho": "201460524",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK425",
+    "ten_chu_ho": "VÕ NGỌC THẢO",
+    "so_cmnd_chu_ho": "048083000632",
+    "so_dien_thoai": "0906400507",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK426",
+    "ten_chu_ho": "VÕ HỒNG HIỆP",
+    "so_cmnd_chu_ho": "201416122",
+    "so_dien_thoai": "0905416960",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK428",
+    "ten_chu_ho": "ĐẶNG THỊ THU",
+    "so_cmnd_chu_ho": "048138002670",
+    "so_dien_thoai": "0935049395",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK429",
+    "ten_chu_ho": "NGUYỄN NAI",
+    "so_cmnd_chu_ho": "200320594",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK430",
+    "ten_chu_ho": "ĐẶNG XUÂN ĐÔNG",
+    "so_cmnd_chu_ho": "201235244",
+    "so_dien_thoai": "0983798255",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK431",
+    "ten_chu_ho": "TRẦN ĐÌNH HIẾU",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK433",
+    "ten_chu_ho": "NGUYỄN NAM",
+    "so_cmnd_chu_ho": "048075001119",
+    "so_dien_thoai": "0939043409",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK434",
+    "ten_chu_ho": "TRƯƠNG MINH TUẤN",
+    "so_cmnd_chu_ho": "201205242",
+    "so_dien_thoai": "0935121335",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK435",
+    "ten_chu_ho": "VÕ THỊ THẮM",
+    "so_cmnd_chu_ho": "201582156",
+    "so_dien_thoai": "0905917028",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK436",
+    "ten_chu_ho": "TRẦN VĂN LỘC",
+    "so_cmnd_chu_ho": "201805537",
+    "so_dien_thoai": "0905853440",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK437",
+    "ten_chu_ho": "DƯƠNG VĂN PHƯỚC",
+    "so_cmnd_chu_ho": "205837088",
+    "so_dien_thoai": "0389563690",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK438",
+    "ten_chu_ho": "ĐÀO THỊ THANH NGHỊ",
+    "so_cmnd_chu_ho": "200320667",
+    "so_dien_thoai": "0934024221",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK439",
+    "ten_chu_ho": "ĐINH THỊ NHÍ",
+    "so_cmnd_chu_ho": "200320813",
+    "so_dien_thoai": "0906542394",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 8,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK440",
+    "ten_chu_ho": "ĐẶNG CHIẾN",
+    "so_cmnd_chu_ho": "201728343",
+    "so_dien_thoai": "0935292334",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 7,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK441",
+    "ten_chu_ho": "ĐẶNG VĂN MƯỜI",
+    "so_cmnd_chu_ho": "048047002825",
+    "so_dien_thoai": "0383975002",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 11,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK442",
+    "ten_chu_ho": "ĐẶNG DỐN",
+    "so_cmnd_chu_ho": "200320797",
+    "so_dien_thoai": "0708141151",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK443",
+    "ten_chu_ho": "ĐẶNG TÍNH",
+    "so_cmnd_chu_ho": "200320796",
+    "so_dien_thoai": "0905557806",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK444",
+    "ten_chu_ho": "ĐẶNG NĂNG",
+    "so_cmnd_chu_ho": "200320590",
+    "so_dien_thoai": "0974552000",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK445",
+    "ten_chu_ho": "NGUYỄN THỊ XUÂN HƯƠNG",
+    "so_cmnd_chu_ho": "200320809",
+    "so_dien_thoai": "0918005568",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK446",
+    "ten_chu_ho": "BÙI HIẾU MẠNH",
+    "so_cmnd_chu_ho": "201077687",
+    "so_dien_thoai": "0905863491",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK447",
+    "ten_chu_ho": "ĐẶNG SƠN",
+    "so_cmnd_chu_ho": "200964651",
+    "so_dien_thoai": "0905434319",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK448",
+    "ten_chu_ho": "HOÀNG THỊ NHUNG",
+    "so_cmnd_chu_ho": "201505428",
+    "so_dien_thoai": "0905734746",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK449",
+    "ten_chu_ho": "ĐẶNG VĂN MAU",
+    "so_cmnd_chu_ho": "200859702",
+    "so_dien_thoai": "0709455200",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK451",
+    "ten_chu_ho": "ĐINH THỊ THƯƠNG",
+    "so_cmnd_chu_ho": "200320800",
+    "so_dien_thoai": "0702484749",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 8,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK452",
+    "ten_chu_ho": "ĐINH XÁNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "0935120760",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK453",
+    "ten_chu_ho": "ĐINH LỆ",
+    "so_cmnd_chu_ho": "200832815",
+    "so_dien_thoai": "0935120760",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK454",
+    "ten_chu_ho": "ĐẶNG THỊ MỘT",
+    "so_cmnd_chu_ho": "200320696",
+    "so_dien_thoai": "0935875890",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK455",
+    "ten_chu_ho": "TRẦN THỊ TOÀN",
+    "so_cmnd_chu_ho": "200828382",
+    "so_dien_thoai": "0328493553",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK456",
+    "ten_chu_ho": "ĐẶNG THỊ NHỎ",
+    "so_cmnd_chu_ho": "200320791",
+    "so_dien_thoai": "0935875890",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK457",
+    "ten_chu_ho": "LÊ THỊ NGỘ",
+    "so_cmnd_chu_ho": "200320801",
+    "so_dien_thoai": "0933867494",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK458",
+    "ten_chu_ho": "NGUYỄN HỒNG SƠN",
+    "so_cmnd_chu_ho": "200964789",
+    "so_dien_thoai": "0905082653",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK459",
+    "ten_chu_ho": "NGUYỄN QUANG LÂM",
+    "so_cmnd_chu_ho": "201205112",
+    "so_dien_thoai": "0815835975",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK461",
+    "ten_chu_ho": "LÊ THỊ ÚT",
+    "so_cmnd_chu_ho": "200964473",
+    "so_dien_thoai": "0787044399",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK463",
+    "ten_chu_ho": "BÙI HIẾU TÀU",
+    "so_cmnd_chu_ho": "201205233",
+    "so_dien_thoai": "0905197553",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK464",
+    "ten_chu_ho": "LÊ THỊ LIÊN",
+    "so_cmnd_chu_ho": "201205385",
+    "so_dien_thoai": "0937275128",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK465",
+    "ten_chu_ho": "NGUYỄN THỊ LƯ",
+    "so_cmnd_chu_ho": "200320807",
+    "so_dien_thoai": "0799580733",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK466",
+    "ten_chu_ho": "DƯƠNG THỊ SÉ",
+    "so_cmnd_chu_ho": "200320811",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK467",
+    "ten_chu_ho": "ĐẶNG VĂN SÁU",
+    "so_cmnd_chu_ho": "201077751",
+    "so_dien_thoai": "0905052329",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK470",
+    "ten_chu_ho": "NGUYỄN THANH BÌNH",
+    "so_cmnd_chu_ho": "201592708",
+    "so_dien_thoai": "0905330549",
+    "dia_chi": "La Châu, Hòa Khương",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK476",
+    "ten_chu_ho": "LÊ ĐÌNH LANH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK460",
+    "ten_chu_ho": "ĐINH THỊ HIỀN",
+    "so_cmnd_chu_ho": "200320686",
+    "so_dien_thoai": "0766690436",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK468",
+    "ten_chu_ho": "BÙI THỊ BÍCH PHÚC",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "0899205169",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK040",
+    "ten_chu_ho": "ĐẶNG CÔNG THU",
+    "so_cmnd_chu_ho": "201505334",
+    "so_dien_thoai": "0905929210",
+    "dia_chi": "Tổ 1 An Trạch",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK061",
+    "ten_chu_ho": "NGUYỄN VĂN VĨNH",
+    "so_cmnd_chu_ho": "201570873",
+    "so_dien_thoai": "0935055990",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK077",
+    "ten_chu_ho": "TRẦN THỊ XỨNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "0703949238",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK086",
+    "ten_chu_ho": "NGUYỄN HỒNG",
+    "so_cmnd_chu_ho": "200321080",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK093",
+    "ten_chu_ho": "VÕ THỊ BẰNG",
+    "so_cmnd_chu_ho": "200320912",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK116",
+    "ten_chu_ho": "TRƯƠNG VĂN LÝ",
+    "so_cmnd_chu_ho": "201518889",
+    "so_dien_thoai": "0905666770",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK126",
+    "ten_chu_ho": "NGUYỄN SƠN",
+    "so_cmnd_chu_ho": "201005081",
+    "so_dien_thoai": "0935313622",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK170",
+    "ten_chu_ho": "TRẦN PHƯƠNG TRUNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "0906406282",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK174",
+    "ten_chu_ho": "VỆ PHÚ HẢI",
+    "so_cmnd_chu_ho": "201416039",
+    "so_dien_thoai": "0934970423",
+    "dia_chi": "Tổ 3 An Trạch",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK204",
+    "ten_chu_ho": "PHẠM THỊ HIỆP",
+    "so_cmnd_chu_ho": "200320961",
+    "so_dien_thoai": "0796668822",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK234",
+    "ten_chu_ho": "PHẠM THỊ TÝ",
+    "so_cmnd_chu_ho": "200320979",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK255",
+    "ten_chu_ho": "PHẠM THỊ LANG",
+    "so_cmnd_chu_ho": "200320744",
+    "so_dien_thoai": "0905772118",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK287",
+    "ten_chu_ho": "ĐẶNG THỊ ĐOAN",
+    "so_cmnd_chu_ho": "200320625",
+    "so_dien_thoai": "0905571563",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK356",
+    "ten_chu_ho": "LÊ THỊ XUÂN LỘC",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK360",
+    "ten_chu_ho": "TRƯƠNG THỊ TÀU",
+    "so_cmnd_chu_ho": "200320818",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK421",
+    "ten_chu_ho": "LÊ VĂN NGHIỆP",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK427",
+    "ten_chu_ho": "ĐẶNG THỊ PHƯƠNG THẢO",
+    "so_cmnd_chu_ho": "201582213",
+    "so_dien_thoai": "0799391750",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK432",
+    "ten_chu_ho": "PHẠM DUY",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "0934784579",
+    "dia_chi": "Tổ 7 An Trạch",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK450",
+    "ten_chu_ho": "VÕ THỊ NHÍ",
+    "so_cmnd_chu_ho": "200320847",
+    "so_dien_thoai": "0905698530",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK462",
+    "ten_chu_ho": "LÊ VĂN QUANG",
+    "so_cmnd_chu_ho": "201205364",
+    "so_dien_thoai": "0905625804",
+    "dia_chi": "Tổ 8 An Trạch",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK469",
+    "ten_chu_ho": "ĐẶNG NGỌC VƯƠNG",
+    "so_cmnd_chu_ho": "048081004907",
+    "so_dien_thoai": "0905800355",
+    "dia_chi": "Tổ 2 An Trạch",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK471",
+    "ten_chu_ho": "VÕ THUYỀN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Đắc Vinh",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK472",
+    "ten_chu_ho": "TRẦN PHƯỚC THÀNH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Nguyễn Ngọc Hùng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK473",
+    "ten_chu_ho": "ĐẶNG THỊ HOA",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Đặng Năng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK474",
+    "ten_chu_ho": "NGUYỄN THỊ VÂN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Đặng Văn Phước",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK475",
+    "ten_chu_ho": "ĐẶNG THỊ CHIẾU",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Đặng Đa",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK477",
+    "ten_chu_ho": "ĐẶNG NGỌC PHÚC",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK478",
+    "ten_chu_ho": "ĐẶNG THỊ TÝ",
+    "so_cmnd_chu_ho": "200964509",
+    "so_dien_thoai": "0905834265",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK479",
+    "ten_chu_ho": "NGUYỄN HỒNG HÀ",
+    "so_cmnd_chu_ho": "201570488",
+    "so_dien_thoai": "0935434519",
+    "dia_chi": "Tổ 4 An Trạch",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK480",
+    "ten_chu_ho": "NGUYỄN VĂN BÌNH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 6 An Trạch",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK481",
+    "ten_chu_ho": "ĐẶNG THỊ BÍCH LOAN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 5 An Trạch",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_PHAN THỊ T",
+    "ten_chu_ho": "PHAN THỊ THỜI",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "AN TRẠCH, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_LÊ QUANG T",
+    "ten_chu_ho": "LÊ QUANG THÀNH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ THỊ NGU",
+    "ten_chu_ho": "VÕ THỊ NGUYÊN THẢO",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN TRU",
+    "ten_chu_ho": "NGUYỄN TRUNG THÀNH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "TỔ 7 THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN QUA",
+    "ten_chu_ho": "NGUYỄN QUANG CHÁNH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_LÊ THỊ NÌ",
+    "ten_chu_ho": "LÊ THỊ NÌ EM",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_TÔN THẤT B",
+    "ten_chu_ho": "TÔN THẤT BÌNH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN ĐỨC",
+    "ten_chu_ho": "NGUYỄN ĐỨC SANG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_TRẦN THỊ T",
+    "ten_chu_ho": "TRẦN THỊ THẢO",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_TRẦN VĂN C",
+    "ten_chu_ho": "TRẦN VĂN CHINH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN NGỌ",
+    "ten_chu_ho": "NGUYỄN NGỌC SĨ",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN XUÂ",
+    "ten_chu_ho": "NGUYỄN XUÂN TRƯỜNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "TỔ 2, THÔN AN TRẠCH, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_LÊ ĐÌNH LA",
+    "ten_chu_ho": "LÊ ĐÌNH LANH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN LÂM",
+    "ten_chu_ho": "NGUYỄN LÂM TÙNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG VĂN L",
+    "ten_chu_ho": "ĐẶNG VĂN LỰC",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "TỔ 3 THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN THỊ",
+    "ten_chu_ho": "NGUYỄN THỊ TÂM",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 19,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG NGỌC",
+    "ten_chu_ho": "ĐẶNG NGỌC HOÀNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 8,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_PHẠM NGỌC",
+    "ten_chu_ho": "PHẠM NGỌC QUỐC ANH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ THỊ MIN",
+    "ten_chu_ho": "VÕ THỊ MINH TUYẾT",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 7, Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_LÊ XUÂN TH",
+    "ten_chu_ho": "LÊ XUÂN THỦY",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN VIẾ",
+    "ten_chu_ho": "NGUYỄN VIẾT HIỆP",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "thôn An Trạch, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 8,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_LÂM THỊ TÚ",
+    "ten_chu_ho": "LÂM THỊ TÚ NGUYÊN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_TRẦN VĂN L",
+    "ten_chu_ho": "TRẦN VĂN LỘC",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_DƯƠNG VĂN",
+    "ten_chu_ho": "DƯƠNG VĂN PHƯỚC",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "tổ 7, Thôn An Trạch, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG VĂN Q",
+    "ten_chu_ho": "ĐẶNG VĂN QUÂN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "TỔ 6, THÔN AN TRẠCH, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN TẤN",
+    "ten_chu_ho": "NGUYỄN TẤN HÒA",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "thôn An Trạch, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_TRẦN ĐÌNH",
+    "ten_chu_ho": "TRẦN ĐÌNH TÂN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 13,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN VĂN",
+    "ten_chu_ho": "NGUYỄN VĂN ĐÔNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 9,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGÔ THỊ DI",
+    "ten_chu_ho": "NGÔ THỊ DIỆP",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_HOÀNG THỊ",
+    "ten_chu_ho": "HOÀNG THỊ NGHÌ",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_PHẠM CÔNG",
+    "ten_chu_ho": "PHẠM CÔNG ANH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "tổ 6, Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG THỊ D",
+    "ten_chu_ho": "ĐẶNG THỊ DIỆU",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_HỒ VIẾT BÌ",
+    "ten_chu_ho": "HỒ VIẾT BÌNH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG HIỂN",
+    "ten_chu_ho": "ĐẶNG HIỂN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG THỊ Ú",
+    "ten_chu_ho": "ĐẶNG THỊ ÚT",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_TRƯƠNG THỊ",
+    "ten_chu_ho": "TRƯƠNG THỊ THU HƯƠNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN CHÁ",
+    "ten_chu_ho": "NGUYỄN CHÁNH TÍN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ VĂN HUY",
+    "ten_chu_ho": "VÕ VĂN HUY DŨNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ THỊ THẮ",
+    "ten_chu_ho": "VÕ THỊ THẮM",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ THỊ SIN",
+    "ten_chu_ho": "VÕ THỊ SINH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN HỒN",
+    "ten_chu_ho": "NGUYỄN HỒNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 7, Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_PHẠM MƯỜI",
+    "ten_chu_ho": "PHẠM MƯỜI",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 5, Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VỆ PHÚC HẢ",
+    "ten_chu_ho": "VỆ PHÚC HẢI",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG TÌNH",
+    "ten_chu_ho": "ĐẶNG TÌNH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_PHẠM THỊ T",
+    "ten_chu_ho": "PHẠM THỊ THU PHƯƠNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐINH THỊ H",
+    "ten_chu_ho": "ĐINH THỊ HƯỜNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG THỊ K",
+    "ten_chu_ho": "ĐẶNG THỊ KIM PHƯỢNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG THỨC",
+    "ten_chu_ho": "ĐẶNG THỨC",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "TỔ 1 THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_LÊ THỊ THA",
+    "ten_chu_ho": "LÊ THỊ THANH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_PHAN THỊ N",
+    "ten_chu_ho": "PHAN THỊ NGỌC ÁNH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG VĂN N",
+    "ten_chu_ho": "ĐẶNG VĂN NGA",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN HÙN",
+    "ten_chu_ho": "NGUYỄN HÙNG SƠN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ THỊ HƯƠ",
+    "ten_chu_ho": "VÕ THỊ HƯƠNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ TIẾN DŨ",
+    "ten_chu_ho": "VÕ TIẾN DŨNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ THỊ KIM",
+    "ten_chu_ho": "VÕ THỊ KIM THANH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN XIN",
+    "ten_chu_ho": "NGUYỄN XIN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_LÂM TÙNG N",
+    "ten_chu_ho": "LÂM TÙNG NGHĨA",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG THỌ",
+    "ten_chu_ho": "ĐẶNG THỌ",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ THỊ NHÍ",
+    "ten_chu_ho": "VÕ THỊ NHÍ",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN NAM",
+    "ten_chu_ho": "NGUYỄN NAM",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_PHẠM THỊ K",
+    "ten_chu_ho": "PHẠM THỊ KIM",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 2, Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG THỊ L",
+    "ten_chu_ho": "ĐẶNG THỊ LỰ",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG THỊ H",
+    "ten_chu_ho": "ĐẶNG THỊ HỒNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ KỲ",
+    "ten_chu_ho": "VÕ KỲ",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ ĐÌNH SƠ",
+    "ten_chu_ho": "VÕ ĐÌNH SƠN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 2, Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG THỨ",
+    "ten_chu_ho": "ĐẶNG THỨ",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG THÀNH",
+    "ten_chu_ho": "ĐẶNG THÀNH PHƯƠNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_DOÃN QUÝ",
+    "ten_chu_ho": "DOÃN QUÝ",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ VĂN PHI",
+    "ten_chu_ho": "VÕ VĂN PHI HÙNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 1, Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_PHẠM PHÚ Q",
+    "ten_chu_ho": "PHẠM PHÚ QUỐC",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG LÝ",
+    "ten_chu_ho": "ĐẶNG LÝ",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG QUÝT",
+    "ten_chu_ho": "ĐẶNG QUÝT",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG KẾ",
+    "ten_chu_ho": "ĐẶNG KẾ",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 4, Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG THỊ B",
+    "ten_chu_ho": "ĐẶNG THỊ BÌNH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "TỔ 6 THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG TIẾU",
+    "ten_chu_ho": "ĐẶNG TIẾU",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "TỔ 4 THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG THANH",
+    "ten_chu_ho": "ĐẶNG THANH TRƯỜNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG TRUNG",
+    "ten_chu_ho": "ĐẶNG TRUNG HIẾU",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN MIN",
+    "ten_chu_ho": "NGUYỄN MINH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐINH THỊ T",
+    "ten_chu_ho": "ĐINH THỊ THƯƠNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "TỔ 8 THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN MỘN",
+    "ten_chu_ho": "NGUYỄN MỘNG HÙNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN PHƯ",
+    "ten_chu_ho": "NGUYỄN PHƯƠNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGÔ NGHĨA",
+    "ten_chu_ho": "NGÔ NGHĨA",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN BÁ",
+    "ten_chu_ho": "NGUYỄN BÁ",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG LẠC",
+    "ten_chu_ho": "ĐẶNG LẠC",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "TỔ 3 THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG TẤN",
+    "ten_chu_ho": "ĐẶNG TẤN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "TỔ 1, AN TRẠCH, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_TỪ VĂN MẪN",
+    "ten_chu_ho": "TỪ VĂN MẪN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG QUANG",
+    "ten_chu_ho": "ĐẶNG QUANG VIÊN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "TỔ 5 THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG VĂN S",
+    "ten_chu_ho": "ĐẶNG VĂN SINH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "TỔ 5 THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_PHẠM THỊ P",
+    "ten_chu_ho": "PHẠM THỊ PHA",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_LÊ THỊ NGỘ",
+    "ten_chu_ho": "LÊ THỊ NGỘ",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_HỒ LIỀN",
+    "ten_chu_ho": "HỒ LIỀN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 7, Thôn An Trạch, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 7",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG THỊ T",
+    "ten_chu_ho": "ĐẶNG THỊ TRẤY",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "TỔ 3 THÔN AN TRẠCH, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ SÁU",
+    "ten_chu_ho": "VÕ SÁU",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "tổ 5, Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 5",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_TRẦN MAI T",
+    "ten_chu_ho": "TRẦN MAI TRƯỜNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ VĂN SAN",
+    "ten_chu_ho": "VÕ VĂN SAN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 6, Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 6",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ THỊ BÚT",
+    "ten_chu_ho": "VÕ THỊ BÚT",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_PHAN LAN",
+    "ten_chu_ho": "PHAN LAN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ VĂN SƠN",
+    "ten_chu_ho": "VÕ VĂN SƠN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "tổ 3, Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_BÙI THỊ BÍ",
+    "ten_chu_ho": "BÙI THỊ BÍCH PHÚC",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 5,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG CHIẾN",
+    "ten_chu_ho": "ĐẶNG CHIẾN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG VĂN H",
+    "ten_chu_ho": "ĐẶNG VĂN HẠNH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN TRƯ",
+    "ten_chu_ho": "NGUYỄN TRƯỜNG SƠN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 3,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ TRỢ",
+    "ten_chu_ho": "VÕ TRỢ",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGÔ THANH",
+    "ten_chu_ho": "NGÔ THANH HÙNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ VĂN VŨ",
+    "ten_chu_ho": "VÕ VĂN VŨ",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_PHẠM THỊ Đ",
+    "ten_chu_ho": "PHẠM THỊ ĐẶNG KIỀU DIỄM",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_TRƯƠNG MIN",
+    "ten_chu_ho": "TRƯƠNG MINH TUẤN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG VĂN T",
+    "ten_chu_ho": "ĐẶNG VĂN THỌ",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "TỔ 4 THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ ĐÔNG GI",
+    "ten_chu_ho": "VÕ ĐÔNG GIANG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 2, Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ THỊ CHI",
+    "ten_chu_ho": "VÕ THỊ CHI",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG CA",
+    "ten_chu_ho": "ĐẶNG CA",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN PHÁ",
+    "ten_chu_ho": "NGUYỄN PHÁP",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG VĂN P",
+    "ten_chu_ho": "ĐẶNG VĂN PHƯỚC",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ SẢN",
+    "ten_chu_ho": "VÕ SẢN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 2, Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG LIÊN",
+    "ten_chu_ho": "ĐẶNG LIÊN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "TỔ 1, THÔN AN TRẠCH, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 1",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN THÁ",
+    "ten_chu_ho": "NGUYỄN THÁI VINH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_BÙI THỊ HỒ",
+    "ten_chu_ho": "BÙI THỊ HỒNG VÂN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 3 thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 3",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_BÙI THỊ GÁ",
+    "ten_chu_ho": "BÙI THỊ GÁI",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG SƠN",
+    "ten_chu_ho": "ĐẶNG SƠN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 6,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_TRẦN VĂN Q",
+    "ten_chu_ho": "TRẦN VĂN QUANG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ ĐÁ",
+    "ten_chu_ho": "VÕ ĐÁ",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN ÂN",
+    "ten_chu_ho": "NGUYỄN ÂN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐINH THỊ N",
+    "ten_chu_ho": "ĐINH THỊ NHÍ",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN KEO",
+    "ten_chu_ho": "NGUYỄN KEO",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN TÀU",
+    "ten_chu_ho": "NGUYỄN TÀU",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 4,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_HỒ THỊ LIÊ",
+    "ten_chu_ho": "HỒ THỊ LIÊN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỆN THU",
+    "ten_chu_ho": "NGUYỆN THUẬN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 2, Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ THỊ HỮU",
+    "ten_chu_ho": "VÕ THỊ HỮU",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG ĐÀO",
+    "ten_chu_ho": "ĐẶNG ĐÀO",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "THÔN AN TRẠCH, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_LÊ VĂN THU",
+    "ten_chu_ho": "LÊ VĂN THUẬN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_NGUYỄN THA",
+    "ten_chu_ho": "NGUYỄN THANH SƠN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Tổ 2, Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 2",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_PHẠM VĂN Q",
+    "ten_chu_ho": "PHẠM VĂN QUANG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "Thôn An Trạch,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG HÙNG",
+    "ten_chu_ho": "ĐẶNG HÙNG",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "TỔ 8 THÔN AN TRẠCH,, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 8",
+    "so_nhan_khau": 2,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_ĐẶNG ANH T",
+    "ten_chu_ho": "ĐẶNG ANH THUẬN",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "AN TRẠCH, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Chưa rõ tổ",
+    "so_nhan_khau": 1,
+    "ghi_chu": ""
+  },
+  {
+    "ma_ho": "HK_MOI_VÕ VĂN THÀ",
+    "ten_chu_ho": "VÕ VĂN THÀNH",
+    "so_cmnd_chu_ho": "",
+    "so_dien_thoai": "",
+    "dia_chi": "tổ 4, thôn An Trach, Xã Hòa Tiến, Thành phố Đà Nẵng",
+    "to_dan_cu": "Tổ 4",
+    "so_nhan_khau": 9,
+    "ghi_chu": ""
+  }
+]
