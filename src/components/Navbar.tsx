@@ -23,7 +23,10 @@ import {
   Compass,
   Smartphone,
   Download,
-  Bot
+  Bot,
+  Cloud,
+  CloudOff,
+  RefreshCw
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useData } from '../context/DataContext';
@@ -153,7 +156,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenAiModal,
 }) => {
   const { currentUser, logout, isAdmin } = useAuth();
-  const { unreadNotificationCount } = useData();
+  const { unreadNotificationCount, isCloudConnected, isCloudSyncing, pullFromCloud, isCloudConfigured } = useData();
   const [showProfileDropdown, setShowProfileDropdown] = useState(false);
 
   const pageInfo = tabTitles[currentTab] || tabTitles.home;
@@ -218,9 +221,38 @@ export const Navbar: React.FC<NavbarProps> = ({
         </nav>
       </div>
 
-      {/* Right: Quick Actions (AI Copilot, Cài App, Quét CCCD, Notification, Officer Profile) */}
+      {/* Right: Quick Actions (Cloud Sync, AI Copilot, Cài App, Quét CCCD, Notification, Officer Profile) */}
       <div className="flex items-center gap-2 shrink-0">
         
+        {/* Cloud Sync Status Pill */}
+        {isCloudConfigured && (
+          <button
+            onClick={() => pullFromCloud()}
+            disabled={isCloudSyncing}
+            title={
+              isCloudConnected
+                ? "Cloud Supabase: Đang đồng bộ thời gian thực 2 chiều (Bấm để tải lại)"
+                : "Cloud Supabase: Chưa kết nối (Bấm để thử lại)"
+            }
+            className={`px-2.5 py-1.5 rounded-xl border flex items-center gap-1.5 text-xs font-black transition-all duration-200 cursor-pointer active:scale-95 shadow-2xs ${
+              isCloudConnected
+                ? 'bg-emerald-50 text-emerald-800 border-emerald-200 hover:bg-emerald-100 hover:border-emerald-300'
+                : 'bg-amber-50 text-amber-800 border-amber-200 hover:bg-amber-100'
+            }`}
+          >
+            {isCloudSyncing ? (
+              <RefreshCw className="w-3.5 h-3.5 animate-spin text-emerald-600" />
+            ) : isCloudConnected ? (
+              <Cloud className="w-3.5 h-3.5 text-emerald-600" />
+            ) : (
+              <CloudOff className="w-3.5 h-3.5 text-amber-600" />
+            )}
+            <span className="hidden xl:inline text-[11px]">
+              {isCloudSyncing ? 'Đang sync...' : isCloudConnected ? 'Cloud Sync' : 'Offline'}
+            </span>
+          </button>
+        )}
+
         {/* An Trạch AI Copilot Button */}
         {onOpenAiModal && (
           <button

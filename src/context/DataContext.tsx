@@ -19,6 +19,37 @@ import {
   IrrigationPointFeature
 } from '../data/anTrachAgriculturalGeoJson';
 import { useAuth } from './AuthContext';
+import { isSupabaseConfigured } from '../lib/supabase';
+import {
+  checkCloudStatus,
+  fetchNhanKhauCloud,
+  fetchHoKhauCloud,
+  fetchSanXuatCloud,
+  fetchCongVanCloud,
+  fetchThongBaoCloud,
+  fetchBinhLuanCloud,
+  fetchCanBoCloud,
+  fetchBoundariesCloud,
+  fetchAiKnowledgeCloud,
+  pushAllDataToCloud,
+  upsertNhanKhauCloud,
+  deleteNhanKhauCloud,
+  upsertHoKhauCloud,
+  deleteHoKhauCloud,
+  upsertSanXuatCloud,
+  deleteSanXuatCloud,
+  upsertCongVanCloud,
+  deleteCongVanCloud,
+  upsertThongBaoCloud,
+  deleteThongBaoCloud,
+  upsertCanBoCloud,
+  deleteCanBoCloud,
+  upsertBinhLuanCloud,
+  deleteBinhLuanCloud,
+  upsertAiKnowledgeCloud,
+  deleteAiKnowledgeCloud,
+  subscribeToRealtimeChanges,
+} from '../services/supabaseService';
 
 export interface FilterOptions {
   searchQuery: string;
@@ -32,6 +63,13 @@ export interface FilterOptions {
 }
 
 interface DataContextType {
+  isCloudConfigured: boolean;
+  isCloudConnected: boolean;
+  isCloudSyncing: boolean;
+  cloudSyncProgress: { message: string; percent: number } | null;
+  lastSyncedAt: string | null;
+  syncToCloud: () => Promise<{ success: boolean; message: string }>;
+  pullFromCloud: () => Promise<{ success: boolean; message: string }>;
   nhanKhauList: NhanKhau[];
   hoKhauList: HoKhau[];
   thongBaoList: ThongBao[];
@@ -401,6 +439,289 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
     localStorage.setItem('antrach_ai_config_v1', JSON.stringify(aiConfig));
   }, [aiConfig]);
 
+  // =========================================================================
+  // SUPABASE CLOUD SYNC STATE & HOOKS
+  // =========================================================================
+  const [isCloudConnected, setIsCloudConnected] = useState<boolean>(false);
+  const [isCloudSyncing, setIsCloudSyncing] = useState<boolean>(false);
+  const [cloudSyncProgress, setCloudSyncProgress] = useState<{ message: string; percent: number } | null>(null);
+  const [lastSyncedAt, setLastSyncedAt] = useState<string | null>(() => localStorage.getItem('antrach_last_synced_at'));
+
+  // Hàm đẩy dữ liệu lên Cloud
+  const syncToCloud = async (): Promise<{ success: boolean; message: string }> => {
+    setIsCloudSyncing(true);
+    setCloudSyncProgress({ message: 'Bắt đầu đồng bộ lên Cloud...', percent: 5 });
+    try {
+      const res = await pushAllDataToCloud(
+        {
+          nhanKhauList,
+          hoKhauList,
+          sanXuatList,
+          congVanList,
+          thongBaoList,
+          canBoList,
+          binhLuanList,
+          boundariesData,
+          aiKnowledgeList
+        },
+        (p) => setCloudSyncProgress(p)
+      );
+      if (res.success) {
+        const now = new Date().toISOString();
+        setLastSyncedAt(now);
+        localStorage.setItem('antrach_last_synced_at', now);
+        setIsCloudConnected(true);
+      }
+      return res;
+    } finally {
+      setIsCloudSyncing(false);
+      setCloudSyncProgress(null);
+    }
+  };
+
+  // Hàm tải dữ liệu từ Cloud về máy
+  const pullFromCloud = async (): Promise<{ success: boolean; message: string }> => {
+    setIsCloudSyncing(true);
+    setCloudSyncProgress({ message: 'Đang tải toàn bộ dữ liệu từ Cloud Supabase...', percent: 15 });
+    try {
+      const [cloudNk, cloudHk, cloudSx, cloudCv, cloudTb, cloudBl, cloudCb, cloudBnd, cloudAi] = await Promise.all([
+        fetchNhanKhauCloud(),
+        fetchHoKhauCloud(),
+        fetchSanXuatCloud(),
+        fetchCongVanCloud(),
+        fetchThongBaoCloud(),
+        fetchBinhLuanCloud(),
+        fetchCanBoCloud(),
+        fetchBoundariesCloud(),
+        fetchAiKnowledgeCloud(),
+      ]);
+
+      let countLoaded = 0;
+      if (cloudNk && cloudNk.length > 0) {
+        setNhanKhauList(cloudNk);
+        countLoaded = cloudNk.length;
+      }
+      if (cloudHk && cloudHk.length > 0) setHoKhauList(cloudHk);
+      if (cloudSx && cloudSx.length > 0) setSanXuatList(cloudSx);
+      if (cloudCv && cloudCv.length > 0) setCongVanList(cloudCv);
+      if (cloudTb && cloudTb.length > 0) setThongBaoList(cloudTb);
+      if (cloudBl && cloudBl.length > 0) setBinhLuanList(cloudBl);
+      if (cloudCb && cloudCb.length > 0) setCanBoList(cloudCb);
+      if (cloudBnd) setBoundariesData(cloudBnd);
+      if (cloudAi && cloudAi.length > 0) setAiKnowledgeList(cloudAi);
+
+      const now = new Date().toISOString();
+      setLastSyncedAt(now);
+      localStorage.setItem('antrach_last_synced_at', now);
+      setIsCloudConnected(true);
+
+      return {
+        success: true,
+        message: `Đã nạp thành công ${countLoaded > 0 ? countLoaded + ' nhân khẩu' : 'dữ liệu'} mới nhất từ Cloud về thiết bị!`
+      };
+    } catch (e: any) {
+      return {
+        success: false,
+        message: `Lỗi nạp dữ liệu từ Cloud: ${e?.message || 'Không xác định'}`
+      };
+    } finally {
+      setIsCloudSyncing(false);
+      setCloudSyncProgress(null);
+    }
+  };
+
+  // Tự động kiểm tra kết nối & tải dữ liệu Cloud khi khởi chạy (với cơ chế Auto-Seed nếu Cloud trống)
+  useEffect(() => {
+    let unsubscribe: (() => void) | undefined;
+
+    const initCloud = async () => {
+      if (!isSupabaseConfigured) return;
+      try {
+        const status = await checkCloudStatus();
+        setIsCloudConnected(status.isConnected);
+
+        if (status.isConnected) {
+          // Nếu trên Cloud đã có dữ liệu nhân khẩu, tự động tải dữ liệu mới nhất
+          if (status.tableCounts.nhanKhau > 0) {
+            const [cloudNk, cloudHk, cloudSx, cloudCv, cloudTb, cloudBl, cloudCb, cloudBnd, cloudAi] = await Promise.all([
+              fetchNhanKhauCloud(),
+              fetchHoKhauCloud(),
+              fetchSanXuatCloud(),
+              fetchCongVanCloud(),
+              fetchThongBaoCloud(),
+              fetchBinhLuanCloud(),
+              fetchCanBoCloud(),
+              fetchBoundariesCloud(),
+              fetchAiKnowledgeCloud(),
+            ]);
+            if (cloudNk && cloudNk.length > 0) setNhanKhauList(cloudNk);
+            if (cloudHk && cloudHk.length > 0) setHoKhauList(cloudHk);
+            if (cloudSx && cloudSx.length > 0) setSanXuatList(cloudSx);
+            if (cloudCv && cloudCv.length > 0) setCongVanList(cloudCv);
+            if (cloudTb && cloudTb.length > 0) setThongBaoList(cloudTb);
+            if (cloudBl && cloudBl.length > 0) setBinhLuanList(cloudBl);
+            if (cloudCb && cloudCb.length > 0) setCanBoList(cloudCb);
+            if (cloudBnd) setBoundariesData(cloudBnd);
+            if (cloudAi && cloudAi.length > 0) setAiKnowledgeList(cloudAi);
+          } else {
+            // Tự động đẩy dữ liệu Master lên Cloud nếu Cloud đang trống (Lần chạy đầu tiên)
+            console.log('[Auto-Seed] Cloud Supabase đang trống. Bắt đầu tự động đồng bộ dữ liệu Master lên Cloud...');
+            pushAllDataToCloud({
+              nhanKhauList,
+              hoKhauList,
+              sanXuatList,
+              congVanList,
+              thongBaoList,
+              canBoList,
+              binhLuanList,
+              boundariesData,
+              aiKnowledgeList
+            }).then((res) => {
+              if (res.success) {
+                console.log('[Auto-Seed] Đã tự động nạp dữ liệu Master lên Supabase Cloud thành công!');
+              }
+            });
+          }
+
+          // Lắng nghe sự kiện Realtime đa máy tính trên tất cả các bảng
+          unsubscribe = subscribeToRealtimeChanges((tableName, payload) => {
+            console.log(`[Realtime Sync] Bảng ${tableName} có thay đổi từ máy khác:`, payload.eventType);
+            
+            if (tableName === 'nhan_khau') {
+              if (payload.eventType === 'INSERT' || payload.eventType === 'UPDATE') {
+                const newRow = payload.new;
+                setNhanKhauList((prev) => {
+                  const idx = prev.findIndex((r) => r.id === newRow.id);
+                  if (idx >= 0) {
+                    const updated = [...prev];
+                    updated[idx] = { ...updated[idx], ...newRow };
+                    return updated;
+                  }
+                  return [newRow, ...prev];
+                });
+              } else if (payload.eventType === 'DELETE') {
+                setNhanKhauList((prev) => prev.filter((r) => r.id !== payload.old?.id));
+              }
+            } else if (tableName === 'ho_khau') {
+              if (payload.eventType === 'INSERT' || payload.eventType === 'UPDATE') {
+                const newRow = payload.new;
+                setHoKhauList((prev) => {
+                  const idx = prev.findIndex((h) => h.id === newRow.id || h.ma_ho === newRow.ma_ho);
+                  if (idx >= 0) {
+                    const updated = [...prev];
+                    updated[idx] = { ...updated[idx], ...newRow };
+                    return updated;
+                  }
+                  return [newRow, ...prev];
+                });
+              } else if (payload.eventType === 'DELETE') {
+                setHoKhauList((prev) => prev.filter((h) => h.id !== payload.old?.id && h.ma_ho !== payload.old?.ma_ho));
+              }
+            } else if (tableName === 'cong_van') {
+              if (payload.eventType === 'INSERT' || payload.eventType === 'UPDATE') {
+                const newRow = payload.new;
+                setCongVanList((prev) => {
+                  const idx = prev.findIndex((c) => c.id === newRow.id);
+                  if (idx >= 0) {
+                    const updated = [...prev];
+                    updated[idx] = { ...updated[idx], ...newRow };
+                    return updated;
+                  }
+                  return [newRow, ...prev];
+                });
+              } else if (payload.eventType === 'DELETE') {
+                setCongVanList((prev) => prev.filter((c) => c.id !== payload.old?.id));
+              }
+            } else if (tableName === 'thong_bao') {
+              if (payload.eventType === 'INSERT' || payload.eventType === 'UPDATE') {
+                const newRow = payload.new;
+                setThongBaoList((prev) => {
+                  const idx = prev.findIndex((t) => t.id === newRow.id);
+                  if (idx >= 0) {
+                    const updated = [...prev];
+                    updated[idx] = { ...updated[idx], ...newRow };
+                    return updated;
+                  }
+                  return [newRow, ...prev];
+                });
+              } else if (payload.eventType === 'DELETE') {
+                setThongBaoList((prev) => prev.filter((t) => t.id !== payload.old?.id));
+              }
+            } else if (tableName === 'san_xuat_nong_nghiep') {
+              if (payload.eventType === 'INSERT' || payload.eventType === 'UPDATE') {
+                const newRow = payload.new;
+                setSanXuatList((prev) => {
+                  const idx = prev.findIndex((s) => s.id === newRow.id);
+                  if (idx >= 0) {
+                    const updated = [...prev];
+                    updated[idx] = { ...updated[idx], ...newRow };
+                    return updated;
+                  }
+                  return [newRow, ...prev];
+                });
+              } else if (payload.eventType === 'DELETE') {
+                setSanXuatList((prev) => prev.filter((s) => s.id !== payload.old?.id));
+              }
+            } else if (tableName === 'can_bo_thon') {
+              if (payload.eventType === 'INSERT' || payload.eventType === 'UPDATE') {
+                const newRow = payload.new;
+                setCanBoList((prev) => {
+                  const idx = prev.findIndex((c) => c.id === newRow.id);
+                  if (idx >= 0) {
+                    const updated = [...prev];
+                    updated[idx] = { ...updated[idx], ...newRow };
+                    return updated;
+                  }
+                  return [newRow, ...prev];
+                });
+              } else if (payload.eventType === 'DELETE') {
+                setCanBoList((prev) => prev.filter((c) => c.id !== payload.old?.id));
+              }
+            } else if (tableName === 'ai_knowledge') {
+              if (payload.eventType === 'INSERT' || payload.eventType === 'UPDATE') {
+                const newRow = payload.new;
+                setAiKnowledgeList((prev) => {
+                  const idx = prev.findIndex((k) => k.id === newRow.id);
+                  if (idx >= 0) {
+                    const updated = [...prev];
+                    updated[idx] = { ...updated[idx], ...newRow };
+                    return updated;
+                  }
+                  return [newRow, ...prev];
+                });
+              } else if (payload.eventType === 'DELETE') {
+                setAiKnowledgeList((prev) => prev.filter((k) => k.id !== payload.old?.id));
+              }
+            } else if (tableName === 'binh_luan_thong_bao') {
+              if (payload.eventType === 'INSERT' || payload.eventType === 'UPDATE') {
+                const newRow = payload.new;
+                setBinhLuanList((prev) => {
+                  const idx = prev.findIndex((b) => b.id === newRow.id);
+                  if (idx >= 0) {
+                    const updated = [...prev];
+                    updated[idx] = { ...updated[idx], ...newRow };
+                    return updated;
+                  }
+                  return [newRow, ...prev];
+                });
+              } else if (payload.eventType === 'DELETE') {
+                setBinhLuanList((prev) => prev.filter((b) => b.id !== payload.old?.id));
+              }
+            }
+          });
+        }
+      } catch (err) {
+        console.warn('Lỗi kết nối Supabase Cloud:', err);
+      }
+    };
+
+    initCloud();
+
+    return () => {
+      if (unsubscribe) unsubscribe();
+    };
+  }, []);
+
   // AI Knowledge Management Handlers
   const addAiKnowledge = async (item: Omit<AiKnowledgeItem, 'id' | 'updatedAt'>) => {
     const newItem: AiKnowledgeItem = {
@@ -410,19 +731,32 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
       hitCount: 0,
     };
     setAiKnowledgeList((prev) => [newItem, ...prev]);
+    upsertAiKnowledgeCloud(newItem);
     logActivity('INSERT', 'thong_bao', newItem.id, null, newItem, `Thêm tri thức AI: ${newItem.title}`);
     return newItem;
   };
 
   const updateAiKnowledge = async (id: string, data: Partial<AiKnowledgeItem>) => {
+    let updatedItem: AiKnowledgeItem | undefined;
     setAiKnowledgeList((prev) =>
-      prev.map((k) => (k.id === id ? { ...k, ...data, updatedAt: new Date().toISOString().split('T')[0] } : k))
+      prev.map((k) => {
+        if (k.id === id) {
+          const updated = { ...k, ...data, updatedAt: new Date().toISOString().split('T')[0] };
+          updatedItem = updated;
+          return updated;
+        }
+        return k;
+      })
     );
+    if (updatedItem) {
+      upsertAiKnowledgeCloud(updatedItem);
+    }
     logActivity('UPDATE', 'thong_bao', id, null, data, `Cập nhật tri thức AI: ${data.title || id}`);
   };
 
   const deleteAiKnowledge = async (id: string) => {
     setAiKnowledgeList((prev) => prev.filter((k) => k.id !== id));
+    deleteAiKnowledgeCloud(id);
     logActivity('DELETE', 'thong_bao', id, null, null, `Xóa tri thức AI: ${id}`);
   };
 
@@ -663,11 +997,16 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setHoKhauList((prev) =>
       prev.map((hk) => {
         if (hk.ma_ho === resident.ma_ho) {
-          return { ...hk, so_nhan_khau: hk.so_nhan_khau + 1 };
+          const updatedHk = { ...hk, so_nhan_khau: hk.so_nhan_khau + 1 };
+          upsertHoKhauCloud(updatedHk);
+          return updatedHk;
         }
         return hk;
       })
     );
+
+    // Đồng bộ lên Supabase Cloud
+    upsertNhanKhauCloud(newResident);
 
     logActivity('INSERT', 'nhan_khau', newId, null, newResident, `Thêm nhân khẩu mới: ${newResident.ho_ten} (${newResident.to_dan_cu})`);
     
@@ -686,6 +1025,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const updateNhanKhau = async (id: string, data: Partial<NhanKhau>) => {
     let oldObj: NhanKhau | undefined;
+    let updatedObj: NhanKhau | undefined;
     setNhanKhauList((prev) =>
       prev.map((item) => {
         if (item.id === id) {
@@ -699,7 +1039,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
             merged.noi_cap_cccd,
             merged.ngay_het_han_cccd
           );
-          return {
+          updatedObj = {
             ...merged,
             ngay_cap_cccd: merged.ngay_cap_cccd || cccdMeta.ngay_cap_cccd,
             noi_cap_cccd: merged.noi_cap_cccd || cccdMeta.noi_cap_cccd,
@@ -707,10 +1047,15 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
             updated_at: new Date().toISOString(),
             updated_by: currentUser?.id,
           };
+          return updatedObj;
         }
         return item;
       })
     );
+
+    if (updatedObj) {
+      upsertNhanKhauCloud(updatedObj);
+    }
 
     if (oldObj) {
       logActivity('UPDATE', 'nhan_khau', id, oldObj, { ...oldObj, ...data }, `Cập nhật thông tin nhân khẩu: ${data.ho_ten || oldObj.ho_ten}`);
@@ -735,11 +1080,16 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setHoKhauList((prev) =>
         prev.map((hk) => {
           if (hk.ma_ho === target.ma_ho) {
-            return { ...hk, so_nhan_khau: Math.max(0, hk.so_nhan_khau - 1) };
+            const updatedHk = { ...hk, so_nhan_khau: Math.max(0, hk.so_nhan_khau - 1) };
+            upsertHoKhauCloud(updatedHk);
+            return updatedHk;
           }
           return hk;
         })
       );
+
+      // Xóa trên Supabase Cloud
+      deleteNhanKhauCloud(id);
 
       logActivity('DELETE', 'nhan_khau', id, target, null, `Xóa nhân khẩu: ${target.ho_ten} (${target.ma_ho})`);
 
@@ -808,6 +1158,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
       updated_at: new Date().toISOString(),
     };
     setHoKhauList((prev) => [newHk, ...prev]);
+    upsertHoKhauCloud(newHk);
     logActivity('INSERT', 'ho_khau', newId, null, newHk, `Thêm sổ hộ khẩu mới: ${newHk.ma_ho} (${newHk.ten_chu_ho})`);
     
     addSystemNotification({
@@ -824,15 +1175,20 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const updateHoKhau = async (id: string, data: Partial<HoKhau>) => {
     let oldObj: HoKhau | undefined;
+    let updatedObj: HoKhau | undefined;
     setHoKhauList((prev) =>
       prev.map((item) => {
         if (item.id === id) {
           oldObj = item;
-          return { ...item, ...data, updated_at: new Date().toISOString() };
+          updatedObj = { ...item, ...data, updated_at: new Date().toISOString() };
+          return updatedObj;
         }
         return item;
       })
     );
+    if (updatedObj) {
+      upsertHoKhauCloud(updatedObj);
+    }
     if (oldObj) {
       logActivity('UPDATE', 'ho_khau', id, oldObj, { ...oldObj, ...data }, `Cập nhật sổ hộ khẩu: ${oldObj.ma_ho}`);
     }
@@ -860,6 +1216,10 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
         return item;
       })
     );
+
+    if (newObj) {
+      upsertHoKhauCloud(newObj);
+    }
 
     if (targetId && newObj) {
       logActivity('UPDATE', 'ho_khau', targetId, oldObj, newObj, `Ghim vị trí GPS cho hộ ${maHo} -> (${lat.toFixed(5)}, ${lng.toFixed(5)})`);
@@ -897,6 +1257,10 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
       })
     );
 
+    if (newObj) {
+      upsertHoKhauCloud(newObj);
+    }
+
     if (targetId && newObj) {
       logActivity('UPDATE', 'ho_khau', targetId, oldObj, newObj, `Cập nhật thông tin không gian thửa đất cho hộ ${maHo}`);
       addSystemNotification({
@@ -924,6 +1288,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
       updated_at: new Date().toISOString(),
     };
     setThongBaoList((prev) => [newTb, ...prev]);
+    upsertThongBaoCloud(newTb);
     logActivity('INSERT', 'thong_bao', newTb.id, null, newTb, `Đăng bản tin thôn: ${newTb.tieu_de} (${newTb.pham_vi})`);
     
     addSystemNotification({
@@ -940,15 +1305,20 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const updateThongBao = async (id: string, data: Partial<ThongBao>) => {
     let oldObj: ThongBao | undefined;
+    let updatedObj: ThongBao | undefined;
     setThongBaoList((prev) =>
       prev.map((item) => {
         if (item.id === id) {
           oldObj = item;
-          return { ...item, ...data, updated_at: new Date().toISOString() };
+          updatedObj = { ...item, ...data, updated_at: new Date().toISOString() };
+          return updatedObj;
         }
         return item;
       })
     );
+    if (updatedObj) {
+      upsertThongBaoCloud(updatedObj);
+    }
     if (oldObj) {
       logActivity('UPDATE', 'thong_bao', id, oldObj, { ...oldObj, ...data }, `Chỉnh sửa bản tin thôn: ${data.tieu_de || oldObj.tieu_de}`);
     }
@@ -958,21 +1328,27 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const target = thongBaoList.find((tb) => tb.id === id);
     if (target) {
       setThongBaoList((prev) => prev.filter((tb) => tb.id !== id));
+      deleteThongBaoCloud(id);
       logActivity('DELETE', 'thong_bao', id, target, null, `Xóa bản tin thôn: ${target.tieu_de}`);
     }
   };
 
   const toggleGhimThongBao = async (id: string) => {
     let isGhimNew = false;
+    let updatedObj: ThongBao | undefined;
     setThongBaoList((prev) =>
       prev.map((item) => {
         if (item.id === id) {
           isGhimNew = !item.is_ghim;
-          return { ...item, is_ghim: isGhimNew, updated_at: new Date().toISOString() };
+          updatedObj = { ...item, is_ghim: isGhimNew, updated_at: new Date().toISOString() };
+          return updatedObj;
         }
         return item;
       })
     );
+    if (updatedObj) {
+      upsertThongBaoCloud(updatedObj);
+    }
     logActivity('UPDATE', 'thong_bao', id, null, null, `${isGhimNew ? 'Ghim' : 'Bỏ ghim'} bản tin thôn`);
   };
 
@@ -1009,6 +1385,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
       created_at: new Date().toISOString(),
     };
     setBinhLuanList((prev) => [newBl, ...prev]);
+    upsertBinhLuanCloud(newBl);
     logActivity('INSERT', 'thong_bao', newBl.id, null, newBl, `Người dân đặt câu hỏi trên bản tin: ${comment.ho_ten_nguoi_gui}`);
     
     // Đẩy thông báo câu hỏi mới vào trung tâm thông báo toàn hệ thống
@@ -1023,10 +1400,11 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const replyBinhLuan = async (commentId: string, replyContent: string) => {
+    let updatedObj: BinhLuanThongBao | undefined;
     setBinhLuanList((prev) =>
       prev.map((bl) => {
         if (bl.id === commentId) {
-          return {
+          updatedObj = {
             ...bl,
             da_tra_loi: true,
             tra_loi_noi_dung: replyContent,
@@ -1034,10 +1412,14 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
             tra_loi_boi_chuc_danh: currentUser?.vai_tro === 'to_truong' ? `Tổ trưởng ${currentUser.to_phu_trach}` : 'Cán Bộ Thôn',
             tra_loi_luc: new Date().toISOString(),
           };
+          return updatedObj;
         }
         return bl;
       })
     );
+    if (updatedObj) {
+      upsertBinhLuanCloud(updatedObj);
+    }
     logActivity('UPDATE', 'thong_bao', commentId, null, null, `Cán bộ giải đáp câu hỏi của người dân: ${currentUser?.ho_ten}`);
 
     addSystemNotification({
@@ -1051,6 +1433,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const deleteBinhLuan = async (commentId: string) => {
     setBinhLuanList((prev) => prev.filter((bl) => bl.id !== commentId));
+    deleteBinhLuanCloud(commentId);
   };
 
   const addCanBo = async (officer: Omit<VillageOfficer, 'id'>): Promise<VillageOfficer> => {
@@ -1060,6 +1443,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
       id: newId,
     };
     setCanBoList((prev) => [newOfficer, ...prev]);
+    upsertCanBoCloud(newOfficer);
     logActivity('INSERT', 'can_bo_thon', newId, null, newOfficer, `Thêm cán bộ mới: ${newOfficer.ho_ten} (${newOfficer.chuc_vu})`);
     addSystemNotification({
       tieu_de: 'Bổ nhiệm cán bộ mới',
@@ -1074,15 +1458,20 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const updateCanBo = async (id: string, data: Partial<VillageOfficer>) => {
     let oldObj: VillageOfficer | undefined;
+    let updatedObj: VillageOfficer | undefined;
     setCanBoList((prev) =>
       prev.map((item) => {
         if (item.id === id) {
           oldObj = item;
-          return { ...item, ...data };
+          updatedObj = { ...item, ...data };
+          return updatedObj;
         }
         return item;
       })
     );
+    if (updatedObj) {
+      upsertCanBoCloud(updatedObj);
+    }
     if (oldObj) {
       logActivity('UPDATE', 'can_bo_thon', id, oldObj, { ...oldObj, ...data }, `Cập nhật hồ sơ cán bộ: ${data.ho_ten || oldObj.ho_ten}`);
       addSystemNotification({
@@ -1100,6 +1489,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const target = canBoList.find((c) => c.id === id);
     if (target) {
       setCanBoList((prev) => prev.filter((c) => c.id !== id));
+      deleteCanBoCloud(id);
       logActivity('DELETE', 'can_bo_thon', id, target, null, `Xóa hồ sơ cán bộ: ${target.ho_ten} (${target.chuc_vu})`);
       addSystemNotification({
         tieu_de: 'Xóa hồ sơ cán bộ',
@@ -1119,6 +1509,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
       created_at: new Date().toISOString(),
     };
     setCongVanList((prev) => [newCV, ...prev]);
+    upsertCongVanCloud(newCV);
     logActivity('INSERT', 'cong_van', newId, null, newCV, `Tiếp nhận công văn mới: ${newCV.so_ky_hieu}`);
     addSystemNotification({
       tieu_de: `Văn bản mới: ${newCV.so_ky_hieu}`,
@@ -1133,15 +1524,20 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const updateCongVan = async (id: string, data: Partial<CongVan>) => {
     let oldObj: CongVan | undefined;
+    let updatedObj: CongVan | undefined;
     setCongVanList((prev) =>
       prev.map((item) => {
         if (item.id === id) {
           oldObj = item;
-          return { ...item, ...data, updated_at: new Date().toISOString() };
+          updatedObj = { ...item, ...data, updated_at: new Date().toISOString() };
+          return updatedObj;
         }
         return item;
       })
     );
+    if (updatedObj) {
+      upsertCongVanCloud(updatedObj);
+    }
     if (oldObj) {
       logActivity('UPDATE', 'cong_van', id, oldObj, { ...oldObj, ...data }, `Cập nhật văn bản: ${data.so_ky_hieu || oldObj.so_ky_hieu}`);
       addSystemNotification({
@@ -1159,6 +1555,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const target = congVanList.find((c) => c.id === id);
     if (target) {
       setCongVanList((prev) => prev.filter((c) => c.id !== id));
+      deleteCongVanCloud(id);
       logActivity('DELETE', 'cong_van', id, target, null, `Xóa văn bản: ${target.so_ky_hieu}`);
       addSystemNotification({
         tieu_de: `Xóa công văn ${target.so_ky_hieu}`,
@@ -1183,6 +1580,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
   ) => {
     const target = congVanList.find((c) => c.id === id);
     if (target) {
+      let updatedCV: CongVan | undefined;
       setCongVanList((prev) =>
         prev.map((item) =>
           item.id === id
@@ -1195,6 +1593,9 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
             : item
         )
       );
+      if (updatedCV) {
+        upsertCongVanCloud(updatedCV);
+      }
       logActivity('UPDATE', 'cong_van', id, target, { ...target, ...assignment }, `Phân công xử lý công văn: ${target.so_ky_hieu} cho ${assignment.nguoi_chu_tri_ten}`);
       addSystemNotification({
         tieu_de: `Giao việc: Công văn ${target.so_ky_hieu}`,
@@ -1216,6 +1617,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const target = congVanList.find((c) => c.id === id);
     if (target) {
       const newStatus = status || (progress >= 100 ? 'hoan_thanh' : 'dang_xu_ly');
+      let updatedCV: CongVan | undefined;
       setCongVanList((prev) =>
         prev.map((item) =>
           item.id === id
@@ -1433,6 +1835,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
     };
 
     setSanXuatList((prev) => [newRecord, ...prev]);
+    upsertSanXuatCloud(newRecord);
     logActivity('INSERT', 'nhan_khau', newId, null, newRecord, `Thêm thửa sản xuất: ${newRecord.chu_dat} (${newRecord.lo_thua_dat}, ${newRecord.dien_tich_m2}m²)`);
 
     addSystemNotification({
@@ -1449,19 +1852,25 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const updateSanXuatRecord = async (id: string, data: Partial<SanXuatRecord>) => {
     let oldObj: SanXuatRecord | undefined;
+    let updatedRecord: SanXuatRecord | undefined;
     setSanXuatList((prev) =>
       prev.map((item) => {
         if (item.id === id) {
           oldObj = item;
-          return {
+          updatedRecord = {
             ...item,
             ...data,
             updated_at: new Date().toISOString(),
           };
+          return updatedRecord;
         }
         return item;
       })
     );
+
+    if (updatedRecord) {
+      upsertSanXuatCloud(updatedRecord);
+    }
 
     if (oldObj) {
       logActivity('UPDATE', 'nhan_khau', id, oldObj, { ...oldObj, ...data }, `Chỉnh sửa thửa sản xuất: ${oldObj.lo_thua_dat} (${oldObj.chu_dat})`);
@@ -1480,6 +1889,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const target = sanXuatList.find((r) => r.id === id);
     if (target) {
       setSanXuatList((prev) => prev.filter((r) => r.id !== id));
+      deleteSanXuatCloud(id);
       logActivity('DELETE', 'nhan_khau', id, target, null, `Xóa thửa sản xuất: ${target.lo_thua_dat} (${target.chu_dat})`);
       addSystemNotification({
         tieu_de: 'Xóa bản ghi thửa đất sản xuất',
@@ -1549,31 +1959,14 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const updateXuDong = async (ma_xu_dong: string, updates: Partial<XuDongMeta>) => {
     setXuDongList((prev) =>
-      prev.map((z) => (z.ma_xu_dong === ma_xu_dong ? { ...z, ...updates } : z))
+      prev.map((xd) => (xd.ma_xu_dong === ma_xu_dong ? { ...xd, ...updates } : xd))
     );
-    logActivity('UPDATE', 'nhan_khau', ma_xu_dong, null, updates, `Cập nhật thông tin Vùng/Xứ đồng: ${ma_xu_dong}`);
-    addSystemNotification({
-      tieu_de: 'Cập nhật Xứ Đồng Sản Xuất',
-      noi_dung: `Đã cập nhật thông tin vùng sản xuất "${updates.ten_xu_dong || ma_xu_dong}".`,
-      loai: 'dan_cu',
-      link_tab: 'nong-nghiep',
-      nguoi_thuc_hien: currentUser?.ho_ten || 'Quản trị viên',
-    });
+    logActivity('UPDATE', 'nhan_khau', ma_xu_dong, null, updates, `Cập nhật thông tin xứ đồng: ${ma_xu_dong}`);
   };
 
   const deleteXuDong = async (ma_xu_dong: string) => {
-    const target = xuDongList.find((z) => z.ma_xu_dong === ma_xu_dong);
-    setXuDongList((prev) => prev.filter((z) => z.ma_xu_dong !== ma_xu_dong));
-    if (target) {
-      logActivity('DELETE', 'nhan_khau', ma_xu_dong, target, null, `Xóa Vùng/Xứ đồng: ${target.ten_xu_dong}`);
-      addSystemNotification({
-        tieu_de: 'Xóa Xứ Đồng Sản Xuất',
-        noi_dung: `Vùng sản xuất "${target.ten_xu_dong}" đã được xóa khỏi hệ thống quản trị.`,
-        loai: 'dan_cu',
-        link_tab: 'nong-nghiep',
-        nguoi_thuc_hien: currentUser?.ho_ten || 'Quản trị viên',
-      });
-    }
+    setXuDongList((prev) => prev.filter((xd) => xd.ma_xu_dong !== ma_xu_dong));
+    logActivity('DELETE', 'nhan_khau', ma_xu_dong, null, null, `Xóa xứ đồng sản xuất: ${ma_xu_dong}`);
   };
 
   const resetXuDongToDefault = () => {
@@ -1641,10 +2034,10 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
       logActivity('DELETE', 'nhan_khau', id, target, null, `Xóa phân vùng đa điểm xứ đồng: ${target.properties.ten_xu_dong}`);
       addSystemNotification({
         tieu_de: 'Xóa Phân Vùng Xứ Đồng GIS',
-        noi_dung: `Đã xóa phân vùng không gian "${target.properties.ten_xu_dong}" khỏi bản đồ số nông nghiệp.`,
+        noi_dung: `Đã xóa phân vùng "${target.properties.ten_xu_dong}" khỏi bản đồ số nông nghiệp.`,
         loai: 'dan_cu',
         link_tab: 'ban-do-san-xuat',
-        nguoi_thuc_hien: currentUser?.ho_ten || 'Quản trị viên',
+        nguoi_thuc_hien: currentUser?.ho_ten || 'Cán bộ GIS',
       });
     }
   };
@@ -1693,33 +2086,31 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const exportAgriGeoJsonBackup = (): string => {
-    const combinedData = {
+    const backupObj = {
       type: 'FeatureCollection',
       features: [
         ...agriZonesGeoJson.features,
-        ...agriParcelsGeoJson.features,
-        ...agriCanalsGeoJson.features,
-        ...agriPointsGeoJson.features,
-      ],
+        ...agriParcelsGeoJson.features
+      ]
     };
-    logActivity('EXPORT_EXCEL', 'nhan_khau', undefined, null, null, `Xuất file GeoJSON toàn bộ không gian nông nghiệp An Trạch`);
-    return JSON.stringify(combinedData, null, 2);
+    logActivity('EXPORT_EXCEL', 'nhan_khau', undefined, null, null, `Xuất file sao lưu GeoJSON nông nghiệp toàn diện`);
+    return JSON.stringify(backupObj, null, 2);
   };
 
   const restoreAgriGeoJson = (geoJsonString: string): { success: boolean; count: number; message: string } => {
     try {
-      const data = JSON.parse(geoJsonString);
-      if (!data || !data.features || !Array.isArray(data.features)) {
-        return { success: false, count: 0, message: 'File không đúng định dạng GeoJSON FeatureCollection hợp lệ.' };
+      const parsed = JSON.parse(geoJsonString);
+      if (!parsed || !Array.isArray(parsed.features)) {
+        return { success: false, count: 0, message: 'Dữ liệu không đúng định dạng FeatureCollection.' };
       }
 
       const newZones: XuDongGeoFeature[] = [];
       const newParcels: ParcelGeoFeature[] = [];
 
-      data.features.forEach((feat: any) => {
-        if (feat.properties?.ma_xu_dong || feat.id?.startsWith('xd-')) {
+      parsed.features.forEach((feat: any) => {
+        if (feat?.properties?.type === 'xudong_zone') {
           newZones.push(feat);
-        } else if (feat.properties?.lo_thua_dat || feat.id?.startsWith('thua-')) {
+        } else if (feat?.properties?.type === 'agricultural_parcel') {
           newParcels.push(feat);
         }
       });
@@ -1751,6 +2142,13 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
   return (
     <DataContext.Provider
       value={{
+        isCloudConfigured: isSupabaseConfigured,
+        isCloudConnected,
+        isCloudSyncing,
+        cloudSyncProgress,
+        lastSyncedAt,
+        syncToCloud,
+        pullFromCloud,
         nhanKhauList,
         hoKhauList,
         thongBaoList,

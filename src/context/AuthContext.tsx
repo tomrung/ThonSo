@@ -1,6 +1,14 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { UserProfile, UserRole, UserStatus, AuditLog, NhanKhau, ThongBao } from '../types';
 import { MOCK_PROFILES } from '../data/defaultData';
+import { 
+  fetchProfilesCloud, 
+  upsertProfileCloud, 
+  deleteProfileCloud, 
+  fetchAuditLogsCloud, 
+  insertAuditLogCloud,
+  subscribeToRealtimeChanges
+} from '../services/supabaseService';
 
 interface AuthContextType {
   currentUser: UserProfile | null;
@@ -90,6 +98,51 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   useEffect(() => {
     localStorage.setItem('antrach_audit_logs', JSON.stringify(auditLogs));
   }, [auditLogs]);
+
+  // Nạp tài khoản và nhật ký từ Supabase Cloud khi khởi động & lắng nghe Realtime
+  useEffect(() => {
+    const initAuthCloud = async () => {
+      try {
+        const cloudProfiles = await fetchProfilesCloud();
+        if (cloudProfiles && cloudProfiles.length > 0) {
+          setProfiles((prev) => {
+            const map = new Map<string, UserProfile>();
+            prev.forEach((p) => map.set(p.email.toLowerCase(), p));
+            cloudProfiles.forEach((cp) => map.set(cp.email.toLowerCase(), cp));
+            return Array.from(map.values());
+          });
+        }
+        const cloudLogs = await fetchAuditLogsCloud();
+        if (cloudLogs && cloudLogs.length > 0) {
+          setAuditLogs(cloudLogs);
+        }
+      } catch (err) {
+        console.warn('Không thể nạp profiles từ Supabase:', err);
+      }
+    };
+    initAuthCloud();
+
+    const unsub = subscribeToRealtimeChanges((tableName, payload) => {
+      if (tableName === 'profiles') {
+        if (payload.eventType === 'INSERT' || payload.eventType === 'UPDATE') {
+          const newRow: UserProfile = payload.new;
+          setProfiles((prev) => {
+            const idx = prev.findIndex((p) => p.email.toLowerCase() === newRow.email.toLowerCase());
+            if (idx >= 0) {
+              const updated = [...prev];
+              updated[idx] = { ...updated[idx], ...newRow };
+              return updated;
+            }
+            return [newRow, ...prev];
+          });
+        } else if (payload.eventType === 'DELETE') {
+          setProfiles((prev) => prev.filter((p) => p.id !== payload.old?.id));
+        }
+      }
+    });
+
+    return () => unsub();
+  }, []);
 
   const switchUser = (userId: string) => {
     const target = profiles.find((p) => p.id === userId);
@@ -198,6 +251,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     };
 
     setProfiles((prev) => [newProfile, ...prev]);
+    upsertProfileCloud(newProfile);
     logActivity(
       'INSERT',
       'profiles',
@@ -240,6 +294,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     };
     setCurrentUser(updated);
     setProfiles((prev) => prev.map((p) => (p.id === currentUser.id ? updated : p)));
+    upsertProfileCloud(updated);
     logActivity('UPDATE', 'profiles', currentUser.id, currentUser, updated, `Cập nhật thông tin cá nhân cán bộ: ${data.ho_ten}`);
   };
 
@@ -261,17 +316,20 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       avatar_url: data.avatar_url || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
     };
     setProfiles((prev) => [newOfficer, ...prev]);
+    upsertProfileCloud(newOfficer);
     logActivity('INSERT', 'profiles', newId, null, newOfficer, `Thêm cán bộ mới vào hệ thống: ${newOfficer.ho_ten} (${newOfficer.vai_tro})`);
     return newOfficer;
   };
 
   const updateOfficerUser = async (userId: string, data: Partial<UserProfile>) => {
     let oldObj: UserProfile | undefined;
+    let updatedObj: UserProfile | undefined;
     setProfiles((prev) =>
       prev.map((p) => {
         if (p.id === userId) {
           oldObj = p;
           const updated = { ...p, ...data };
+          updatedObj = updated;
           if (currentUser?.id === userId) {
             setCurrentUser(updated);
           }
@@ -280,6 +338,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         return p;
       })
     );
+    if (updatedObj) {
+      upsertProfileCloud(updatedObj);
+    }
     if (oldObj) {
       logActivity('UPDATE', 'profiles', userId, oldObj, { ...oldObj, ...data }, `Quản trị viên cập nhật tài khoản cán bộ: ${data.ho_ten || oldObj.ho_ten}`);
     }
@@ -289,6 +350,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const target = profiles.find((p) => p.id === userId);
     if (target) {
       setProfiles((prev) => prev.filter((p) => p.id !== userId));
+      deleteProfileCloud(userId);
       logActivity('DELETE', 'profiles', userId, target, null, `Xóa tài khoản cán bộ khỏi hệ thống: ${target.ho_ten} (${target.email})`);
     }
   };
@@ -303,6 +365,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             vai_tro: role || p.vai_tro,
             to_phu_trach: to || p.to_phu_trach,
           };
+          upsertProfileCloud(updated);
           logActivity(
             'APPROVE_USER',
             'profiles',
@@ -340,6 +403,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       created_at: new Date().toISOString(),
     };
     setAuditLogs((prev) => [newLog, ...prev.slice(0, 199)]);
+    insertAuditLogCloud(newLog);
   };
 
   const isSuperAdmin = currentUser?.vai_tro === 'super_admin' && currentUser?.trang_thai === 'active';

@@ -55,11 +55,15 @@ import {
   FileSpreadsheet,
   FileUp,
   Table,
-  Building2,
   Wheat,
   Sprout,
   Scale,
-  Droplets
+  Droplets,
+  Cloud,
+  CloudLightning,
+  CloudOff,
+  UploadCloud,
+  DownloadCloud
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useData } from '../context/DataContext';
@@ -69,6 +73,7 @@ import { XuDongGeoFeature, ParcelGeoFeature } from '../data/anTrachAgriculturalG
 import { AgriSpatialEditorModal } from '../components/AgriSpatialEditorModal';
 import { PageHeaderBanner } from '../components/PageHeaderBanner';
 import { exportNhanKhauToExcel } from '../lib/utils';
+import { checkCloudStatus, CloudStatus } from '../services/supabaseService';
 
 const roleMeta: Record<UserRole, { label: string; desc: string; badge: string; color: string }> = {
   super_admin: { 
@@ -160,6 +165,8 @@ export const AdminPage: React.FC = () => {
     thongBaoList, 
     binhLuanList,
     sanXuatList,
+    canBoList,
+    congVanList,
     boundariesData,
     addBoundary,
     updateBoundary,
@@ -172,12 +179,39 @@ export const AdminPage: React.FC = () => {
     updateXuDong,
     deleteXuDong,
     resetXuDongToDefault,
-    agriZonesGeoJson
+    agriZonesGeoJson,
+    aiKnowledgeList,
+    isCloudConfigured,
+    isCloudConnected,
+    isCloudSyncing,
+    cloudSyncProgress,
+    lastSyncedAt,
+    syncToCloud,
+    pullFromCloud
   } = useData();
 
   // Active Tab
   const [activeTab, setActiveTab] = useState<'boundaries' | 'members' | 'excel' | 'san_xuat_zones' | 'matrix' | 'audit' | 'supabase'>('boundaries');
   const [copiedSQL, setCopiedSQL] = useState(false);
+  const [cloudStatus, setCloudStatus] = useState<CloudStatus | null>(null);
+  const [isCheckingCloud, setIsCheckingCloud] = useState(false);
+  const [syncFeedback, setSyncFeedback] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
+
+  const refreshCloudStatus = async () => {
+    setIsCheckingCloud(true);
+    try {
+      const st = await checkCloudStatus();
+      setCloudStatus(st);
+    } finally {
+      setIsCheckingCloud(false);
+    }
+  };
+
+  useEffect(() => {
+    if (activeTab === 'supabase') {
+      refreshCloudStatus();
+    }
+  }, [activeTab]);
 
   // Filters for Members
   const [searchMember, setSearchMember] = useState('');
@@ -2090,60 +2124,370 @@ export const AdminPage: React.FC = () => {
         </div>
       )}
 
-      {/* ================= TAB 6: SUPABASE SQL ================= */}
+      {/* ================= TAB 6: TRUNG TÂM ĐỒNG BỘ ĐÁM MÂY SUPABASE CLOUD ================= */}
       {activeTab === 'supabase' && (
-        <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 space-y-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="font-black text-slate-900 text-sm">Cơ Sở Dữ Liệu Supabase & RLS Policies</h3>
-              <p className="text-xs text-slate-500 mt-0.5">Tệp SQL định nghĩa schema hoàn chỉnh, kích hoạt Row Level Security bảo mật cấp cao.</p>
+        <div className="space-y-4 animate-in fade-in duration-200">
+          
+          {/* Header Card: Cloud Status & Live Sync Controls */}
+          <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 relative overflow-hidden">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+              <div className="flex items-start gap-3.5">
+                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 border ${
+                  isCloudConnected 
+                    ? 'bg-emerald-50 text-emerald-600 border-emerald-200 shadow-emerald-500/10 shadow-lg' 
+                    : 'bg-amber-50 text-amber-600 border-amber-200'
+                }`}>
+                  {isCloudConnected ? <CloudLightning className="w-6 h-6 animate-pulse" /> : <CloudOff className="w-6 h-6" />}
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <h3 className="font-black text-slate-900 text-base tracking-tight">
+                      Trung Tâm Đồng Bộ Đám Mây Supabase (Cloud Sync Hub)
+                    </h3>
+                    <span className={`px-2.5 py-0.5 rounded-full text-[11px] font-black border flex items-center gap-1 ${
+                      isCloudConnected 
+                        ? 'bg-emerald-50 text-emerald-700 border-emerald-300' 
+                        : 'bg-amber-50 text-amber-800 border-amber-300'
+                    }`}>
+                      <span className={`w-2 h-2 rounded-full ${isCloudConnected ? 'bg-emerald-500 animate-ping' : 'bg-amber-500'}`} />
+                      <span>{isCloudConnected ? 'Realtime 2-Way Active' : 'Chưa kết nối Cloud'}</span>
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-500 mt-1 font-medium">
+                    Tất cả các máy tính đăng nhập cùng tài khoản sẽ tự động đồng bộ dữ liệu thời gian thực không cần tải lại trang.
+                  </p>
+                  <div className="mt-2 flex items-center gap-3 text-[11px] text-slate-600 font-mono flex-wrap">
+                    <span>⚡ URL: <strong className="text-slate-900">https://jpgzfqqknttwwynhyvxb.supabase.co</strong></span>
+                    <span>• Lần đồng bộ cuối: <strong className="text-slate-900">{lastSyncedAt ? new Date(lastSyncedAt).toLocaleString('vi-VN') : 'Chưa đồng bộ'}</strong></span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex items-center gap-2 shrink-0 flex-wrap">
+                <button
+                  onClick={refreshCloudStatus}
+                  disabled={isCheckingCloud || isCloudSyncing}
+                  className="px-3.5 py-2.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center gap-1.5 transition-all cursor-pointer disabled:opacity-50"
+                  title="Kiểm tra trạng thái máy chủ"
+                >
+                  <RefreshCw className={`w-3.5 h-3.5 ${isCheckingCloud ? 'animate-spin' : ''}`} />
+                  <span>Kiểm Tra Lại</span>
+                </button>
+
+                <button
+                  onClick={async () => {
+                    const res = await pullFromCloud();
+                    setSyncFeedback({ type: res.success ? 'success' : 'error', message: res.message });
+                    refreshCloudStatus();
+                  }}
+                  disabled={isCloudSyncing}
+                  className="px-4 py-2.5 rounded-2xl bg-sky-50 hover:bg-sky-100 text-sky-800 border border-sky-200 font-extrabold text-xs flex items-center gap-1.5 transition-all cursor-pointer disabled:opacity-50 active:scale-95"
+                >
+                  <DownloadCloud className="w-4 h-4 text-sky-600" />
+                  <span>Tải Từ Cloud Về Máy</span>
+                </button>
+
+                <button
+                  onClick={async () => {
+                    if (window.confirm('Hành động này sẽ tải toàn bộ 2.308 nhân khẩu, hộ khẩu, sản xuất và công văn hiện tại lên Cloud Supabase. Bạn có chắc chắn muốn tiếp tục?')) {
+                      const res = await syncToCloud();
+                      setSyncFeedback({ type: res.success ? 'success' : 'error', message: res.message });
+                      refreshCloudStatus();
+                    }
+                  }}
+                  disabled={isCloudSyncing}
+                  className="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-teal-800 text-white font-extrabold text-xs flex items-center gap-2 shadow-md shadow-emerald-600/20 active:scale-95 transition-all cursor-pointer disabled:opacity-50"
+                >
+                  <UploadCloud className="w-4 h-4" />
+                  <span>Đẩy Toàn Bộ Lên Cloud (Seed)</span>
+                </button>
+              </div>
             </div>
-            <button
-              onClick={handleCopySQL}
-              className="px-3.5 py-2 rounded-xl gradient-gov text-white font-bold text-xs flex items-center gap-1.5 shadow-md cursor-pointer"
-            >
-              {copiedSQL ? <Check className="w-4 h-4 text-emerald-300" /> : <Copy className="w-4 h-4" />}
-              <span>{copiedSQL ? 'Đã Sao Chép SQL' : 'Sao Chép SQL'}</span>
-            </button>
+
+            {/* Sync Progress Indicator */}
+            {isCloudSyncing && cloudSyncProgress && (
+              <div className="mt-4 p-4 rounded-2xl bg-emerald-50/80 border border-emerald-200 space-y-2 animate-in fade-in">
+                <div className="flex items-center justify-between text-xs font-bold text-emerald-950">
+                  <span className="flex items-center gap-2">
+                    <RefreshCw className="w-4 h-4 animate-spin text-emerald-600" />
+                    <span>{cloudSyncProgress.message}</span>
+                  </span>
+                  <span>{cloudSyncProgress.percent}%</span>
+                </div>
+                <div className="w-full h-2.5 rounded-full bg-emerald-200/70 overflow-hidden">
+                  <div 
+                    className="h-full bg-gradient-to-r from-emerald-500 to-teal-600 transition-all duration-300 rounded-full"
+                    style={{ width: `${cloudSyncProgress.percent}%` }}
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* Feedback Alert */}
+            {syncFeedback && (
+              <div className={`mt-4 p-3.5 rounded-2xl border text-xs font-bold flex items-center justify-between animate-in fade-in ${
+                syncFeedback.type === 'success' 
+                  ? 'bg-emerald-50 text-emerald-900 border-emerald-200' 
+                  : 'bg-rose-50 text-rose-900 border-rose-200'
+              }`}>
+                <span>{syncFeedback.message}</span>
+                <button 
+                  onClick={() => setSyncFeedback(null)} 
+                  className="text-slate-400 hover:text-slate-700 cursor-pointer ml-2"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+            )}
           </div>
 
-          <div className="p-4 rounded-2xl bg-slate-900 text-emerald-400 font-mono text-xs overflow-x-auto leading-relaxed border border-slate-800 max-h-96">
-            <pre>{`-- =========================================================================
--- SUPABASE POSTGRESQL SCHEMA COMPLETE FOR AN TRACH SMART VILLAGE GIS
--- =========================================================================
+          {/* Database Comparison Table Card */}
+          <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+            <div className="p-4 sm:p-5 border-b border-slate-100 bg-slate-50/60 flex items-center justify-between">
+              <div>
+                <h4 className="font-extrabold text-slate-900 text-sm">
+                  Đối Chiếu Số Lượng Bản Ghi: Trình Duyệt Này vs Cloud Supabase
+                </h4>
+                <p className="text-xs text-slate-500 mt-0.5">
+                  Đảm bảo dữ liệu giữa các máy tính luôn đạt trạng thái đồng bộ 100%.
+                </p>
+              </div>
+              <span className="text-xs font-bold text-slate-600 bg-white px-3 py-1 rounded-xl border border-slate-200 shadow-2xs">
+                7 Bảng Dữ Liệu
+              </span>
+            </div>
 
--- 1. BẢNG HỘ KHẨU (ho_khau)
-CREATE TABLE IF NOT EXISTS public.ho_khau (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  ma_ho VARCHAR(50) UNIQUE NOT NULL,
-  ten_chu_ho VARCHAR(255) NOT NULL,
-  to_dan_cu VARCHAR(100) NOT NULL,
-  dia_chi TEXT NOT NULL,
-  so_dien_thoai VARCHAR(20),
-  loai_ho VARCHAR(50) DEFAULT 'chuan',
-  dien_tich_dat_m2 NUMERIC DEFAULT 120,
-  polygon_thua_dat JSONB,
-  lat NUMERIC DEFAULT 15.9620,
-  lng NUMERIC DEFAULT 108.1965,
-  created_at TIMESTAMPTZ DEFAULT now()
-);
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs">
+                <thead className="bg-slate-100 text-slate-600 font-extrabold uppercase text-[10px] tracking-wider border-b border-slate-200">
+                  <tr>
+                    <th className="py-3 px-4">Bảng Dữ Liệu</th>
+                    <th className="py-3 px-4">Tên Bảng Supabase</th>
+                    <th className="py-3 px-4 text-center">Bộ Nhớ Máy Này</th>
+                    <th className="py-3 px-4 text-center">Trên Cloud Supabase</th>
+                    <th className="py-3 px-4 text-center">Trạng Thái Đồng Bộ</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100 font-medium text-slate-800">
+                  {/* Row 1: Nhân Khẩu */}
+                  <tr className="hover:bg-slate-50">
+                    <td className="py-3 px-4 font-bold text-slate-900">👥 Hồ Sơ Cư Dân (Nhân Khẩu)</td>
+                    <td className="py-3 px-4 font-mono text-purple-700">public.nhan_khau</td>
+                    <td className="py-3 px-4 text-center font-bold font-mono text-slate-900">{nhanKhauList.length.toLocaleString('vi-VN')}</td>
+                    <td className="py-3 px-4 text-center font-bold font-mono text-emerald-700">
+                      {cloudStatus ? (cloudStatus.tableCounts.nhanKhau || 0).toLocaleString('vi-VN') : 'Đang kiểm tra...'}
+                    </td>
+                    <td className="py-3 px-4 text-center">
+                      <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-black border ${
+                        cloudStatus && cloudStatus.tableCounts.nhanKhau === nhanKhauList.length && nhanKhauList.length > 0
+                          ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                          : 'bg-amber-50 text-amber-700 border-amber-200'
+                      }`}>
+                        {cloudStatus && cloudStatus.tableCounts.nhanKhau === nhanKhauList.length && nhanKhauList.length > 0 ? '✓ Đã Đồng Bộ' : 'Chưa Khớp'}
+                      </span>
+                    </td>
+                  </tr>
 
--- 2. BẢNG NHÂN KHẨU (nhan_khau)
-CREATE TABLE IF NOT EXISTS public.nhan_khau (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  ma_ho VARCHAR(50) REFERENCES public.ho_khau(ma_ho) ON DELETE CASCADE,
-  ho_ten VARCHAR(255) NOT NULL,
-  quan_he_chu_ho VARCHAR(100) NOT NULL,
-  nam_sinh INT,
-  gioi_tinh VARCHAR(20),
-  so_cmnd_cccd VARCHAR(50),
-  ma_the_bhyt VARCHAR(50),
-  created_at TIMESTAMPTZ DEFAULT now()
-);
+                  {/* Row 2: Hộ Khẩu */}
+                  <tr className="hover:bg-slate-50">
+                    <td className="py-3 px-4 font-bold text-slate-900">🏠 Sổ Hộ Khẩu Gia Đình</td>
+                    <td className="py-3 px-4 font-mono text-purple-700">public.ho_khau</td>
+                    <td className="py-3 px-4 text-center font-bold font-mono text-slate-900">{hoKhauList.length.toLocaleString('vi-VN')}</td>
+                    <td className="py-3 px-4 text-center font-bold font-mono text-emerald-700">
+                      {cloudStatus ? (cloudStatus.tableCounts.hoKhau || 0).toLocaleString('vi-VN') : '...'}
+                    </td>
+                    <td className="py-3 px-4 text-center">
+                      <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-black border ${
+                        cloudStatus && cloudStatus.tableCounts.hoKhau === hoKhauList.length && hoKhauList.length > 0
+                          ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                          : 'bg-amber-50 text-amber-700 border-amber-200'
+                      }`}>
+                        {cloudStatus && cloudStatus.tableCounts.hoKhau === hoKhauList.length && hoKhauList.length > 0 ? '✓ Đã Đồng Bộ' : 'Chưa Khớp'}
+                      </span>
+                    </td>
+                  </tr>
 
--- 3. KÍCH HOẠT ROW LEVEL SECURITY (RLS)
-ALTER TABLE public.ho_khau ENABLE ROW LEVEL SECURITY;
-ALTER TABLE public.nhan_khau ENABLE ROW LEVEL SECURITY;`}</pre>
+                  {/* Row 3: Sản Xuất Nông Nghiệp */}
+                  <tr className="hover:bg-slate-50">
+                    <td className="py-3 px-4 font-bold text-slate-900">🌾 Sổ Bộ Thửa Đất Sản Xuất</td>
+                    <td className="py-3 px-4 font-mono text-purple-700">public.san_xuat_nong_nghiep</td>
+                    <td className="py-3 px-4 text-center font-bold font-mono text-slate-900">{sanXuatList.length.toLocaleString('vi-VN')}</td>
+                    <td className="py-3 px-4 text-center font-bold font-mono text-emerald-700">
+                      {cloudStatus ? (cloudStatus.tableCounts.sanXuat || 0).toLocaleString('vi-VN') : '...'}
+                    </td>
+                    <td className="py-3 px-4 text-center">
+                      <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-black border ${
+                        cloudStatus && cloudStatus.tableCounts.sanXuat === sanXuatList.length && sanXuatList.length > 0
+                          ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                          : 'bg-amber-50 text-amber-700 border-amber-200'
+                      }`}>
+                        {cloudStatus && cloudStatus.tableCounts.sanXuat === sanXuatList.length && sanXuatList.length > 0 ? '✓ Đã Đồng Bộ' : 'Chưa Khớp'}
+                      </span>
+                    </td>
+                  </tr>
+
+                  {/* Row 4: Công Văn */}
+                  <tr className="hover:bg-slate-50">
+                    <td className="py-3 px-4 font-bold text-slate-900">📑 Công Văn & Chỉ Đạo</td>
+                    <td className="py-3 px-4 font-mono text-purple-700">public.cong_van</td>
+                    <td className="py-3 px-4 text-center font-bold font-mono text-slate-900">{congVanList.length.toLocaleString('vi-VN')}</td>
+                    <td className="py-3 px-4 text-center font-bold font-mono text-emerald-700">
+                      {cloudStatus ? (cloudStatus.tableCounts.congVan || 0).toLocaleString('vi-VN') : '...'}
+                    </td>
+                    <td className="py-3 px-4 text-center">
+                      <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-black border ${
+                        cloudStatus && cloudStatus.tableCounts.congVan === congVanList.length && congVanList.length > 0
+                          ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                          : 'bg-amber-50 text-amber-700 border-amber-200'
+                      }`}>
+                        {cloudStatus && cloudStatus.tableCounts.congVan === congVanList.length && congVanList.length > 0 ? '✓ Đã Đồng Bộ' : 'Chưa Khớp'}
+                      </span>
+                    </td>
+                  </tr>
+
+                  {/* Row 5: Cán Bộ Thôn */}
+                  <tr className="hover:bg-slate-50">
+                    <td className="py-3 px-4 font-bold text-slate-900">🏛️ Bộ Máy Cán Bộ Thôn</td>
+                    <td className="py-3 px-4 font-mono text-purple-700">public.can_bo_thon</td>
+                    <td className="py-3 px-4 text-center font-bold font-mono text-slate-900">{canBoList.length.toLocaleString('vi-VN')}</td>
+                    <td className="py-3 px-4 text-center font-bold font-mono text-emerald-700">
+                      {cloudStatus ? (cloudStatus.tableCounts.canBo || 0).toLocaleString('vi-VN') : '...'}
+                    </td>
+                    <td className="py-3 px-4 text-center">
+                      <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-black border ${
+                        cloudStatus && cloudStatus.tableCounts.canBo === canBoList.length && canBoList.length > 0
+                          ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                          : 'bg-amber-50 text-amber-700 border-amber-200'
+                      }`}>
+                        {cloudStatus && cloudStatus.tableCounts.canBo === canBoList.length && canBoList.length > 0 ? '✓ Đã Đồng Bộ' : 'Chưa Khớp'}
+                      </span>
+                    </td>
+                  </tr>
+
+                  {/* Row 6: Thông Báo */}
+                  <tr className="hover:bg-slate-50">
+                    <td className="py-3 px-4 font-bold text-slate-900">📢 Bản Tin & Thông Báo</td>
+                    <td className="py-3 px-4 font-mono text-purple-700">public.thong_bao</td>
+                    <td className="py-3 px-4 text-center font-bold font-mono text-slate-900">{thongBaoList.length.toLocaleString('vi-VN')}</td>
+                    <td className="py-3 px-4 text-center font-bold font-mono text-emerald-700">
+                      {cloudStatus ? (cloudStatus.tableCounts.thongBao || 0).toLocaleString('vi-VN') : '...'}
+                    </td>
+                    <td className="py-3 px-4 text-center">
+                      <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-black border ${
+                        cloudStatus && cloudStatus.tableCounts.thongBao === thongBaoList.length && thongBaoList.length > 0
+                          ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                          : 'bg-amber-50 text-amber-700 border-amber-200'
+                      }`}>
+                        {cloudStatus && cloudStatus.tableCounts.thongBao === thongBaoList.length && thongBaoList.length > 0 ? '✓ Đã Đồng Bộ' : 'Chưa Khớp'}
+                      </span>
+                    </td>
+                  </tr>
+
+                  {/* Row 7: GIS Boundaries */}
+                  <tr className="hover:bg-slate-50">
+                    <td className="py-3 px-4 font-bold text-slate-900">🗺️ Ranh Giới Địa Lý GIS</td>
+                    <td className="py-3 px-4 font-mono text-purple-700">public.gis_boundaries</td>
+                    <td className="py-3 px-4 text-center font-bold font-mono text-slate-900">{boundariesData.features.length.toLocaleString('vi-VN')}</td>
+                    <td className="py-3 px-4 text-center font-bold font-mono text-emerald-700">
+                      {cloudStatus ? (cloudStatus.tableCounts.boundaries || 0).toLocaleString('vi-VN') : '...'}
+                    </td>
+                    <td className="py-3 px-4 text-center">
+                      <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-black border ${
+                        cloudStatus && cloudStatus.tableCounts.boundaries === boundariesData.features.length && boundariesData.features.length > 0
+                          ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                          : 'bg-amber-50 text-amber-700 border-amber-200'
+                      }`}>
+                        {cloudStatus && cloudStatus.tableCounts.boundaries === boundariesData.features.length && boundariesData.features.length > 0 ? '✓ Đã Đồng Bộ' : 'Chưa Khớp'}
+                      </span>
+                    </td>
+                  </tr>
+
+                  {/* Row 8: Tài Khoản & Phân Quyền */}
+                  <tr className="hover:bg-slate-50">
+                    <td className="py-3 px-4 font-bold text-slate-900">🔐 Tài Khoản & Phân Quyền Cán Bộ</td>
+                    <td className="py-3 px-4 font-mono text-purple-700">public.profiles</td>
+                    <td className="py-3 px-4 text-center font-bold font-mono text-slate-900">{allProfiles.length.toLocaleString('vi-VN')}</td>
+                    <td className="py-3 px-4 text-center font-bold font-mono text-emerald-700">
+                      {cloudStatus ? (cloudStatus.tableCounts.profiles || 0).toLocaleString('vi-VN') : '...'}
+                    </td>
+                    <td className="py-3 px-4 text-center">
+                      <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-black border ${
+                        cloudStatus && cloudStatus.tableCounts.profiles === allProfiles.length && allProfiles.length > 0
+                          ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                          : 'bg-amber-50 text-amber-700 border-amber-200'
+                      }`}>
+                        {cloudStatus && cloudStatus.tableCounts.profiles === allProfiles.length && allProfiles.length > 0 ? '✓ Đã Đồng Bộ' : 'Chưa Khớp'}
+                      </span>
+                    </td>
+                  </tr>
+
+                  {/* Row 9: Cơ Sở Tri Thức AI */}
+                  <tr className="hover:bg-slate-50">
+                    <td className="py-3 px-4 font-bold text-slate-900">🤖 Tri Thức An Trạch AI Copilot</td>
+                    <td className="py-3 px-4 font-mono text-purple-700">public.ai_knowledge</td>
+                    <td className="py-3 px-4 text-center font-bold font-mono text-slate-900">{aiKnowledgeList.length.toLocaleString('vi-VN')}</td>
+                    <td className="py-3 px-4 text-center font-bold font-mono text-emerald-700">
+                      {cloudStatus ? (cloudStatus.tableCounts.aiKnowledge || 0).toLocaleString('vi-VN') : '...'}
+                    </td>
+                    <td className="py-3 px-4 text-center">
+                      <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-black border ${
+                        cloudStatus && cloudStatus.tableCounts.aiKnowledge === aiKnowledgeList.length && aiKnowledgeList.length > 0
+                          ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                          : 'bg-amber-50 text-amber-700 border-amber-200'
+                      }`}>
+                        {cloudStatus && cloudStatus.tableCounts.aiKnowledge === aiKnowledgeList.length && aiKnowledgeList.length > 0 ? '✓ Đã Đồng Bộ' : 'Chưa Khớp'}
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* SQL Setup Script Box */}
+          <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 space-y-4">
+            <div className="flex items-center justify-between flex-wrap gap-2">
+              <div>
+                <h4 className="font-black text-slate-900 text-sm flex items-center gap-2">
+                  <Database className="w-4 h-4 text-purple-600" />
+                  <span>Kịch Bản Cấu Hình Supabase Cloud Sync Toàn Diện (SQL Setup Script)</span>
+                </h4>
+                <p className="text-xs text-slate-500 mt-0.5">
+                  Tệp SQL gỡ ràng buộc khóa ngoại cứng, mở quyền RLS và kích hoạt Realtime replication (File: <code>supabase_cloud_sync_setup.sql</code>)
+                </p>
+              </div>
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText(`-- CẤU HÌNH SUPABASE CLOUD REALTIME SYNC TOÀN DIỆN CHO THÔN AN TRẠCH --\nALTER TABLE IF EXISTS public.profiles DROP CONSTRAINT IF EXISTS profiles_id_fkey;\nALTER TABLE IF EXISTS public.profiles ALTER COLUMN id SET DEFAULT gen_random_uuid();\nALTER TABLE IF EXISTS public.nhan_khau DROP CONSTRAINT IF EXISTS nhan_khau_ma_ho_fkey;\nALTER TABLE IF EXISTS public.nhan_khau DROP CONSTRAINT IF EXISTS nhan_khau_updated_by_fkey;\nALTER TABLE IF EXISTS public.ho_khau DROP CONSTRAINT IF EXISTS ho_khau_updated_by_fkey;\nALTER TABLE IF EXISTS public.ho_khau DROP CONSTRAINT IF EXISTS ho_khau_chu_ho_id_fkey;\nALTER TABLE IF EXISTS public.thong_bao DROP CONSTRAINT IF EXISTS thong_bao_nguoi_dang_id_fkey;\nALTER TABLE IF EXISTS public.binh_luan_thong_bao DROP CONSTRAINT IF EXISTS binh_luan_thong_bao_thong_bao_id_fkey;\nALTER TABLE IF EXISTS public.nhat_ky_thao_tac DROP CONSTRAINT IF EXISTS nhat_ky_thao_tac_user_id_fkey;\n\nCREATE TABLE IF NOT EXISTS public.profiles (\n  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),\n  email TEXT NOT NULL UNIQUE,\n  ho_ten TEXT NOT NULL,\n  so_dien_thoai TEXT,\n  vai_tro TEXT NOT NULL DEFAULT 'to_truong',\n  to_phu_trach TEXT NOT NULL DEFAULT 'Tổ 1',\n  trang_thai TEXT NOT NULL DEFAULT 'active',\n  avatar_url TEXT,\n  created_at TIMESTAMPTZ NOT NULL DEFAULT timezone('utc'::text, now()),\n  updated_at TIMESTAMPTZ NOT NULL DEFAULT timezone('utc'::text, now())\n);\n\nCREATE TABLE IF NOT EXISTS public.ai_knowledge (\n  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),\n  code TEXT UNIQUE,\n  title TEXT NOT NULL,\n  category TEXT NOT NULL,\n  summary TEXT,\n  content TEXT NOT NULL,\n  source TEXT,\n  applicable_to TEXT DEFAULT 'Toàn thôn',\n  tags TEXT[] DEFAULT '{}',\n  updated_at TIMESTAMPTZ NOT NULL DEFAULT timezone('utc'::text, now())\n);\n\nDO $$\nDECLARE\n  tbl text;\nBEGIN\n  FOR tbl IN \n    SELECT unnest(ARRAY['profiles', 'nhan_khau', 'ho_khau', 'san_xuat_nong_nghiep', 'cong_van', 'thong_bao', 'binh_luan_thong_bao', 'can_bo_thon', 'gis_boundaries', 'nhat_ky_thao_tac', 'ai_knowledge'])\n  LOOP\n    EXECUTE format('ALTER TABLE IF EXISTS public.%I ENABLE ROW LEVEL SECURITY;', tbl);\n    EXECUTE format('DROP POLICY IF EXISTS %I ON public.%I;', tbl || '_sync_all_policy', tbl);\n    EXECUTE format('CREATE POLICY %I ON public.%I FOR ALL TO anon, authenticated USING (true) WITH CHECK (true);', tbl || '_sync_all_policy', tbl);\n    BEGIN\n      EXECUTE format('ALTER PUBLICATION supabase_realtime ADD TABLE public.%I;', tbl);\n    EXCEPTION WHEN OTHERS THEN NULL; END;\n  END LOOP;\nEND $$;`);
+                  setCopiedSQL(true);
+                  setTimeout(() => setCopiedSQL(false), 2500);
+                }}
+                className="px-3.5 py-2 rounded-xl gradient-gov text-white font-bold text-xs flex items-center gap-1.5 shadow-md cursor-pointer"
+              >
+                {copiedSQL ? <Check className="w-4 h-4 text-emerald-300" /> : <Copy className="w-4 h-4" />}
+                <span>{copiedSQL ? 'Đã Sao Chép SQL' : 'Sao Chép SQL Cấu Hình'}</span>
+              </button>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-slate-900 text-emerald-400 font-mono text-xs overflow-x-auto leading-relaxed border border-slate-800 max-h-60">
+              <pre>{`-- Mở toàn quyền RLS & Kích hoạt Realtime cho 10 bảng dữ liệu
+DO $$
+DECLARE
+  tbl text;
+BEGIN
+  FOR tbl IN 
+    SELECT unnest(ARRAY['profiles', 'nhan_khau', 'ho_khau', 'san_xuat_nong_nghiep', 'cong_van', 'thong_bao', 'binh_luan_thong_bao', 'can_bo_thon', 'gis_boundaries', 'nhat_ky_thao_tac', 'ai_knowledge'])
+  LOOP
+    EXECUTE format('ALTER TABLE IF EXISTS public.%I ENABLE ROW LEVEL SECURITY;', tbl);
+    EXECUTE format('DROP POLICY IF EXISTS %I ON public.%I;', tbl || '_sync_all_policy', tbl);
+    EXECUTE format('CREATE POLICY %I ON public.%I FOR ALL TO anon, authenticated USING (true) WITH CHECK (true);', tbl || '_sync_all_policy', tbl);
+    BEGIN
+      EXECUTE format('ALTER PUBLICATION supabase_realtime ADD TABLE public.%I;', tbl);
+    EXCEPTION WHEN OTHERS THEN NULL; END;
+  END LOOP;
+END $$;`}</pre>
+            </div>
           </div>
         </div>
       )}
