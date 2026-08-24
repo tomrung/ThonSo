@@ -1,6 +1,7 @@
 -- ==============================================================================
 -- CẤU HÌNH SUPABASE CLOUD REALTIME SYNC HOÀN CHỈNH CHO THÔN SỐ AN TRẠCH
 -- Tự động tạo đầy đủ bảng dữ liệu, gỡ khóa ngoại cứng, mở RLS & kích hoạt Realtime
+-- Sử dụng kiểu TEXT PRIMARY KEY để đồng bộ 100% mọi định dạng mã định danh
 -- ==============================================================================
 
 -- 1. BẬT EXTENSION CẦN THIẾT
@@ -10,7 +11,7 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 -- 2.1 Bảng PROFILES (Hồ sơ Cán bộ & Tài khoản)
 CREATE TABLE IF NOT EXISTS public.profiles (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  id TEXT PRIMARY KEY,
   email TEXT NOT NULL UNIQUE,
   ho_ten TEXT NOT NULL,
   so_dien_thoai TEXT,
@@ -26,7 +27,7 @@ CREATE TABLE IF NOT EXISTS public.profiles (
 
 -- 2.2 Bảng HO_KHAU (Sổ Hộ Khẩu Gia Đình)
 CREATE TABLE IF NOT EXISTS public.ho_khau (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  id TEXT PRIMARY KEY,
   ma_ho TEXT NOT NULL UNIQUE,
   ten_chu_ho TEXT NOT NULL,
   so_cmnd_chu_ho TEXT,
@@ -41,7 +42,7 @@ CREATE TABLE IF NOT EXISTS public.ho_khau (
 
 -- 2.3 Bảng NHAN_KHAU (2.308 Hồ Sơ Nhân Khẩu Chi Tiết)
 CREATE TABLE IF NOT EXISTS public.nhan_khau (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  id TEXT PRIMARY KEY,
   stt_excel INTEGER,
   ma_ho TEXT NOT NULL,
   chu_ho TEXT NOT NULL,
@@ -72,7 +73,7 @@ CREATE TABLE IF NOT EXISTS public.nhan_khau (
 
 -- 2.4 Bảng SAN_XUAT_NONG_NGHIEP (647 Thửa Đất Sản Xuất & Mùa Vụ)
 CREATE TABLE IF NOT EXISTS public.san_xuat_nong_nghiep (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  id TEXT PRIMARY KEY,
   stt INTEGER,
   dot_phan_bo TEXT,
   giong_lua TEXT,
@@ -96,7 +97,7 @@ CREATE TABLE IF NOT EXISTS public.san_xuat_nong_nghiep (
 
 -- 2.5 Bảng CONG_VAN (Văn Thư & Điều Hành)
 CREATE TABLE IF NOT EXISTS public.cong_van (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  id TEXT PRIMARY KEY,
   so_ky_hieu TEXT NOT NULL,
   trich_yeu TEXT NOT NULL,
   loai_cong_van TEXT NOT NULL DEFAULT 'chi_dao',
@@ -122,7 +123,7 @@ CREATE TABLE IF NOT EXISTS public.cong_van (
 
 -- 2.6 Bảng THONG_BAO (Bản Tin & Thông Báo)
 CREATE TABLE IF NOT EXISTS public.thong_bao (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  id TEXT PRIMARY KEY,
   tieu_de TEXT NOT NULL,
   noi_dung TEXT NOT NULL,
   loai_tin TEXT NOT NULL DEFAULT 'thong_bao_chung',
@@ -141,8 +142,8 @@ CREATE TABLE IF NOT EXISTS public.thong_bao (
 
 -- 2.7 Bảng BINH_LUAN_THONG_BAO
 CREATE TABLE IF NOT EXISTS public.binh_luan_thong_bao (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  thong_bao_id UUID,
+  id TEXT PRIMARY KEY,
+  thong_bao_id TEXT,
   ho_ten_nguoi_gui TEXT NOT NULL,
   so_dien_thoai TEXT,
   to_dan_cu TEXT,
@@ -160,7 +161,7 @@ CREATE TABLE IF NOT EXISTS public.binh_luan_thong_bao (
 
 -- 2.8 Bảng CAN_BO_THON (20 Cán Bộ Trụ Cột)
 CREATE TABLE IF NOT EXISTS public.can_bo_thon (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  id TEXT PRIMARY KEY,
   ho_ten TEXT NOT NULL,
   chuc_vu TEXT NOT NULL,
   khoi TEXT NOT NULL DEFAULT 'ban_nhan_dan',
@@ -183,7 +184,7 @@ CREATE TABLE IF NOT EXISTS public.can_bo_thon (
 
 -- 2.9 Bảng GIS_BOUNDARIES (Ranh Giới 8 Tổ Dân Cư)
 CREATE TABLE IF NOT EXISTS public.gis_boundaries (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  id TEXT PRIMARY KEY,
   ma_vung TEXT NOT NULL UNIQUE,
   ten_vung TEXT NOT NULL,
   loai_vung TEXT DEFAULT 'to_dan_cu',
@@ -201,8 +202,8 @@ CREATE TABLE IF NOT EXISTS public.gis_boundaries (
 
 -- 2.10 Bảng NHAT_KY_THAO_TAC (Audit Logs)
 CREATE TABLE IF NOT EXISTS public.nhat_ky_thao_tac (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id UUID,
+  id TEXT PRIMARY KEY,
+  user_id TEXT,
   user_email TEXT,
   user_name TEXT,
   hanh_dong TEXT NOT NULL,
@@ -216,7 +217,7 @@ CREATE TABLE IF NOT EXISTS public.nhat_ky_thao_tac (
 
 -- 2.11 Bảng AI_KNOWLEDGE (Cơ Sở Tri Thức An Trạch AI)
 CREATE TABLE IF NOT EXISTS public.ai_knowledge (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  id TEXT PRIMARY KEY,
   code TEXT UNIQUE,
   title TEXT NOT NULL,
   category TEXT NOT NULL,
@@ -230,7 +231,6 @@ CREATE TABLE IF NOT EXISTS public.ai_knowledge (
 
 -- 3. GỠ BỎ RÀNG BUỘC KHÓA NGOẠI CỨNG ĐỂ CLIENT WEB SYNC TỰ DO
 ALTER TABLE IF EXISTS public.profiles DROP CONSTRAINT IF EXISTS profiles_id_fkey;
-ALTER TABLE IF EXISTS public.profiles ALTER COLUMN id SET DEFAULT gen_random_uuid();
 ALTER TABLE IF EXISTS public.nhan_khau DROP CONSTRAINT IF EXISTS nhan_khau_ma_ho_fkey;
 ALTER TABLE IF EXISTS public.nhan_khau DROP CONSTRAINT IF EXISTS nhan_khau_updated_by_fkey;
 ALTER TABLE IF EXISTS public.ho_khau DROP CONSTRAINT IF EXISTS ho_khau_updated_by_fkey;
@@ -239,7 +239,30 @@ ALTER TABLE IF EXISTS public.thong_bao DROP CONSTRAINT IF EXISTS thong_bao_nguoi
 ALTER TABLE IF EXISTS public.binh_luan_thong_bao DROP CONSTRAINT IF EXISTS binh_luan_thong_bao_thong_bao_id_fkey;
 ALTER TABLE IF EXISTS public.nhat_ky_thao_tac DROP CONSTRAINT IF EXISTS nhat_ky_thao_tac_user_id_fkey;
 
--- 4. MỞ CHÍNH SÁCH RLS ĐỒNG BỘ CHO CLIENT (ANON + AUTHENTICATED)
+-- 4. CHUYỂN TOÀN BỘ CỘT ID CỦA CÁC BẢNG HIỆN CÓ SANG KIỂU TEXT (ĐẢM BẢO KHÔNG LỖI UUID)
+DO $$
+DECLARE
+  tbl text;
+BEGIN
+  FOR tbl IN 
+    SELECT table_name 
+    FROM information_schema.tables 
+    WHERE table_schema = 'public' 
+      AND table_name IN (
+        'profiles', 'nhan_khau', 'ho_khau', 'san_xuat_nong_nghiep', 
+        'cong_van', 'thong_bao', 'binh_luan_thong_bao', 'can_bo_thon', 
+        'gis_boundaries', 'nhat_ky_thao_tac', 'ai_knowledge'
+      )
+  LOOP
+    BEGIN
+      EXECUTE format('ALTER TABLE public.%I ALTER COLUMN id TYPE TEXT USING id::text;', tbl);
+    EXCEPTION WHEN OTHERS THEN 
+      NULL;
+    END;
+  END LOOP;
+END $$;
+
+-- 5. MỞ CHÍNH SÁCH RLS ĐỒNG BỘ CHO CLIENT (ANON + AUTHENTICATED)
 DO $$
 DECLARE
   tbl text;
@@ -264,7 +287,7 @@ BEGIN
   END LOOP;
 END $$;
 
--- 5. KÍCH HOẠT SUPABASE REALTIME REPLICATION CHO TẤT CẢ CÁC BẢNG
+-- 6. KÍCH HOẠT SUPABASE REALTIME REPLICATION CHO TẤT CẢ CÁC BẢNG
 DO $$
 DECLARE
   tbl text;

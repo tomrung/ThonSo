@@ -109,7 +109,18 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             const map = new Map<string, UserProfile>();
             prev.forEach((p) => map.set(p.email.toLowerCase(), p));
             cloudProfiles.forEach((cp) => map.set(cp.email.toLowerCase(), cp));
-            return Array.from(map.values());
+            const merged = Array.from(map.values());
+            
+            // Tự động cập nhật lại currentUser nếu có sự thay đổi từ máy khác
+            setCurrentUser((current) => {
+              if (!current) return current;
+              const matched = merged.find(
+                (p) => p.email.toLowerCase() === current.email.toLowerCase() || p.id === current.id
+              );
+              return matched || current;
+            });
+
+            return merged;
           });
         }
         const cloudLogs = await fetchAuditLogsCloud();
@@ -127,13 +138,21 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         if (payload.eventType === 'INSERT' || payload.eventType === 'UPDATE') {
           const newRow: UserProfile = payload.new;
           setProfiles((prev) => {
-            const idx = prev.findIndex((p) => p.email.toLowerCase() === newRow.email.toLowerCase());
+            const idx = prev.findIndex((p) => p.email.toLowerCase() === newRow.email.toLowerCase() || p.id === newRow.id);
             if (idx >= 0) {
               const updated = [...prev];
               updated[idx] = { ...updated[idx], ...newRow };
               return updated;
             }
             return [newRow, ...prev];
+          });
+
+          setCurrentUser((current) => {
+            if (!current) return current;
+            if (current.id === newRow.id || current.email.toLowerCase() === newRow.email.toLowerCase()) {
+              return { ...current, ...newRow };
+            }
+            return current;
           });
         } else if (payload.eventType === 'DELETE') {
           setProfiles((prev) => prev.filter((p) => p.id !== payload.old?.id));

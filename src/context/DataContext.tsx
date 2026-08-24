@@ -46,6 +46,8 @@ import {
   deleteCanBoCloud,
   upsertBinhLuanCloud,
   deleteBinhLuanCloud,
+  upsertBoundaryCloud,
+  deleteBoundaryCloud,
   upsertAiKnowledgeCloud,
   deleteAiKnowledgeCloud,
   subscribeToRealtimeChanges,
@@ -541,30 +543,32 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setIsCloudConnected(status.isConnected);
 
         if (status.isConnected) {
-          // Nếu trên Cloud đã có dữ liệu nhân khẩu, tự động tải dữ liệu mới nhất
-          if (status.tableCounts.nhanKhau > 0) {
-            const [cloudNk, cloudHk, cloudSx, cloudCv, cloudTb, cloudBl, cloudCb, cloudBnd, cloudAi] = await Promise.all([
-              fetchNhanKhauCloud(),
-              fetchHoKhauCloud(),
-              fetchSanXuatCloud(),
-              fetchCongVanCloud(),
-              fetchThongBaoCloud(),
-              fetchBinhLuanCloud(),
-              fetchCanBoCloud(),
-              fetchBoundariesCloud(),
-              fetchAiKnowledgeCloud(),
-            ]);
-            if (cloudNk && cloudNk.length > 0) setNhanKhauList(cloudNk);
-            if (cloudHk && cloudHk.length > 0) setHoKhauList(cloudHk);
-            if (cloudSx && cloudSx.length > 0) setSanXuatList(cloudSx);
-            if (cloudCv && cloudCv.length > 0) setCongVanList(cloudCv);
-            if (cloudTb && cloudTb.length > 0) setThongBaoList(cloudTb);
-            if (cloudBl && cloudBl.length > 0) setBinhLuanList(cloudBl);
-            if (cloudCb && cloudCb.length > 0) setCanBoList(cloudCb);
-            if (cloudBnd) setBoundariesData(cloudBnd);
-            if (cloudAi && cloudAi.length > 0) setAiKnowledgeList(cloudAi);
-          } else {
-            // Tự động đẩy dữ liệu Master lên Cloud nếu Cloud đang trống (Lần chạy đầu tiên)
+          // Luôn tải trực tiếp toàn bộ dữ liệu mới nhất từ Cloud về máy cho từng bảng
+          const [cloudNk, cloudHk, cloudSx, cloudCv, cloudTb, cloudBl, cloudCb, cloudBnd, cloudAi] = await Promise.all([
+            fetchNhanKhauCloud(),
+            fetchHoKhauCloud(),
+            fetchSanXuatCloud(),
+            fetchCongVanCloud(),
+            fetchThongBaoCloud(),
+            fetchBinhLuanCloud(),
+            fetchCanBoCloud(),
+            fetchBoundariesCloud(),
+            fetchAiKnowledgeCloud(),
+          ]);
+
+          if (cloudNk && cloudNk.length > 0) setNhanKhauList(cloudNk);
+          if (cloudHk && cloudHk.length > 0) setHoKhauList(cloudHk);
+          if (cloudSx && cloudSx.length > 0) setSanXuatList(cloudSx);
+          if (cloudCv && cloudCv.length > 0) setCongVanList(cloudCv);
+          if (cloudTb && cloudTb.length > 0) setThongBaoList(cloudTb);
+          if (cloudBl && cloudBl.length > 0) setBinhLuanList(cloudBl);
+          if (cloudCb && cloudCb.length > 0) setCanBoList(cloudCb);
+          if (cloudBnd && cloudBnd.features && cloudBnd.features.length > 0) setBoundariesData(cloudBnd);
+          if (cloudAi && cloudAi.length > 0) setAiKnowledgeList(cloudAi);
+
+          // Nếu toàn bộ cơ sở dữ liệu trên Cloud đang trống hoàn toàn (0 bản ghi), tự động seed lần đầu
+          const totalRecords = (cloudNk?.length || 0) + (cloudHk?.length || 0) + (cloudSx?.length || 0) + (cloudCv?.length || 0);
+          if (totalRecords === 0) {
             console.log('[Auto-Seed] Cloud Supabase đang trống. Bắt đầu tự động đồng bộ dữ liệu Master lên Cloud...');
             pushAllDataToCloud({
               nhanKhauList,
@@ -1580,22 +1584,14 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
   ) => {
     const target = congVanList.find((c) => c.id === id);
     if (target) {
-      let updatedCV: CongVan | undefined;
-      setCongVanList((prev) =>
-        prev.map((item) =>
-          item.id === id
-            ? {
-                ...item,
-                ...assignment,
-                trang_thai: item.trang_thai === 'cho_phan_cong' ? 'dang_xu_ly' : item.trang_thai,
-                updated_at: new Date().toISOString(),
-              }
-            : item
-        )
-      );
-      if (updatedCV) {
-        upsertCongVanCloud(updatedCV);
-      }
+      const updatedCV: CongVan = {
+        ...target,
+        ...assignment,
+        trang_thai: target.trang_thai === 'cho_phan_cong' ? 'dang_xu_ly' : target.trang_thai,
+        updated_at: new Date().toISOString(),
+      };
+      setCongVanList((prev) => prev.map((item) => (item.id === id ? updatedCV : item)));
+      upsertCongVanCloud(updatedCV);
       logActivity('UPDATE', 'cong_van', id, target, { ...target, ...assignment }, `Phân công xử lý công văn: ${target.so_ky_hieu} cho ${assignment.nguoi_chu_tri_ten}`);
       addSystemNotification({
         tieu_de: `Giao việc: Công văn ${target.so_ky_hieu}`,
@@ -1617,20 +1613,15 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const target = congVanList.find((c) => c.id === id);
     if (target) {
       const newStatus = status || (progress >= 100 ? 'hoan_thanh' : 'dang_xu_ly');
-      let updatedCV: CongVan | undefined;
-      setCongVanList((prev) =>
-        prev.map((item) =>
-          item.id === id
-            ? {
-                ...item,
-                tien_do_phan_tram: progress,
-                ket_qua_xu_ly: ketQua !== undefined ? ketQua : item.ket_qua_xu_ly,
-                trang_thai: newStatus,
-                updated_at: new Date().toISOString(),
-              }
-            : item
-        )
-      );
+      const updatedCV: CongVan = {
+        ...target,
+        tien_do_phan_tram: progress,
+        ket_qua_xu_ly: ketQua !== undefined ? ketQua : target.ket_qua_xu_ly,
+        trang_thai: newStatus,
+        updated_at: new Date().toISOString(),
+      };
+      setCongVanList((prev) => prev.map((item) => (item.id === id ? updatedCV : item)));
+      upsertCongVanCloud(updatedCV);
       logActivity('UPDATE', 'cong_van', id, target, { ...target, tien_do_phan_tram: progress, trang_thai: newStatus }, `Cập nhật tiến độ (${progress}%) công văn: ${target.so_ky_hieu}`);
       if (progress >= 100) {
         addSystemNotification({
@@ -1752,28 +1743,35 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const updateBoundary = (
     boundaryId: string, 
-    properties: Partial<ToBoundaryFeature['properties']>, 
-    coordinates?: [number, number][][]
+    data: Partial<ToBoundaryFeature['properties']>, 
+    coordinates?: any
   ) => {
+    let updatedFeature: ToBoundaryFeature | undefined;
     setBoundariesData((prev) => {
       const newFeatures = prev.features.map((feat) => {
         if (feat.properties.id === boundaryId || feat.properties.to_dan_cu === boundaryId) {
-          return {
+          const updated = {
             ...feat,
             properties: {
               ...feat.properties,
-              ...properties,
+              ...data,
             },
             geometry: {
               ...feat.geometry,
               coordinates: coordinates || feat.geometry.coordinates,
             },
           };
+          updatedFeature = updated;
+          return updated;
         }
         return feat;
       });
       return { ...prev, features: newFeatures };
     });
+
+    if (updatedFeature) {
+      upsertBoundaryCloud(updatedFeature);
+    }
 
     logActivity('UPDATE', 'ho_khau', boundaryId, null, null, `Cập nhật ranh giới không gian địa lý ${boundaryId}`);
     addSystemNotification({
@@ -1790,6 +1788,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
       ...prev,
       features: [...prev.features, boundary],
     }));
+    upsertBoundaryCloud(boundary);
     logActivity('INSERT', 'ho_khau', boundary.properties.id, null, boundary, `Thêm phân vùng ranh giới mới: ${boundary.properties.to_dan_cu}`);
     addSystemNotification({
       tieu_de: 'Thêm ranh giới phân vùng mới',
@@ -1810,6 +1809,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
         features: prev.features.filter((f) => f.properties.id !== boundaryId && f.properties.to_dan_cu !== boundaryId),
       };
     });
+    deleteBoundaryCloud(boundaryId);
     logActivity('DELETE', 'ho_khau', boundaryId, null, null, `Xóa phân vùng ranh giới: ${deletedName}`);
     addSystemNotification({
       tieu_de: 'Xóa phân vùng ranh giới',

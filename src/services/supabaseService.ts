@@ -377,25 +377,17 @@ export async function fetchAuditLogsCloud(): Promise<AuditLog[]> {
 // 2. ĐẨY TOÀN BỘ DỮ LIỆU LOCAL/SEED LÊN CLOUD (BATCH INSERT / SEED TO CLOUD)
 // --------------------------------------------------------------------------
 
-// Chuyển UUID an toàn
+// Chuyển ID an toàn (hỗ trợ cả UUID lẫn TEXT ID nguyên bản)
 export function ensureValidUuid(id: string): string {
-  if (/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id)) {
-    return id;
-  }
-  // Tạo deterministic uuid từ chuỗi text
-  let hex = '';
-  for (let i = 0; i < id.length; i++) {
-    hex += id.charCodeAt(i).toString(16);
-  }
-  hex = hex.padEnd(32, '0').slice(0, 32);
-  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-4${hex.slice(13, 16)}-8${hex.slice(17, 20)}-${hex.slice(20, 32)}`;
+  if (!id) return `gen-${Date.now()}`;
+  return String(id);
 }
 
 async function batchInsert<T>(
   tableName: string, 
   items: T[], 
   transformFn: (item: T) => any, 
-  batchSize = 150,
+  batchSize = 100,
   onProgress?: (count: number, total: number) => void
 ) {
   if (!supabase || items.length === 0) return;
@@ -409,7 +401,7 @@ async function batchInsert<T>(
       .upsert(chunk, { onConflict: 'id', ignoreDuplicates: false });
 
     if (error) {
-      console.error(`Lỗi batch insert ${tableName} (lô ${i}-${i + chunk.length}):`, error);
+      console.error(`[Supabase Error] Lỗi batch insert ${tableName} (lô ${i}-${i + chunk.length}):`, error);
     }
     inserted += chunk.length;
     if (onProgress) onProgress(inserted, total);
@@ -440,7 +432,7 @@ export async function pushAllDataToCloud(
     // 1. Đồng bộ Cán bộ thôn
     if (onProgress) onProgress({ message: 'Đang đẩy hồ sơ cán bộ thôn...', percent: 10 });
     await batchInsert('can_bo_thon', data.canBoList, (c) => ({
-      id: ensureValidUuid(c.id),
+      id: String(c.id),
       ho_ten: c.ho_ten,
       chuc_vu: c.chuc_vu,
       khoi: c.khoi,
@@ -460,9 +452,9 @@ export async function pushAllDataToCloud(
     }));
 
     // 2. Đồng bộ Hộ khẩu
-    if (onProgress) onProgress({ message: 'Đang đẩy 582 sổ hộ khẩu gia đình...', percent: 25 });
+    if (onProgress) onProgress({ message: 'Đang đẩy sổ hộ khẩu gia đình...', percent: 25 });
     await batchInsert('ho_khau', data.hoKhauList, (h) => ({
-      id: ensureValidUuid(h.id),
+      id: String(h.id),
       ma_ho: h.ma_ho,
       ten_chu_ho: h.ten_chu_ho,
       so_cmnd_chu_ho: h.so_cmnd_chu_ho,
@@ -476,7 +468,7 @@ export async function pushAllDataToCloud(
     // 3. Đồng bộ 2.308 Nhân khẩu
     if (onProgress) onProgress({ message: 'Đang đẩy 2.308 hồ sơ nhân khẩu master...', percent: 50 });
     await batchInsert('nhan_khau', data.nhanKhauList, (r) => ({
-      id: ensureValidUuid(r.id),
+      id: String(r.id),
       stt_excel: r.stt_excel,
       ma_ho: r.ma_ho,
       chu_ho: r.chu_ho,
@@ -498,48 +490,48 @@ export async function pushAllDataToCloud(
       dia_chi: r.dia_chi,
       to_dan_cu: r.to_dan_cu,
       trang_thai_cu_tru: r.trang_thai_cu_tru,
-      doi_tuong_dac_thu: r.doi_tuong_dac_thu || 'Bình thường',
+      doi_tuong_dac_thu: r.doi_tuong_dac_thu,
       ghi_chu: r.ghi_chu,
-      nguon_dong_bo: r.nguon_dong_bo || 'Đồng bộ Master'
+      nguon_dong_bo: r.nguon_dong_bo
     }));
 
-    // 4. Đồng bộ Sản xuất Nông nghiệp
-    if (onProgress) onProgress({ message: 'Đang đẩy sổ bộ sản xuất nông nghiệp & mùa vụ...', percent: 75 });
+    // 4. Đồng bộ Sản xuất nông nghiệp
+    if (onProgress) onProgress({ message: 'Đang đẩy 647 thửa sản xuất nông nghiệp...', percent: 75 });
     await batchInsert('san_xuat_nong_nghiep', data.sanXuatList, (s) => ({
-      id: ensureValidUuid(s.id),
+      id: String(s.id),
       stt: typeof s.stt === 'number' ? s.stt : parseInt(String(s.stt)) || 1,
-      dot_phan_bo: s.dot_phan_bo || 'HG12-T9',
-      giong_lua: s.giong_lua || 'HG12',
-      xu_dong: s.xu_dong || 'Tổ 9',
-      lo_thua_dat: s.lo_thua_dat || 'Thửa đất',
-      chu_dat: s.chu_dat || '',
-      ho_san_xuat: s.ho_san_xuat || '',
+      dot_phan_bo: s.dot_phan_bo,
+      giong_lua: s.giong_lua,
+      xu_dong: s.xu_dong,
+      lo_thua_dat: s.lo_thua_dat,
+      chu_dat: s.chu_dat,
+      ho_san_xuat: s.ho_san_xuat,
       la_chinh_chu: s.la_chinh_chu ?? true,
-      dien_tich_m2: s.dien_tich_m2 || 0,
-      giong_cap_kg: s.giong_cap_kg || 0,
-      mua_them_kg: s.mua_them_kg || 0,
-      don_gia: s.don_gia || 0,
-      thanh_tien: s.thanh_tien || 0,
-      ky_nhan: String(s.ky_nhan || 'Đã nhận'),
-      to_dan_cu: s.to_dan_cu || 'Tổ 1',
-      trang_thai_canh_tac: s.trang_thai_canh_tac || 'chuan_bi_dat',
+      dien_tich_m2: s.dien_tich_m2,
+      giong_cap_kg: s.giong_cap_kg,
+      mua_them_kg: s.mua_them_kg,
+      don_gia: s.don_gia,
+      thanh_tien: s.thanh_tien,
+      ky_nhan: String(s.ky_nhan || ''),
+      to_dan_cu: s.to_dan_cu,
+      trang_thai_canh_tac: s.trang_thai_canh_tac,
       ghi_chu: s.ghi_chu
     }));
 
-    // 5. Đồng bộ Công văn
-    if (onProgress) onProgress({ message: 'Đang đẩy danh mục công văn & văn bản chỉ đạo...', percent: 85 });
+    // 5. Đồng bộ Công văn & Văn thư
+    if (onProgress) onProgress({ message: 'Đang đẩy sổ công văn & chỉ đạo...', percent: 88 });
     await batchInsert('cong_van', data.congVanList, (cv) => ({
-      id: ensureValidUuid(cv.id),
+      id: String(cv.id),
       so_ky_hieu: cv.so_ky_hieu,
       trich_yeu: cv.trich_yeu,
       loai_cong_van: cv.loai_cong_van,
       co_quan_ban_hanh: cv.co_quan_ban_hanh,
-      ngay_ban_hanh: cv.ngay_ban_hanh || new Date().toISOString().split('T')[0],
-      ngay_tiep_nhan: cv.ngay_tiep_nhan || new Date().toISOString().split('T')[0],
-      do_khan: cv.do_khan || 'thuong',
-      do_mat: cv.do_mat || 'thuong',
-      han_xu_ly: cv.han_xu_ly || null,
-      trang_thai: cv.trang_thai || 'dang_xu_ly',
+      ngay_ban_hanh: cv.ngay_ban_hanh,
+      ngay_tiep_nhan: cv.ngay_tiep_nhan,
+      do_khan: cv.do_khan,
+      do_mat: cv.do_mat,
+      han_xu_ly: cv.han_xu_ly,
+      trang_thai: cv.trang_thai,
       nguoi_chu_tri_ten: cv.nguoi_chu_tri_ten,
       nguoi_chu_tri_chuc_vu: cv.nguoi_chu_tri_chuc_vu,
       can_bo_phoi_hop: cv.can_bo_phoi_hop || [],
@@ -554,7 +546,7 @@ export async function pushAllDataToCloud(
     // 6. Đồng bộ Thông báo & Bản tin
     if (onProgress) onProgress({ message: 'Đang đẩy bản tin & thông báo thôn...', percent: 92 });
     await batchInsert('thong_bao', data.thongBaoList, (t) => ({
-      id: ensureValidUuid(t.id),
+      id: String(t.id),
       tieu_de: t.tieu_de,
       noi_dung: t.noi_dung,
       loai_tin: t.loai_tin,
@@ -573,8 +565,8 @@ export async function pushAllDataToCloud(
     if (data.boundariesData && data.boundariesData.features) {
       if (onProgress) onProgress({ message: 'Đang đẩy ranh giới bản đồ GIS không gian...', percent: 94 });
       const gisList = data.boundariesData.features.map((f: any) => ({
-        id: ensureValidUuid(f.properties?.id || f.id || 'boundary'),
-        ma_vung: f.properties?.id || f.id,
+        id: String(f.properties?.id || f.id || 'boundary'),
+        ma_vung: String(f.properties?.id || f.id),
         ten_vung: f.properties?.name || 'Vùng',
         loai_vung: f.properties?.type || 'to_dan_cu',
         to_truong: f.properties?.to_truong,
@@ -593,7 +585,7 @@ export async function pushAllDataToCloud(
     if (data.profiles && data.profiles.length > 0) {
       if (onProgress) onProgress({ message: 'Đang đẩy danh sách tài khoản cán bộ...', percent: 96 });
       await batchInsert('profiles', data.profiles, (p) => ({
-        id: ensureValidUuid(p.id),
+        id: String(p.id),
         email: p.email,
         ho_ten: p.ho_ten,
         so_dien_thoai: p.so_dien_thoai || '',
@@ -608,7 +600,7 @@ export async function pushAllDataToCloud(
     if (data.aiKnowledgeList && data.aiKnowledgeList.length > 0) {
       if (onProgress) onProgress({ message: 'Đang đẩy dữ liệu tri thức An Trạch AI...', percent: 98 });
       await batchInsert('ai_knowledge', data.aiKnowledgeList, (k) => ({
-        id: ensureValidUuid(k.id),
+        id: String(k.id),
         code: `AI-${k.id}`,
         title: k.title,
         category: k.category,
@@ -622,7 +614,7 @@ export async function pushAllDataToCloud(
     // 10. Đồng bộ Nhật ký thao tác (nhat_ky_thao_tac)
     if (data.auditLogs && data.auditLogs.length > 0) {
       await batchInsert('nhat_ky_thao_tac', data.auditLogs, (log) => ({
-        id: ensureValidUuid(log.id),
+        id: String(log.id),
         user_name: log.user_name,
         user_email: log.user_email || 'admin@antrach.danang.gov.vn',
         hanh_dong: log.hanh_dong,
@@ -647,8 +639,8 @@ export async function pushAllDataToCloud(
 export async function upsertNhanKhauCloud(r: NhanKhau) {
   if (!supabase) return;
   try {
-    await supabase.from('nhan_khau').upsert({
-      id: ensureValidUuid(r.id),
+    const { error } = await supabase.from('nhan_khau').upsert({
+      id: String(r.id),
       stt_excel: r.stt_excel,
       ma_ho: r.ma_ho,
       chu_ho: r.chu_ho,
@@ -673,7 +665,8 @@ export async function upsertNhanKhauCloud(r: NhanKhau) {
       doi_tuong_dac_thu: r.doi_tuong_dac_thu,
       ghi_chu: r.ghi_chu,
       updated_at: new Date().toISOString()
-    });
+    }, { onConflict: 'id' });
+    if (error) console.error('[Supabase Error] upsert nhan_khau:', error);
   } catch (e) {
     console.warn('Lỗi upsert nhan_khau lên cloud:', e);
   }
@@ -682,7 +675,8 @@ export async function upsertNhanKhauCloud(r: NhanKhau) {
 export async function deleteNhanKhauCloud(id: string) {
   if (!supabase) return;
   try {
-    await supabase.from('nhan_khau').delete().eq('id', ensureValidUuid(id));
+    const { error } = await supabase.from('nhan_khau').delete().eq('id', String(id));
+    if (error) console.error('[Supabase Error] delete nhan_khau:', error);
   } catch (e) {
     console.warn('Lỗi xóa nhan_khau trên cloud:', e);
   }
@@ -691,8 +685,8 @@ export async function deleteNhanKhauCloud(id: string) {
 export async function upsertHoKhauCloud(h: HoKhau) {
   if (!supabase) return;
   try {
-    await supabase.from('ho_khau').upsert({
-      id: ensureValidUuid(h.id),
+    const { error } = await supabase.from('ho_khau').upsert({
+      id: String(h.id),
       ma_ho: h.ma_ho,
       ten_chu_ho: h.ten_chu_ho,
       so_cmnd_chu_ho: h.so_cmnd_chu_ho,
@@ -702,7 +696,8 @@ export async function upsertHoKhauCloud(h: HoKhau) {
       so_nhan_khau: h.so_nhan_khau,
       ghi_chu: h.ghi_chu,
       updated_at: new Date().toISOString()
-    });
+    }, { onConflict: 'id' });
+    if (error) console.error('[Supabase Error] upsert ho_khau:', error);
   } catch (e) {
     console.warn('Lỗi upsert ho_khau lên cloud:', e);
   }
@@ -711,7 +706,8 @@ export async function upsertHoKhauCloud(h: HoKhau) {
 export async function deleteHoKhauCloud(id: string) {
   if (!supabase) return;
   try {
-    await supabase.from('ho_khau').delete().eq('id', ensureValidUuid(id));
+    const { error } = await supabase.from('ho_khau').delete().eq('id', String(id));
+    if (error) console.error('[Supabase Error] delete ho_khau:', error);
   } catch (e) {
     console.warn('Lỗi xóa ho_khau trên cloud:', e);
   }
@@ -720,8 +716,8 @@ export async function deleteHoKhauCloud(id: string) {
 export async function upsertSanXuatCloud(s: SanXuatRecord) {
   if (!supabase) return;
   try {
-    await supabase.from('san_xuat_nong_nghiep').upsert({
-      id: ensureValidUuid(s.id),
+    const { error } = await supabase.from('san_xuat_nong_nghiep').upsert({
+      id: String(s.id),
       stt: typeof s.stt === 'number' ? s.stt : parseInt(String(s.stt)) || 1,
       dot_phan_bo: s.dot_phan_bo,
       giong_lua: s.giong_lua,
@@ -740,7 +736,8 @@ export async function upsertSanXuatCloud(s: SanXuatRecord) {
       trang_thai_canh_tac: s.trang_thai_canh_tac,
       ghi_chu: s.ghi_chu,
       updated_at: new Date().toISOString()
-    });
+    }, { onConflict: 'id' });
+    if (error) console.error('[Supabase Error] upsert san_xuat:', error);
   } catch (e) {
     console.warn('Lỗi upsert san_xuat lên cloud:', e);
   }
@@ -749,7 +746,8 @@ export async function upsertSanXuatCloud(s: SanXuatRecord) {
 export async function deleteSanXuatCloud(id: string) {
   if (!supabase) return;
   try {
-    await supabase.from('san_xuat_nong_nghiep').delete().eq('id', ensureValidUuid(id));
+    const { error } = await supabase.from('san_xuat_nong_nghiep').delete().eq('id', String(id));
+    if (error) console.error('[Supabase Error] delete san_xuat:', error);
   } catch (e) {
     console.warn('Lỗi xóa san_xuat trên cloud:', e);
   }
@@ -758,8 +756,8 @@ export async function deleteSanXuatCloud(id: string) {
 export async function upsertCongVanCloud(cv: CongVan) {
   if (!supabase) return;
   try {
-    await supabase.from('cong_van').upsert({
-      id: ensureValidUuid(cv.id),
+    const { error } = await supabase.from('cong_van').upsert({
+      id: String(cv.id),
       so_ky_hieu: cv.so_ky_hieu,
       trich_yeu: cv.trich_yeu,
       loai_cong_van: cv.loai_cong_van,
@@ -772,15 +770,16 @@ export async function upsertCongVanCloud(cv: CongVan) {
       trang_thai: cv.trang_thai,
       nguoi_chu_tri_ten: cv.nguoi_chu_tri_ten,
       nguoi_chu_tri_chuc_vu: cv.nguoi_chu_tri_chuc_vu,
-      can_bo_phoi_hop: cv.can_bo_phoi_hop,
+      can_bo_phoi_hop: cv.can_bo_phoi_hop || [],
       chi_dao_xu_ly: cv.chi_dao_xu_ly,
-      tien_do_phan_tram: cv.tien_do_phan_tram,
+      tien_do_phan_tram: cv.tien_do_phan_tram || 0,
       ket_qua_xu_ly: cv.ket_qua_xu_ly,
       file_url: cv.file_url,
       file_name: cv.file_name,
       nguoi_tao_ten: cv.nguoi_tao_ten,
       updated_at: new Date().toISOString()
-    });
+    }, { onConflict: 'id' });
+    if (error) console.error('[Supabase Error] upsert cong_van:', error);
   } catch (e) {
     console.warn('Lỗi upsert cong_van lên cloud:', e);
   }
@@ -789,7 +788,8 @@ export async function upsertCongVanCloud(cv: CongVan) {
 export async function deleteCongVanCloud(id: string) {
   if (!supabase) return;
   try {
-    await supabase.from('cong_van').delete().eq('id', ensureValidUuid(id));
+    const { error } = await supabase.from('cong_van').delete().eq('id', String(id));
+    if (error) console.error('[Supabase Error] delete cong_van:', error);
   } catch (e) {
     console.warn('Lỗi xóa cong_van trên cloud:', e);
   }
@@ -798,8 +798,8 @@ export async function deleteCongVanCloud(id: string) {
 export async function upsertThongBaoCloud(t: ThongBao) {
   if (!supabase) return;
   try {
-    await supabase.from('thong_bao').upsert({
-      id: ensureValidUuid(t.id),
+    const { error } = await supabase.from('thong_bao').upsert({
+      id: String(t.id),
       tieu_de: t.tieu_de,
       noi_dung: t.noi_dung,
       loai_tin: t.loai_tin,
@@ -813,7 +813,8 @@ export async function upsertThongBaoCloud(t: ThongBao) {
       luot_xem: t.luot_xem,
       so_luot_thich: t.so_luot_thich,
       updated_at: new Date().toISOString()
-    });
+    }, { onConflict: 'id' });
+    if (error) console.error('[Supabase Error] upsert thong_bao:', error);
   } catch (e) {
     console.warn('Lỗi upsert thong_bao lên cloud:', e);
   }
@@ -822,7 +823,8 @@ export async function upsertThongBaoCloud(t: ThongBao) {
 export async function deleteThongBaoCloud(id: string) {
   if (!supabase) return;
   try {
-    await supabase.from('thong_bao').delete().eq('id', ensureValidUuid(id));
+    const { error } = await supabase.from('thong_bao').delete().eq('id', String(id));
+    if (error) console.error('[Supabase Error] delete thong_bao:', error);
   } catch (e) {
     console.warn('Lỗi xóa thong_bao trên cloud:', e);
   }
@@ -831,8 +833,8 @@ export async function deleteThongBaoCloud(id: string) {
 export async function upsertCanBoCloud(c: VillageOfficer) {
   if (!supabase) return;
   try {
-    await supabase.from('can_bo_thon').upsert({
-      id: ensureValidUuid(c.id),
+    const { error } = await supabase.from('can_bo_thon').upsert({
+      id: String(c.id),
       ho_ten: c.ho_ten,
       chuc_vu: c.chuc_vu,
       khoi: c.khoi,
@@ -850,7 +852,8 @@ export async function upsertCanBoCloud(c: VillageOfficer) {
       so_ho_phu_trach: c.so_ho_phu_trach,
       so_dan_phu_trach: c.so_dan_phu_trach,
       updated_at: new Date().toISOString()
-    });
+    }, { onConflict: 'id' });
+    if (error) console.error('[Supabase Error] upsert can_bo_thon:', error);
   } catch (e) {
     console.warn('Lỗi upsert can_bo lên cloud:', e);
   }
@@ -859,7 +862,8 @@ export async function upsertCanBoCloud(c: VillageOfficer) {
 export async function deleteCanBoCloud(id: string) {
   if (!supabase) return;
   try {
-    await supabase.from('can_bo_thon').delete().eq('id', ensureValidUuid(id));
+    const { error } = await supabase.from('can_bo_thon').delete().eq('id', String(id));
+    if (error) console.error('[Supabase Error] delete can_bo_thon:', error);
   } catch (e) {
     console.warn('Lỗi xóa can_bo trên cloud:', e);
   }
@@ -868,9 +872,9 @@ export async function deleteCanBoCloud(id: string) {
 export async function upsertBinhLuanCloud(b: BinhLuanThongBao) {
   if (!supabase) return;
   try {
-    await supabase.from('binh_luan_thong_bao').upsert({
-      id: ensureValidUuid(b.id),
-      thong_bao_id: ensureValidUuid(b.thong_bao_id),
+    const { error } = await supabase.from('binh_luan_thong_bao').upsert({
+      id: String(b.id),
+      thong_bao_id: String(b.thong_bao_id),
       ho_ten_nguoi_gui: b.ho_ten_nguoi_gui,
       so_dien_thoai: b.so_dien_thoai,
       to_dan_cu: b.to_dan_cu,
@@ -883,7 +887,8 @@ export async function upsertBinhLuanCloud(b: BinhLuanThongBao) {
       tra_loi_boi_ten: b.tra_loi_boi_ten,
       tra_loi_boi_chuc_danh: b.tra_loi_boi_chuc_danh,
       tra_loi_luc: b.tra_loi_luc
-    });
+    }, { onConflict: 'id' });
+    if (error) console.error('[Supabase Error] upsert binh_luan:', error);
   } catch (e) {
     console.warn('Lỗi upsert binh_luan lên cloud:', e);
   }
@@ -892,17 +897,53 @@ export async function upsertBinhLuanCloud(b: BinhLuanThongBao) {
 export async function deleteBinhLuanCloud(id: string) {
   if (!supabase) return;
   try {
-    await supabase.from('binh_luan_thong_bao').delete().eq('id', ensureValidUuid(id));
+    const { error } = await supabase.from('binh_luan_thong_bao').delete().eq('id', String(id));
+    if (error) console.error('[Supabase Error] delete binh_luan:', error);
   } catch (e) {
     console.warn('Lỗi xóa binh_luan trên cloud:', e);
+  }
+}
+
+export async function upsertBoundaryCloud(f: any) {
+  if (!supabase) return;
+  try {
+    const id = String(f.properties?.id || f.id || 'boundary');
+    const { error } = await supabase.from('gis_boundaries').upsert({
+      id,
+      ma_vung: String(f.properties?.id || f.id),
+      ten_vung: f.properties?.name || f.properties?.to_dan_cu || 'Vùng',
+      loai_vung: f.properties?.type || 'to_dan_cu',
+      to_truong: f.properties?.to_truong,
+      so_dien_thoai: f.properties?.phone,
+      so_ho: f.properties?.households || 0,
+      so_dan: f.properties?.population || 0,
+      dien_tich_ha: f.properties?.area_ha || 0,
+      color: f.properties?.color || '#0284c7',
+      fill_color: f.properties?.fillColor || '#38bdf8',
+      geojson_geometry: f.geometry,
+      updated_at: new Date().toISOString()
+    }, { onConflict: 'id' });
+    if (error) console.error('[Supabase Error] upsert gis_boundaries:', error);
+  } catch (e) {
+    console.warn('Lỗi upsert boundary lên cloud:', e);
+  }
+}
+
+export async function deleteBoundaryCloud(boundaryId: string) {
+  if (!supabase) return;
+  try {
+    const { error } = await supabase.from('gis_boundaries').delete().eq('id', String(boundaryId));
+    if (error) console.error('[Supabase Error] delete gis_boundaries:', error);
+  } catch (e) {
+    console.warn('Lỗi xóa boundary trên cloud:', e);
   }
 }
 
 export async function upsertProfileCloud(p: UserProfile) {
   if (!supabase) return;
   try {
-    await supabase.from('profiles').upsert({
-      id: ensureValidUuid(p.id),
+    const { error } = await supabase.from('profiles').upsert({
+      id: String(p.id),
       email: p.email,
       ho_ten: p.ho_ten,
       so_dien_thoai: p.so_dien_thoai || '',
@@ -911,7 +952,8 @@ export async function upsertProfileCloud(p: UserProfile) {
       trang_thai: p.trang_thai,
       avatar_url: p.avatar_url || '',
       updated_at: new Date().toISOString()
-    });
+    }, { onConflict: 'id' });
+    if (error) console.error('[Supabase Error] upsert profiles:', error);
   } catch (e) {
     console.warn('Lỗi upsert profile lên cloud:', e);
   }
@@ -920,7 +962,8 @@ export async function upsertProfileCloud(p: UserProfile) {
 export async function deleteProfileCloud(id: string) {
   if (!supabase) return;
   try {
-    await supabase.from('profiles').delete().eq('id', ensureValidUuid(id));
+    const { error } = await supabase.from('profiles').delete().eq('id', String(id));
+    if (error) console.error('[Supabase Error] delete profiles:', error);
   } catch (e) {
     console.warn('Lỗi xóa profile trên cloud:', e);
   }
@@ -929,8 +972,8 @@ export async function deleteProfileCloud(id: string) {
 export async function upsertAiKnowledgeCloud(k: AiKnowledgeItem) {
   if (!supabase) return;
   try {
-    await supabase.from('ai_knowledge').upsert({
-      id: ensureValidUuid(k.id),
+    const { error } = await supabase.from('ai_knowledge').upsert({
+      id: String(k.id),
       code: `AI-${k.id}`,
       title: k.title,
       category: k.category,
@@ -939,7 +982,8 @@ export async function upsertAiKnowledgeCloud(k: AiKnowledgeItem) {
       tags: k.keywords || [],
       applicable_to: 'Toàn thôn',
       updated_at: new Date().toISOString()
-    });
+    }, { onConflict: 'id' });
+    if (error) console.error('[Supabase Error] upsert ai_knowledge:', error);
   } catch (e) {
     console.warn('Lỗi upsert ai_knowledge lên cloud:', e);
   }
@@ -948,7 +992,8 @@ export async function upsertAiKnowledgeCloud(k: AiKnowledgeItem) {
 export async function deleteAiKnowledgeCloud(id: string) {
   if (!supabase) return;
   try {
-    await supabase.from('ai_knowledge').delete().eq('id', ensureValidUuid(id));
+    const { error } = await supabase.from('ai_knowledge').delete().eq('id', String(id));
+    if (error) console.error('[Supabase Error] delete ai_knowledge:', error);
   } catch (e) {
     console.warn('Lỗi xóa ai_knowledge trên cloud:', e);
   }
@@ -957,8 +1002,8 @@ export async function deleteAiKnowledgeCloud(id: string) {
 export async function insertAuditLogCloud(log: AuditLog) {
   if (!supabase) return;
   try {
-    await supabase.from('nhat_ky_thao_tac').insert({
-      id: ensureValidUuid(log.id),
+    const { error } = await supabase.from('nhat_ky_thao_tac').insert({
+      id: String(log.id),
       user_name: log.user_name,
       user_email: log.user_email || 'admin@antrach.danang.gov.vn',
       hanh_dong: log.hanh_dong,
